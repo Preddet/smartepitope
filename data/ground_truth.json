@@ -1,0 +1,18 @@
+{
+    "sars2": [
+        {"name": "Literature Motif A", "range": [980, 990]},
+        {"name": "Receptor Binding Ridge", "range": [470, 490]},
+        {"name": "NTD Supersite", "range": [140, 158]},
+        {"name": "Fusion Peptide Region", "range": [950, 960]}
+    ],
+    "sars1": [
+        {"name": "RBD Interface", "range": [320, 340]},
+        {"name": "Neutralization Loop", "range": [460, 480]},
+        {"name": "Conserved Core B", "range": [960, 970]}
+    ],
+    "flu": [
+        {"name": "Antigenic Site Sa", "range": [128, 133]},
+        {"name": "Antigenic Site Sb", "range": [170, 180]},
+        {"name": "Antigenic Site Ca", "range": [235, 245]}
+    ]
+}

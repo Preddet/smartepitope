@@ -246,7 +246,64 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main>        <section class="optimization-demo-section" style="background-color: var(--color-bg); border-top: 1px solid var(--color-border); padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Kapalı Döngü Optimizasyon Modülü (Feedback Loop Demo)</h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 800px; margin: 0 auto 2rem auto;">
+                    Bu modül, arka planda çalışan makine öğrenmesi algoritmasının deneme-yanılma (Grid Search) yöntemiyle hiperparametrelerini ayarlamasını simüle eder. Amaç: Sistem tarafından tahmin edilen bölgelerin, literatürdeki "Altın Standart" (Ground Truth) bölgelerle kesişim (IoU) oranını maksimize etmektir.
+                </p>
+
+                <div class="optimization-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <!-- SARS-2 -->
+                    <div class="metric-card" style="border-top: 4px solid var(--color-deep-bio-blue);">
+                        <span class="badge" style="background-color: var(--color-deep-bio-blue); color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-2</span>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-deep-bio-blue); margin-bottom: 1rem;">%100.0</div>
+                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                            <strong>En İyi Parametreler:</strong><br><br>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>7 Amino Asit</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.50</span></span>
+                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.50</span></span>
+                        </div>
+                    </div>
+
+                    <!-- SARS-1 -->
+                    <div class="metric-card" style="border-top: 4px solid #f59e0b;">
+                        <span class="badge" style="background-color: #f59e0b; color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-1</span>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #f59e0b; margin-bottom: 1rem;">%66.7</div>
+                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                            <strong>En İyi Parametreler:</strong><br><br>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>3 Amino Asit</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.65</span></span>
+                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.35</span></span>
+                        </div>
+                    </div>
+
+                    <!-- FLU -->
+                    <div class="metric-card" style="border-top: 4px solid var(--color-action-red);">
+                        <span class="badge" style="background-color: var(--color-action-red); color: white; border: none; margin-bottom:1rem; display:inline-block;">Influenza A</span>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-action-red); margin-bottom: 1rem;">%66.7</div>
+                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                            <strong>En İyi Parametreler:</strong><br><br>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>3 Amino Asit</span></span>
+                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.71</span></span>
+                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.29</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; text-align: center;">
+                    <p style="font-size: 0.9rem; color: var(--color-text-muted); font-style: italic;">
+                        * Sistem her virüs için 120 farklı hiperparametre kombinasyonu (Grid Search) test etmiştir.
+                    </p>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <div
