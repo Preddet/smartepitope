@@ -94,7 +94,16 @@ async function updateInterface(virusKey) {
                     ${seqStr}
                 </div>
                 <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Pozisyon Aralığı: <strong>${startPosPdb} - ${endPosPdb}</strong> (Merkez: ${candidate.pos})</p>
-                <p style="font-size: 0.9rem;">Erişilebilirlik (SASA): ${candidate.sasa} Å²<br>AI Skoru: %${(candidate.ai_score * 100).toFixed(1)}</p>
+                <p style="font-size: 0.9rem; margin-bottom: 0.25rem;">Erişilebilirlik (SASA): ${candidate.sasa} Å²</p>
+                <p style="font-size: 0.9rem; margin-bottom: 0.25rem;">
+                    <span title="ESM-2 protein dil modelinin bu pozisyonu ne kadar 'değiştirilemez' bulduğunun ölçüsüdür. Yüksek değer, mutasyonun proteini işlevsiz kılacağını gösterir." style="cursor: help; border-bottom: 1px dashed #94a3b8;">
+                        ESM-2 Kararlılık Tahmini:
+                    </span>
+                    %${(candidate.ai_score * 100).toFixed(1)}
+                </p>
+                <p style="font-size: 0.78rem; color: #94a3b8; margin-bottom: 0.5rem; font-style: italic;">
+                    ESM-2'nin bu pozisyona atadığı amino asidin "değiştirilemezlik" olasılığı. Yüksek değer = yapısal açıdan kritik bölge.
+                </p>
                 <div class="metric-score" style="margin-top: 1rem;">${candidate.final_score.toFixed(3)}<span>S<sub>final</sub></span></div>
             `;
             grid.appendChild(card);
