@@ -5,7 +5,7 @@ import os
 from Bio.PDB import PDBParser
 from Bio.PDB.Polypeptide import protein_letters_3to1
 
-model_name = "facebook/esm2_t30_150M_UR50D"
+model_name = "facebook/esm2_t33_650M_UR50D"
 tokenizer = EsmTokenizer.from_pretrained(model_name)
 model = EsmForMaskedLM.from_pretrained(model_name)
 
