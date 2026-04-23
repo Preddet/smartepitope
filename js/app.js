@@ -44,7 +44,6 @@ $(function () {
 async function updateInterface(virusKey) {
     currentVirusKey = virusKey;
     const config = configurations[virusKey];
-    document.getElementById('structural-desc').innerHTML = config.structuralDesc;
     if (window.MathJax) MathJax.typesetPromise();
 
     const grid = document.getElementById('top-candidates-grid');
