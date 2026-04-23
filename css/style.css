@@ -27,6 +27,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: rgba(29, 78, 216, 0.05);
+  color: var(--color-deep-bio-blue);
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.95em;
+  font-weight: 600;
+}
+
 /* Container */
 .container {
   max-width: 1200px;
