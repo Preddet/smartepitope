@@ -13,8 +13,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- PDBe Molstar -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pdbe-molstar@3.2.0/build/pdbe-molstar-light.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pdbe-molstar@3.2.0/build/pdbe-molstar-plugin.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/pdbe-molstar@3.2.0/build/pdbe-molstar-light.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/pdbe-molstar@3.2.0/build/pdbe-molstar-plugin.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
@@ -24,8 +26,9 @@
 
     <header class="hero">
         <div class="container">
-            <img src="assets/logo.png" alt="SmartEpitope Logo" style="max-width: 600px; width: 100%; height: auto; margin-bottom: 0.5rem; display: inline-block;">
-            <p class="subtitle">Hibrit İstatistiksel ve Protein Dil Modelleri (ESM-2) ile viral proteinlerdeki evrimsel çıkmaz sokakların ve ideal bağlanma bölgelerinin tespiti.</p>
+            <img src="assets/logo.png" alt="SmartEpitope Logo"
+                style="max-width: 600px; width: 100%; height: auto; margin-bottom: 0.5rem; display: inline-block;">
+            <p class="subtitle">Evrimsel korunmuşluk analizleri ve ESM-2 tabanlı protein dil modelleri kullanılarak viral antijenler üzerindeki potansiyel terapötik hedeflerin saptanması.</p>
         </div>
     </header>
 
@@ -33,29 +36,59 @@
         <section class="pipeline-section">
             <div class="container">
                 <h2 class="section-title">SmartEpitope Metodolojisi ve Kullanılan Araçlar</h2>
-                <div class="methodology-content" style="background-color: var(--color-surface); padding: 2.5rem; border: 1px solid var(--color-border); border-radius: 6px; line-height: 1.8; color: var(--color-text-muted);">
+                <div class="methodology-content"
+                    style="background-color: var(--color-surface); padding: 2.5rem; border: 1px solid var(--color-border); border-radius: 6px; line-height: 1.8; color: var(--color-text-muted);">
                     <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-                        SmartEpitope, viral proteinler üzerinde ideal <strong>terapötik hedefleri (bağlanma bölgeleri)</strong> keşfetmek için biyoenformatik araçları ve gelişmiş derin öğrenme modellerini (LLMs) birleştiren hibrit bir platformdur. Amacımız, virüsün mutasyona uğratamayacağı "evrimsel çıkmaz sokakları" bulmak ve bu bölgelerin fiziksel olarak ilaç/antikor bağlanmasına uygunluğunu doğrulamaktır.
+                        SmartEpitope, viral proteinler üzerinde ideal <strong>terapötik hedefleri (bağlanma
+                            bölgeleri)</strong> keşfetmek için biyoenformatik araçları ve gelişmiş derin öğrenme
+                        modellerini (LLMs) birleştiren hibrit bir platformdur. Amacımız, virüsün mutasyona
+                        uğratamayacağı "evrimsel çıkmaz sokakları" bulmak ve bu bölgelerin fiziksel olarak ilaç/antikor
+                        bağlanmasına uygunluğunu doğrulamaktır.
                     </p>
 
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">1. Veri Madenciliği ve Evrimsel Hizalama (NCBI & MAFFT)</h3>
+                    <h3
+                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
+                        1. Veri Madenciliği ve Evrimsel Hizalama (NCBI & MAFFT)</h3>
                     <p style="margin-bottom: 1.5rem;">
-                        İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı viral varyant sekansı (örneğin SARS-CoV-2 için 380+ sekans) otomatik olarak çekilir. Bu sekanslar, yüksek performanslı <strong>MAFFT (Multiple Alignment using Fast Fourier Transform)</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino asit pozisyonu için <em>Shannon Entropisi</em> hesaplanarak, virüsün mutasyona direndiği (korunmuş) cepler istatistiksel olarak haritalanır.
+                        İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı
+                        viral varyant sekansı (örneğin SARS-CoV-2 için 380+ sekans) otomatik olarak çekilir. Bu
+                        sekanslar, yüksek performanslı <strong>MAFFT (Multiple Alignment using Fast Fourier
+                            Transform)</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino
+                        asit pozisyonu için <em>Shannon Entropisi</em> hesaplanarak, virüsün mutasyona direndiği
+                        (korunmuş) cepler istatistiksel olarak haritalanır.
                     </p>
 
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">2. Yapay Zeka ile Yapısal Yaşamsallık Doğrulaması (Meta ESM-2)</h3>
+                    <h3
+                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
+                        2. Yapay Zeka ile Yapısal Yaşamsallık Doğrulaması (Meta ESM-2)</h3>
                     <p style="margin-bottom: 1.5rem;">
-                        Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu aşamada Meta'nın geliştirdiği <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil modeli devreye girer. ESM-2, milyarlarca parametresiyle proteinin dilini anlar ve ilgili korunmuş bölgeye in-silico (sanal) mutasyonlar uygulayarak proteinin yapısının bozulup bozulmayacağını (yaşamsallık) tahmin eder. Yapıyı en çok bozan bölgeler, virüsün zayıf karnı olarak <strong>AI Skoru</strong> ile ödüllendirilir.
+                        Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu
+                        aşamada Meta'nın geliştirdiği <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil
+                        modeli devreye girer. ESM-2, milyarlarca parametresiyle proteinin dilini anlar ve ilgili
+                        korunmuş bölgeye in-silico (sanal) mutasyonlar uygulayarak proteinin yapısının bozulup
+                        bozulmayacağını (yaşamsallık) tahmin eder. Yapıyı en çok bozan bölgeler, virüsün zayıf karnı
+                        olarak <strong>AI Skoru</strong> ile ödüllendirilir.
                     </p>
 
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">3. Yüzey Erişilebilirliği ve 3D Modelleme (SASA & PDBe-Molstar)</h3>
+                    <h3
+                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
+                        3. Yüzey Erişilebilirliği ve 3D Modelleme (SASA & PDBe-Molstar)</h3>
                     <p style="margin-bottom: 1.5rem;">
-                        Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın veya antikorun oraya ulaşması imkansızdır. PDB (Protein Data Bank) verileri kullanılarak hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri ile bölgenin fiziksel olarak dışarıya açıklığı doğrulanır. Nihai sonuçlar, profesyonel <strong>PDBe-Molstar</strong> 3D kütüphanesi üzerinden araştırmacıya interaktif olarak sunulur.
+                        Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın
+                        veya antikorun oraya ulaşması imkansızdır. PDB (Protein Data Bank) verileri kullanılarak
+                        hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri ile bölgenin
+                        fiziksel olarak dışarıya açıklığı doğrulanır. Nihai sonuçlar, profesyonel
+                        <strong>PDBe-Molstar</strong> 3D kütüphanesi üzerinden araştırmacıya interaktif olarak sunulur.
                     </p>
 
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">4. Hibrit Skorlama (S_final)</h3>
+                    <h3
+                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
+                        4. Hibrit Skorlama (S_final)</h3>
                     <p>
-                        Tüm bu veriler, istatistiksel korunmuşluk ve yapay zeka güven skorunu birleştiren dinamik bir formül ($$S_{final}$$) ile ağırlıklandırılır. Algoritma, her virüsün evrimsel hızına göre bu ağırlıkları otomatik optimize ederek en güvenilir <strong>Top 3 Bağlanma Bölgesini</strong> tespit eder.
+                        Tüm bu veriler, istatistiksel korunmuşluk ve yapay zeka güven skorunu birleştiren dinamik bir
+                        formül ($$S_{final}$$) ile ağırlıklandırılır. Algoritma, her virüsün evrimsel hızına göre bu
+                        ağırlıkları otomatik optimize ederek en güvenilir <strong>Top 3 Bağlanma Bölgesini</strong>
+                        tespit eder.
                     </p>
                 </div>
             </div>
@@ -67,7 +100,7 @@
 
                 <div class="analysis-dashboard">
                     <h2>SmartEpitope Analiz Paneli</h2>
-                    
+
                     <div class="control-group">
                         <label for="virus-select">Hedef Virüsü Seçin:</label>
                         <select id="virus-select">
@@ -89,37 +122,52 @@
                     </div>
 
                     <div class="ml-info">
-                        <p><strong>Hibrit Skorlama Modeli:</strong> 
+                        <p><strong>Hibrit Skorlama Modeli:</strong>
                             <span id="formula-display">S_final = 0.5 * Stats + 0.5 * AI</span>
                         </p>
-                        <small id="ml-status">* SARS-CoV-2 için ML ile optimize edilmiş ağırlıklar kullanılmaktadır.</small>
+                        <small id="ml-status">* SARS-CoV-2 için ML ile optimize edilmiş ağırlıklar
+                            kullanılmaktadır.</small>
                     </div>
                 </div>
 
                 <div class="lab-container" style="flex-direction: column;">
-                    <div id="myViewer" class="molstar-container" style="height: 700px; border-bottom: 1px solid var(--color-border); border-bottom-left-radius: 0; border-bottom-right-radius: 0;"></div>
-                    
-                    <div style="padding: 2rem; background: var(--color-surface); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
-                        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text-main); border-left: 4px solid var(--color-deep-bio-blue); padding-left: 1rem;">Seçilen 3 Sekans Bölgesi (Top 3 Candidates)</h3>
+                    <div id="myViewer" class="molstar-container"
+                        style="height: 700px; border-bottom: 1px solid var(--color-border); border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                    </div>
+
+                    <div
+                        style="padding: 2rem; background: var(--color-surface); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                        <h3
+                            style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text-main); border-left: 4px solid var(--color-deep-bio-blue); padding-left: 1rem;">
+                            Seçilen 3 Sekans Bölgesi (Top 3 Candidates)</h3>
                         <div class="metrics-grid" id="top-candidates-grid">
                             <!-- Cards will be dynamically injected here by JS -->
                         </div>
                         <div style="margin-top: 2rem; text-align: center;">
-                            <a href="data/final_targets.json" download="final_targets.json" class="btn btn-primary" style="display: inline-block;">Tüm Analiz Verilerini İndir (.JSON)</a>
+                            <a href="data/final_targets.json" download="final_targets.json" class="btn btn-primary"
+                                style="display: inline-block;">Tüm Analiz Verilerini İndir (.JSON)</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="lab-container" style="margin-top: 2rem; padding: 2rem; display: flex; gap: 2rem;">
                     <div style="flex: 1;">
-                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-text-main);">Yapısal Görünüm Özeti</h3>
-                        <p id="structural-desc" style="color: var(--color-text-muted);"><strong>7K8S</strong> protein yapısının 3D analizi. Renkli bölgeler, seçilen hedefler için potansiyel aday bölgeleri temsil eder.</p>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-text-main);">Yapısal
+                            Görünüm Özeti</h3>
+                        <p id="structural-desc" style="color: var(--color-text-muted);"><strong>7K8S</strong> protein
+                            yapısının 3D analizi. Renkli bölgeler, seçilen hedefler için potansiyel aday bölgeleri
+                            temsil eder.</p>
                     </div>
 
-                    <div class="formula-box" style="flex: 1; background-color: var(--color-bg); padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
-                        <h4 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: 0.5rem;">Hibrit Skorlama Formülü</h4>
-                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Sıralama algoritması, istatistiksel korunmuşluk ve AI-tahminli kararlılığın dengeli birleşimidir.</p>
-                        <div class="math-formula" style="background-color: var(--color-surface); padding: 1rem; border-radius: 4px; border: 1px solid var(--color-border); color: var(--color-action-red); font-weight: bold; text-align: center; font-family: monospace; font-size: 1.1rem;">
+                    <div class="formula-box"
+                        style="flex: 1; background-color: var(--color-bg); padding: 1.5rem; border: 1px solid var(--color-border); border-radius: 4px;">
+                        <h4
+                            style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: 0.5rem;">
+                            Hibrit Skorlama Formülü</h4>
+                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Sıralama
+                            algoritması, istatistiksel korunmuşluk ve AI-tahminli kararlılığın dengeli birleşimidir.</p>
+                        <div class="math-formula"
+                            style="background-color: var(--color-surface); padding: 1rem; border-radius: 4px; border: 1px solid var(--color-border); color: var(--color-action-red); font-weight: bold; text-align: center; font-family: monospace; font-size: 1.1rem;">
                             $$S_{final} = 0.5 \cdot Stats + 0.5 \cdot AI$$
                         </div>
                     </div>
@@ -129,16 +177,14 @@
     </main>
 
     <footer>
-        <div class="container developer-profile" style="text-align: center;">
-            <h5>Gökberk Çelebi</h5>
-            <p>İYTE Biyomühendislik Öğrencisi. Terapötik inovasyon ve protein mühendisliği odaklı lisans araştırmacısı.</p>
-            
-            <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; gap: 5px;">
-                <a href="https://gkcelebi.me" target="_blank" style="color: var(--color-text-muted); text-decoration: none; font-weight: 700; border-bottom: 1px solid transparent; transition: border-color 0.2s;">gkcelebi.me</a>
-                <span>tarafından</span>
-                <img src="assets/heart.png" alt="Kalp" style="width: 22px; height: 22px; vertical-align: middle; margin: 0 2px;">
-                <span>ile yapılmıştır</span>
-            </div>
+        <div
+            style="margin-top: 0.1rem; font-size: 1rem; color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <a href="https://gkcelebi.me" target="_blank"
+                style="color: var(--color-text-muted); text-decoration: none; font-weight: 700; border-bottom: 1px solid transparent; transition: border-color 0.2s;">gkcelebi.me</a>
+            <span>tarafından</span>
+            <img src="assets/heart.png" alt="Kalp"
+                style="width: 25px; height: 25px; vertical-align: middle; margin: 0 2px;">
+            <span>ile geliştirildi</span>
         </div>
     </footer>
 
