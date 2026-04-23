@@ -159,14 +159,35 @@ function renderMolstarStyles() {
 function startAutomatedAnalysis() {
     const selected = document.getElementById('virus-select').value;
     const overlay = document.getElementById('loading-overlay');
+    const fill = document.getElementById('progress-fill');
+    const statusText = document.getElementById('status-text');
+    
     overlay.style.display = 'flex';
+    fill.style.width = '0%';
+    
+    const steps = [
+        "Veri Setleri Yükleniyor...",
+        "MSA Hizalaması Yapılıyor...",
+        "ESM-2 Analizi Yürütülüyor...",
+        "SASA ve Yüzey Erişilebilirliği Hesaplanıyor...",
+        "Model Hazırlanıyor..."
+    ];
+    
     let step = 0;
+    const totalSteps = steps.length;
+    
     const interval = setInterval(() => {
-        step++;
-        if (step >= 5) {
+        if (step < totalSteps) {
+            statusText.innerText = steps[step];
+            const progress = ((step + 1) / totalSteps) * 100;
+            fill.style.width = `${progress}%`;
+            step++;
+        } else {
             clearInterval(interval);
-            overlay.style.display = 'none';
-            updateInterface(selected);
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                updateInterface(selected);
+            }, 500);
         }
-    }, 500);
+    }, 800);
 }
