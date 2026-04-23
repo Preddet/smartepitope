@@ -304,29 +304,29 @@
                 </div>
 
                 <div class="optimization-details" style="margin-top: 3rem; background-color: var(--color-surface); padding: 2.5rem; border-radius: 6px; border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Sistem Kendi Kendini Nasıl Doğruluyor? (Kapalı Döngü Optimizasyonu)</h3>
+                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Model Doğrulama ve Hiperparametre Optimizasyonu</h3>
                     <p style="margin-bottom: 1rem;">
-                        SmartEpitope, varsayılan olarak "sıfır bilgi (zero-shot)" prensibiyle çalışır; yani dışarıdan hiçbir kopya çekmeden sadece istatistiksel entropi ve ESM-2 modeline dayanarak tahmin yapar. Ancak bu tahminlerin bilimsel geçerliliğini kanıtlamak ve modelin limitlerini keşfetmek için arka planda Python tabanlı bir <strong>Hiperparametre Optimizasyon Motoru (Grid Search)</strong> çalışmaktadır.
+                        SmartEpitope modeli, istatistiksel evrimsel korunmuşluk ve ESM-2 protein dil modelini kullanarak terapötik hedefler önerir. Bu önerilerin güvenilirliğini test etmek ve sistem parametrelerini iyileştirmek amacıyla literatür verilerine dayalı bir kapalı döngü (closed-loop) optimizasyon süreci uygulanmaktadır.
                     </p>
                     
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Altın Standart (Ground Truth) Verisinin Hazırlanması</h4>
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Referans Veri Setinin (Ground Truth) Kurulması</h4>
                     <p style="margin-bottom: 1rem;">
-                        İlk olarak, IEDB (Immune Epitope Database) ve PDB kompleks yapı analizleri taranarak her üç virüs için de literatürde kesin olarak kanıtlanmış "gerçek epitop" koordinatları sisteme tanıtılır. (Örneğin; SARS-CoV-2 için RBD Motif [980-990], NTD Supersite [140-158] gibi bölgeler).
+                        IEDB (Immune Epitope Database) ve PDB kayıtlarındaki biyokimyasal olarak doğrulanmış antikor bağlanma bölgeleri, model için yapısal referans noktaları olarak sisteme tanımlanır. (Örn; SARS-CoV-2 için yapısal NTD Supersite [140-158] bölgesi).
                     </p>
                     
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Doğruluk (Accuracy) Metriğinin Kurulması</h4>
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Algoritma Performansının Değerlendirilmesi</h4>
                     <p style="margin-bottom: 1rem;">
-                        Sistemin ürettiği "Top 3" bölge adaylarının pozisyon aralıkları, literatürdeki bu "Altın Standart" aralıklarla kıyaslanır. Tahmin edilen amino asit penceresi literatürdeki hedefle fiziksel olarak kesişirse (IoU - Kesişim/Birleşim mantığı), o tahmin başarılı (Hit) sayılır. Başarı oranı, 3 adaydan kaçının gerçek hedefleri vurduğuyla ölçülür.
+                        Modelin en yüksek skorla önerdiği bölgeler, tanımlanan referans bölgeler ile pozisyonel bazda (kesişim/birleşim - IoU metoduyla) karşılaştırılır. Tahmin edilen amino asit dizilimi ile referans dizilim arasındaki örtüşme yüzdesi üzerinden algoritmik isabet oranı (Accuracy) nicel olarak hesaplanır.
                     </p>
                     
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Çok Boyutlu Uzayda Izgara Araması (Grid Search)</h4>
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Çok Değişkenli Parametre Optimizasyonu (Grid Search)</h4>
                     <p style="margin-bottom: 1rem;">
-                        Sistem; <em>SASA Eşiğini</em> (15'ten 35'e kadar), <em>Pencere Boyutunu</em> (3'ten 9'a kadar) ve ESM-2 ile İstatistikler arasındaki <em>Ağırlık Sapması (AI Bias)</em> parametrelerini otomatik olarak değiştirerek aynı analizi <strong>120 farklı kombinasyonda</strong> tekrar tekrar çalıştırır. Her iterasyonda yeni bir $S_{final}$ skoru hesaplanır ve yeni bir "Top 3" listesi çıkartılarak doğruluk skoru (Accuracy) tekrar ölçülür.
+                        Optimizasyon algoritması; modelin kullandığı <em>Yüzey Erişilebilirliği (SASA) Eşiğini</em> (15-35 Å²), incelenen <em>Amino Asit Pencere Boyutunu</em> (3-9 AA) ve model bileşenleri (ESM-2 vs. İstatistik) arasındaki <em>Ağırlık Dağılım Katsayısını</em> sistematik olarak tarar. Toplam 120 farklı parametre konfigürasyonu test edilerek hesaplamalar yinelenir.
                     </p>
                     
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Sonuç ve Evrim</h4>
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Optimizasyon Sonucu</h4>
                     <p style="margin-bottom: 0;">
-                        Optimizasyon motoru, yukarıdaki kartlarda gördüğünüz en yüksek doğruluk oranını veren <strong>"Altın Parametreleri"</strong> bulana kadar modeli zorlar. Bu sayede insan müdahalesi olmadan, dış doğrulama verisi sayesinde modelin isabetliliği (SARS-CoV-2'de %100'e kadar) maksimize edilmiş olur. Yukarıda listelenen parametreler, literatür ile algoritmanın en çok uzlaştığı matematiksel zirveleri temsil eder.
+                        Iterasyonlar sonucunda, yukarıdaki tablolarda raporlanan en yüksek isabet oranını sağlayan optimum parametre seti tespit edilir. Bu işlem, analitik öngörülerin literatür verisiyle desteklenerek modelin hedef bulma kapasitesinin sistematik olarak maksimize edilmesini sağlar.
                     </p>
                 </div>
         </section>
