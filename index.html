@@ -45,32 +45,36 @@
                             bölgeleri)</strong> keşfetmek için biyoenformatik araçları ve gelişmiş derin öğrenme
                         modellerini (LLMs) birleştiren hibrit bir platformdur. Amacımız, virüsün mutasyona
                         uğratamayacağı "evrimsel çıkmaz sokakları" bulmak ve bu bölgelerin fiziksel olarak ilaç/antikor
-                        bağlanmasına uygunluğunu doğrulamaktır. Tüm analiz boru hattı aşağıda adım adım matematiksel formülleriyle özetlenmiştir.
+                        bağlanmasına uygunluğunu doğrulamaktır. Tüm analiz boru hattı aşağıda adım adım matematiksel
+                        formülleriyle özetlenmiştir.
                     </p>
 
                     <div style="display: flex; flex-direction: column; gap: 2.5rem;">
-                        
+
                         <!-- Adım 1 -->
                         <div class="pipeline-step-detailed">
                             <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 0.5rem;">
                                 1. Veri Madenciliği ve Evrimsel Hizalama (NCBI & MAFFT)
                             </h3>
                             <p style="margin-bottom: 1rem;">
-                                İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı
-                                viral varyant sekansı (örneğin SARS-CoV-2 için 380+ sekans) otomatik olarak çekilir. Bu
-                                sekanslar, yüksek performanslı <strong>MAFFT</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino
-                                asit pozisyonu için <em>Shannon Entropisi</em> hesaplanarak, virüsün mutasyona direndiği
-                                (korunmuş) cepler istatistiksel olarak haritalanır.
+                                İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı viral varyant sekansı otomatik olarak çekilir. Bu sekanslar, yüksek performanslı <strong>MAFFT</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino asit pozisyonu için Python'un <code>math</code> kütüphanesi kullanılarak <em>Shannon Entropisi</em> hesaplanır ve virüsün mutasyona direndiği korunmuş cepler istatistiksel olarak haritalanır.
                             </p>
-                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
-                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
-                                    $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad \text{Stats}(i) =
+                            <div
+                                style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                                <h4
+                                    style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                    Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
+                                <div class="math-formula"
+                                    style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
+                                    $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad
+                                    \text{Stats}(i) =
                                     1 - \frac{H(i)}{H_{\max}}$$
                                 </div>
                                 <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
-                                    Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını, \(\mathcal{A}\)
-                                    20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise maksimum
+                                    Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını,
+                                    \(\mathcal{A}\)
+                                    20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise
+                                    maksimum
                                     entropiyi ifade eder. Korunmuş pozisyonlarda \(H(i) \approx 0\) ve \(\text{Stats}(i)
                                     \approx 1\) olur.
                                 </p>
@@ -83,21 +87,25 @@
                                 2. Yapay Zeka ile Yapısal Yaşamsallık Doğrulaması (Meta ESM-2)
                             </h3>
                             <p style="margin-bottom: 1rem;">
-                                Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu
-                                aşamada Meta'nın geliştirdiği 150 Milyon parametreli <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil
-                                modeli devreye girer. ESM-2, protein dizisindeki her pozisyon için in-silico mutasyonlar uygulayarak proteinin yapısının bozulup
-                                bozulmayacağını tahmin eder.
+                                Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu aşamada Meta'nın geliştirdiği 150 Milyon parametreli <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil modeli devreye girer. Python tabanlı <code>Transformers (Hugging Face)</code> ve <code>PyTorch</code> kütüphaneleri kullanılarak çalıştırılan bu model, protein dizisindeki her pozisyon için in-silico mutasyonlar uygulayarak proteinin yapısal kararlılığını tahmin eder.
                             </p>
-                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
-                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
-                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
+                            <div
+                                style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
+                                <h4
+                                    style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                    ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
+                                <div class="math-formula"
+                                    style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
                                     $$\ell(i) = \log P_{\theta}\!\left(x_i \mid \mathbf{x}_{\setminus i}\right), \qquad
                                     \text{AI}(i) = \frac{1}{1 + |\ell(i)|}$$
                                 </div>
                                 <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
                                     Burada \(P_\theta\) ESM-2 modelinin parametrelerini, \(x_i\) pozisyon \(i\)'deki
-                                    gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan tüm diziyi temsil eder.
-                                    Yüksek mutlak \(|\ell(i)|\) (çok negatif log-olasılık), o pozisyondaki amino asidin model tarafından oldukça beklenmedik/özgün bulunduğunu ve yapısal açıdan değiştirilemez derecede kritik olduğunu gösterir.
+                                    gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan tüm diziyi
+                                    temsil eder.
+                                    Yüksek mutlak \(|\ell(i)|\) (çok negatif log-olasılık), o pozisyondaki amino asidin
+                                    model tarafından oldukça beklenmedik/özgün bulunduğunu ve yapısal açıdan
+                                    değiştirilemez derecede kritik olduğunu gösterir.
                                 </p>
                             </div>
                         </div>
@@ -108,18 +116,25 @@
                                 3. Yüzey Erişilebilirliği ve 3D Modelleme (SASA)
                             </h3>
                             <p style="margin-bottom: 1rem;">
-                                Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın
-                                veya antikorun oraya ulaşması (sterik engel nedeniyle) imkansızdır. PDB verileri kullanılarak
-                                Shrake-Rupley algoritması ile hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri, bölgenin
-                                fiziksel olarak solvente açıklığını doğrular.
+                                Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın veya antikorun oraya ulaşması imkansızdır. <strong>Biopython (Bio.PDB.SASA)</strong> kütüphanesi ve Shrake-Rupley algoritması kullanılarak hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri, bölgenin fiziksel olarak solvente açıklığını 3D koordinatlar üzerinden doğrular.
                             </p>
-                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #10b981; border-radius: 6px; padding: 1.5rem;">
-                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Solvent Erişilebilir Yüzey Alanı &nbsp;<code>SASA(i)</code></h4>
-                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #10b981;">
-                                    $$\text{SASA}(i) \approx \sum_{j \in \text{Atoms}(i)} 4\pi (R_j + r_w)^2 \cdot \frac{P_j}{N} > 25 \, \text{\AA}^2$$
+                            <div
+                                style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #10b981; border-radius: 6px; padding: 1.5rem;">
+                                <h4
+                                    style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                    Solvent Erişilebilir Yüzey Alanı &nbsp;<code>SASA(i)</code></h4>
+                                <div class="math-formula"
+                                    style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #10b981;">
+                                    $$\text{SASA}(i) \approx \sum_{j \in \text{Atoms}(i)} 4\pi (R_j + r_w)^2 \cdot
+                                    \frac{P_j}{N} > 25 \, \text{\AA}^2$$
                                 </div>
                                 <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
-                                    Shrake-Rupley algoritmasında, her atom \(j\) için van der Waals yarıçapı \(R_j\) ve su molekülü prob yarıçapı \(r_w \approx 1.4 \, \text{\AA}\) kullanılır. Atomların yüzeyine \(N\) adet test noktası yerleştirilir ve solventle temas eden (başka atomlar tarafından engellenmeyen) nokta sayısı \(P_j\) hesaplanarak alan bulunur. Toplam alanı \(25 \, \text{\AA}^2\)'nin altında olan pozisyonlar hedeflenebilirlik açısından <strong>elenecektir</strong>.
+                                    Shrake-Rupley algoritmasında, her atom \(j\) için van der Waals yarıçapı \(R_j\) ve
+                                    su molekülü prob yarıçapı \(r_w \approx 1.4 \, \text{\AA}\) kullanılır. Atomların
+                                    yüzeyine \(N\) adet test noktası yerleştirilir ve solventle temas eden (başka
+                                    atomlar tarafından engellenmeyen) nokta sayısı \(P_j\) hesaplanarak alan bulunur.
+                                    Toplam alanı \(25 \, \text{\AA}^2\)'nin altında olan pozisyonlar hedeflenebilirlik
+                                    açısından <strong>elenecektir</strong>.
                                 </p>
                             </div>
                         </div>
@@ -130,31 +145,48 @@
                                 4. Dinamik Ağırlıklandırma ve Hibrit Skorlama (S_final)
                             </h3>
                             <p style="margin-bottom: 1rem;">
-                                Her amino asit pozisyonu için hesaplanan istatistiksel ve yapay zeka skorları, virüse özgü dinamik ağırlıklarla
-                                birleştirilerek nihai sıralama skoru elde edilir. Ağırlıklar her virüsün kendine has evrimsel ve yapısal varyans profiline göre algoritma tarafından otomatik ayarlanır.
+                                Her amino asit pozisyonu için hesaplanan istatistiksel ve yapay zeka skorları, virüse
+                                özgü dinamik ağırlıklarla
+                                birleştirilerek nihai sıralama skoru elde edilir. Ağırlıklar her virüsün kendine has
+                                evrimsel ve yapısal varyans profiline göre algoritma tarafından otomatik ayarlanır.
                             </p>
                             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
-                                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Dinamik Ağırlık Hesabı</h4>
-                                    <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
-                                        $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}}, \qquad w_S =
+                                <div
+                                    style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
+                                    <h4
+                                        style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                        Dinamik Ağırlık Hesabı</h4>
+                                    <div class="math-formula"
+                                        style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
+                                        $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}},
+                                        \qquad w_S =
                                         1 - w_{AI}$$
                                     </div>
                                     <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
-                                        Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein genelindeki
-                                        standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha iyi ayrım
-                                        yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök dönüşümü,
+                                        Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein
+                                        genelindeki
+                                        standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha
+                                        iyi ayrım
+                                        yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök
+                                        dönüşümü,
                                         aşırı uç ağırlıklar üretilmesini önler.
                                     </p>
                                 </div>
 
-                                <div style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
-                                    <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
+                                <div
+                                    style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                                    <h4
+                                        style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">
+                                        Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
+                                    <div class="math-formula"
+                                        style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
                                         $$S_{\text{final}}(i) = w_S \cdot \text{Stats}(i) + w_{AI} \cdot \text{AI}(i)$$
                                     </div>
-                                    <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0; color: var(--color-text-muted);">
-                                        SASA filtresini geçen pozisyonlar arasında en yüksek \(S_{\text{final}}\) skoruna sahip olan yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong> olarak belirlenir ve panelde görselleştirilir.
+                                    <p
+                                        style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0; color: var(--color-text-muted);">
+                                        SASA filtresini geçen pozisyonlar arasında en yüksek \(S_{\text{final}}\)
+                                        skoruna sahip olan yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong>
+                                        olarak belirlenir ve panelde görselleştirilir.
                                     </p>
                                 </div>
                             </div>
@@ -176,8 +208,8 @@
                     <div class="control-group">
                         <label for="virus-select">Hedef Virüsü Seçin:</label>
                         <select id="virus-select">
-                            <option value="sars2">SARS-CoV-2 (Spike Proteini)</option>
-                            <option value="sars1">SARS-CoV-1 (2003 Salgını)</option>
+                            <option value="sars2">SARS-CoV-2</option>
+                            <option value="sars1">SARS-CoV-1</option>
                             <option value="flu">Influenza A (H1N1)</option>
                         </select>
                         <button onclick="startAutomatedAnalysis()" class="primary-btn">Analizi Başlat</button>
@@ -225,90 +257,148 @@
 
             </div>
         </section>
-    </main>        <section class="optimization-demo-section" style="background-color: var(--color-bg); border-top: 1px solid var(--color-border); padding: 4rem 0;">
-            <div class="container">
-                <h2 class="section-title">Kapalı Döngü Optimizasyon Modülü (Feedback Loop Demo)</h2>
-                <p style="text-align: center; color: var(--color-text-muted); max-width: 800px; margin: 0 auto 2rem auto;">
-                    Bu modül, arka planda çalışan makine öğrenmesi algoritmasının deneme-yanılma (Grid Search) yöntemiyle hiperparametrelerini ayarlamasını simüle eder. Amaç: Sistem tarafından tahmin edilen bölgelerin, literatürdeki "Altın Standart" (Ground Truth) bölgelerle kesişim (IoU) oranını maksimize etmektir.
+    </main>
+    <section class="optimization-demo-section"
+        style="background-color: var(--color-bg); border-top: 1px solid var(--color-border); padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Kapalı Döngü Optimizasyon Modülü (Feedback Loop Demo)</h2>
+            <p style="text-align: center; color: var(--color-text-muted); max-width: 800px; margin: 0 auto 2rem auto;">
+                Bu modül, arka planda çalışan makine öğrenmesi algoritmasının deneme-yanılma (Grid Search) yöntemiyle
+                hiperparametrelerini ayarlamasını simüle eder. Amaç: Sistem tarafından tahmin edilen bölgelerin,
+                literatürdeki "Altın Standart" (Ground Truth) bölgelerle kesişim (IoU) oranını maksimize etmektir.
+            </p>
+
+            <div class="optimization-container"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- SARS-2 -->
+                <div class="metric-card" style="border-top: 4px solid var(--color-deep-bio-blue);">
+                    <span class="badge"
+                        style="background-color: var(--color-deep-bio-blue); color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-2</span>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum
+                        Doğruluk (Accuracy):</p>
+                    <div
+                        style="font-size: 2.5rem; font-weight: 800; color: var(--color-deep-bio-blue); margin-bottom: 1rem;">
+                        %100.0</div>
+                    <div
+                        style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                        <strong>En İyi Parametreler:</strong><br><br>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA
+                            Eşiği: <span>> 15.0 Å²</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere
+                            Boyutu: <span>7 Amino Asit</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats
+                            Ağırlığı: <span>0.50</span></span>
+                        <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.50</span></span>
+                    </div>
+                </div>
+
+                <!-- SARS-1 -->
+                <div class="metric-card" style="border-top: 4px solid #f59e0b;">
+                    <span class="badge"
+                        style="background-color: #f59e0b; color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-1</span>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum
+                        Doğruluk (Accuracy):</p>
+                    <div style="font-size: 2.5rem; font-weight: 800; color: #f59e0b; margin-bottom: 1rem;">%66.7</div>
+                    <div
+                        style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                        <strong>En İyi Parametreler:</strong><br><br>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA
+                            Eşiği: <span>> 15.0 Å²</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere
+                            Boyutu: <span>3 Amino Asit</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats
+                            Ağırlığı: <span>0.65</span></span>
+                        <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.35</span></span>
+                    </div>
+                </div>
+
+                <!-- FLU -->
+                <div class="metric-card" style="border-top: 4px solid var(--color-action-red);">
+                    <span class="badge"
+                        style="background-color: var(--color-action-red); color: white; border: none; margin-bottom:1rem; display:inline-block;">Influenza
+                        A</span>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum
+                        Doğruluk (Accuracy):</p>
+                    <div
+                        style="font-size: 2.5rem; font-weight: 800; color: var(--color-action-red); margin-bottom: 1rem;">
+                        %66.7</div>
+                    <div
+                        style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
+                        <strong>En İyi Parametreler:</strong><br><br>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA
+                            Eşiği: <span>> 15.0 Å²</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere
+                            Boyutu: <span>3 Amino Asit</span></span>
+                        <span
+                            style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats
+                            Ağırlığı: <span>0.71</span></span>
+                        <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.29</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <p style="font-size: 0.9rem; color: var(--color-text-muted); font-style: italic;">
+                    * Sistem her virüs için 120 farklı hiperparametre kombinasyonu (Grid Search) test etmiştir.
+                </p>
+            </div>
+
+            <div class="optimization-details"
+                style="margin-top: 3rem; background-color: var(--color-surface); padding: 2.5rem; border-radius: 6px; border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.8;">
+                <h3
+                    style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">
+                    Model Doğrulama ve Hiperparametre Optimizasyonu</h3>
+                <p style="margin-bottom: 1rem;">
+                    SmartEpitope modeli, istatistiksel evrimsel korunmuşluk ve ESM-2 protein dil modelini kullanarak
+                    terapötik hedefler önerir. Bu önerilerin güvenilirliğini test etmek ve sistem parametrelerini
+                    iyileştirmek amacıyla literatür verilerine dayalı bir kapalı döngü (closed-loop) optimizasyon süreci
+                    uygulanmaktadır.
                 </p>
 
-                <div class="optimization-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                    <!-- SARS-2 -->
-                    <div class="metric-card" style="border-top: 4px solid var(--color-deep-bio-blue);">
-                        <span class="badge" style="background-color: var(--color-deep-bio-blue); color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-2</span>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
-                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-deep-bio-blue); margin-bottom: 1rem;">%100.0</div>
-                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
-                            <strong>En İyi Parametreler:</strong><br><br>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>7 Amino Asit</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.50</span></span>
-                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.50</span></span>
-                        </div>
-                    </div>
+                <h4
+                    style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                    1. Referans Veri Setinin (Ground Truth) Kurulması</h4>
+                <p style="margin-bottom: 1rem;">
+                    IEDB (Immune Epitope Database) ve PDB kayıtlarındaki biyokimyasal olarak doğrulanmış antikor
+                    bağlanma bölgeleri, model için yapısal referans noktaları olarak sisteme tanımlanır. (Örn;
+                    SARS-CoV-2 için yapısal NTD Supersite [140-158] bölgesi).
+                </p>
 
-                    <!-- SARS-1 -->
-                    <div class="metric-card" style="border-top: 4px solid #f59e0b;">
-                        <span class="badge" style="background-color: #f59e0b; color: white; border: none; margin-bottom:1rem; display:inline-block;">SARS-CoV-1</span>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
-                        <div style="font-size: 2.5rem; font-weight: 800; color: #f59e0b; margin-bottom: 1rem;">%66.7</div>
-                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
-                            <strong>En İyi Parametreler:</strong><br><br>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>3 Amino Asit</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.65</span></span>
-                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.35</span></span>
-                        </div>
-                    </div>
+                <h4
+                    style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                    2. Algoritma Performansının Değerlendirilmesi</h4>
+                <p style="margin-bottom: 1rem;">
+                    Modelin en yüksek skorla önerdiği bölgeler, tanımlanan referans bölgeler ile pozisyonel bazda
+                    (kesişim/birleşim - IoU metoduyla) karşılaştırılır. Tahmin edilen amino asit dizilimi ile referans
+                    dizilim arasındaki örtüşme yüzdesi üzerinden algoritmik isabet oranı (Accuracy) nicel olarak
+                    hesaplanır.
+                </p>
 
-                    <!-- FLU -->
-                    <div class="metric-card" style="border-top: 4px solid var(--color-action-red);">
-                        <span class="badge" style="background-color: var(--color-action-red); color: white; border: none; margin-bottom:1rem; display:inline-block;">Influenza A</span>
-                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">Maksimum Doğruluk (Accuracy):</p>
-                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--color-action-red); margin-bottom: 1rem;">%66.7</div>
-                        <div style="background-color: #f8fafc; padding: 1rem; border-radius: 4px; border: 1px solid #e2e8f0; font-size: 0.85rem;">
-                            <strong>En İyi Parametreler:</strong><br><br>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">SASA Eşiği: <span>> 15.0 Å²</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Pencere Boyutu: <span>3 Amino Asit</span></span>
-                            <span style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">Stats Ağırlığı: <span>0.71</span></span>
-                            <span style="display:flex; justify-content:space-between;">AI Ağırlığı: <span>0.29</span></span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 2rem; text-align: center;">
-                    <p style="font-size: 0.9rem; color: var(--color-text-muted); font-style: italic;">
-                        * Sistem her virüs için 120 farklı hiperparametre kombinasyonu (Grid Search) test etmiştir.
-                    </p>
-                </div>
+                <h4
+                    style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                    3. Çok Değişkenli Parametre Optimizasyonu (Grid Search)</h4>
+                <p style="margin-bottom: 1rem;">
+                    Optimizasyon algoritması, Python'un <code>itertools</code> kütüphanesini kullanarak; modelin kullandığı <em>Yüzey Erişilebilirliği (SASA) Eşiğini</em> (15-35 Å²), incelenen <em>Amino Asit Pencere Boyutunu</em> (3-9 AA) ve model bileşenleri (ESM-2 vs. İstatistik) arasındaki <em>Ağırlık Dağılım Katsayısını</em> sistematik olarak tarar. Toplam 120 farklı parametre konfigürasyonu test edilerek hesaplamalar yinelenir.
+                </p>
 
-                <div class="optimization-details" style="margin-top: 3rem; background-color: var(--color-surface); padding: 2.5rem; border-radius: 6px; border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Model Doğrulama ve Hiperparametre Optimizasyonu</h3>
-                    <p style="margin-bottom: 1rem;">
-                        SmartEpitope modeli, istatistiksel evrimsel korunmuşluk ve ESM-2 protein dil modelini kullanarak terapötik hedefler önerir. Bu önerilerin güvenilirliğini test etmek ve sistem parametrelerini iyileştirmek amacıyla literatür verilerine dayalı bir kapalı döngü (closed-loop) optimizasyon süreci uygulanmaktadır.
-                    </p>
-                    
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Referans Veri Setinin (Ground Truth) Kurulması</h4>
-                    <p style="margin-bottom: 1rem;">
-                        IEDB (Immune Epitope Database) ve PDB kayıtlarındaki biyokimyasal olarak doğrulanmış antikor bağlanma bölgeleri, model için yapısal referans noktaları olarak sisteme tanımlanır. (Örn; SARS-CoV-2 için yapısal NTD Supersite [140-158] bölgesi).
-                    </p>
-                    
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Algoritma Performansının Değerlendirilmesi</h4>
-                    <p style="margin-bottom: 1rem;">
-                        Modelin en yüksek skorla önerdiği bölgeler, tanımlanan referans bölgeler ile pozisyonel bazda (kesişim/birleşim - IoU metoduyla) karşılaştırılır. Tahmin edilen amino asit dizilimi ile referans dizilim arasındaki örtüşme yüzdesi üzerinden algoritmik isabet oranı (Accuracy) nicel olarak hesaplanır.
-                    </p>
-                    
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Çok Değişkenli Parametre Optimizasyonu (Grid Search)</h4>
-                    <p style="margin-bottom: 1rem;">
-                        Optimizasyon algoritması; modelin kullandığı <em>Yüzey Erişilebilirliği (SASA) Eşiğini</em> (15-35 Å²), incelenen <em>Amino Asit Pencere Boyutunu</em> (3-9 AA) ve model bileşenleri (ESM-2 vs. İstatistik) arasındaki <em>Ağırlık Dağılım Katsayısını</em> sistematik olarak tarar. Toplam 120 farklı parametre konfigürasyonu test edilerek hesaplamalar yinelenir.
-                    </p>
-                    
-                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Optimizasyon Sonucu</h4>
-                    <p style="margin-bottom: 0;">
-                        Iterasyonlar sonucunda, yukarıdaki tablolarda raporlanan en yüksek isabet oranını sağlayan optimum parametre seti tespit edilir. Bu işlem, analitik öngörülerin literatür verisiyle desteklenerek modelin hedef bulma kapasitesinin sistematik olarak maksimize edilmesini sağlar.
-                    </p>
-                </div>
-        </section>
+                <h4
+                    style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                    Optimizasyon Sonucu</h4>
+                <p style="margin-bottom: 0;">
+                    Iterasyonlar sonucunda, yukarıdaki tablolarda raporlanan en yüksek isabet oranını sağlayan optimum
+                    parametre seti tespit edilir. Bu işlem, analitik öngörülerin literatür verisiyle desteklenerek
+                    modelin hedef bulma kapasitesinin sistematik olarak maksimize edilmesini sağlar.
+                </p>
+            </div>
+    </section>
 
     <footer>
         <div
