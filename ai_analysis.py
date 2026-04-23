@@ -48,6 +48,19 @@ def get_ai_scores(sequence):
         
     return ai_scores
 
+def compute_weights(stats_vals, ai_vals):
+    """Sqrt-variance orantılı ağırlık hesaplaması.
+    Daha büyük standart sapma = daha ayırt edici sinyal = daha yüksek ağırlık.
+    Sqrt alınır çünkü ham varyans aşırı uç ağırlıklar üretir."""
+    import math, statistics
+    std_s = statistics.stdev(stats_vals) if len(stats_vals) > 1 else 1.0
+    std_a = statistics.stdev(ai_vals)    if len(ai_vals)    > 1 else 1.0
+    sq_s = math.sqrt(std_s)
+    sq_a = math.sqrt(std_a)
+    w_a = round(sq_a / (sq_s + sq_a), 2)
+    w_s = round(1 - w_a, 2)
+    return w_s, w_a
+
 def process_ai_for_virus(pdb_file, stats_json, output_json):
     if not os.path.exists(stats_json) or not os.path.exists(pdb_file):
         print(f"Hata: Gerekli dosyalar bulunamadı.")
@@ -64,19 +77,27 @@ def process_ai_for_virus(pdb_file, stats_json, output_json):
     with open(stats_json, 'r') as f:
         stats_data = json.load(f)
     
+    stats_vals = [item['score'] for item in stats_data]
+    ai_vals    = [ai_dict.get(item['pos'], 0.0) for item in stats_data]
+    
+    w_s, w_a = compute_weights(stats_vals, ai_vals)
+    print(f"   -> Ağırlıklar otomatik hesaplandı: Stats={w_s}, AI={w_a}")
+    
     hybrid_results = []
     for item in stats_data:
-        res_id = item['pos']
+        res_id   = item['pos']
         stats_val = item['score']
-        ai_val = ai_dict.get(res_id, 0.0)
+        ai_val    = ai_dict.get(res_id, 0.0)
         
-        hybrid_score = (stats_val * 0.5) + (ai_val * 0.5)
+        hybrid_score = (stats_val * w_s) + (ai_val * w_a)
         
         hybrid_results.append({
-            "pos": res_id,
+            "pos":         res_id,
             "stats_score": stats_val,
-            "ai_score": ai_val,
-            "final_score": round(hybrid_score, 4)
+            "ai_score":    ai_val,
+            "final_score": round(hybrid_score, 4),
+            "w_stats":     w_s,
+            "w_ai":        w_a
         })
     
     with open(output_json, "w") as f:
