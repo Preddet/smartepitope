@@ -27,9 +27,9 @@ const configurations = {
 };
 
 const candidateColorsRGB = [
-    {r: 239, g: 68, b: 68},  // Kırmızı
-    {r: 59,  g: 130, b: 246}, // Mavi
-    {r: 16,  g: 185, b: 129}  // Yeşil
+    { r: 239, g: 68, b: 68 },  // Kırmızı
+    { r: 59, g: 130, b: 246 }, // Mavi
+    { r: 16, g: 185, b: 129 }  // Yeşil
 ];
 
 let viewerInstance = null;
@@ -66,19 +66,19 @@ async function updateInterface(virusKey) {
 
         // JSON'dan ağırlıkları oku (ilk adayın w_stats/w_ai değerlerini kullan)
         const w_s = currentTop3Data[0]?.w_stats ?? 0.5;
-        const w_a = currentTop3Data[0]?.w_ai   ?? 0.5;
+        const w_a = currentTop3Data[0]?.w_ai ?? 0.5;
         const formulaStr = `$$S_{final} = ${w_s.toFixed(2)} \\cdot Stats + ${w_a.toFixed(2)} \\cdot AI$$`;
         document.getElementById('formula-display').innerText = formulaStr;
         document.getElementById('ml-status').innerText = `* ${config.name} için otomatik hesaplanmış ağırlıklar: Stats=${w_s.toFixed(2)}, AI=${w_a.toFixed(2)}`;
         if (window.MathJax) MathJax.typesetPromise();
-        
-        grid.innerHTML = ''; 
+
+        grid.innerHTML = '';
         currentTop3Data.forEach((candidate, index) => {
             const rgb = candidateColorsRGB[index];
             const hexColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
             const card = document.createElement('div');
             card.className = 'metric-card';
-            card.style.borderTopColor = hexColor; 
+            card.style.borderTopColor = hexColor;
 
             // Dizilimi doğrudan JSON'dan al
             const seqStr = candidate.seq_snippet || "N-A";
@@ -88,7 +88,7 @@ async function updateInterface(virusKey) {
             const endPosPdb = candidate.pos + 2;
 
             card.innerHTML = `
-                <span class="badge" style="background-color: ${hexColor}; color: white; border: none;">Aday ${index+1}</span>
+                <span class="badge" style="background-color: ${hexColor}; color: white; border: none;">Aday ${index + 1}</span>
                 <h4>${config.typeMapping[index]}</h4>
                 <div style="background-color: #f8fafc; padding: 0.5rem; border-radius: 4px; border: 1px solid #e2e8f0; font-family: monospace; font-size: 1.1rem; text-align: center; margin: 10px 0; color: ${hexColor}; font-weight: bold; letter-spacing: 2px;">
                     ${seqStr}
@@ -117,23 +117,23 @@ function loadProteinStructure(pdbPath) {
     const options = {
         customData: { url: pdbPath, format: 'pdb' },
         assemblyId: '1', // Biyolojik asambleyi (tekil trimer) göstermeye zorlar
-        bgColor: {r: 255, g: 255, b: 255},
+        bgColor: { r: 255, g: 255, b: 255 },
         hideControls: false,
         hideSequencePanel: false, // Molstar sekans panelini göster
         sequencePanel: true,
         landscape: true,
         visualStyle: 'cartoon'
     };
-    
+
     const viewerContainer = document.getElementById('myViewer');
     viewerInstance.render(viewerContainer, options);
-    
+
     // Sekans panelini açık tutmaya zorla
     setTimeout(() => {
         if (viewerInstance && viewerInstance.plugin && viewerInstance.plugin.layout) {
-            viewerInstance.plugin.layout.setProps({ 
+            viewerInstance.plugin.layout.setProps({
                 showSequence: true,
-                regionState: { top: 'show', right: 'show' } 
+                regionState: { top: 'show', right: 'show' }
             });
         }
         renderMolstarStyles();
@@ -149,9 +149,9 @@ function loadProteinStructure(pdbPath) {
 
 function renderMolstarStyles() {
     if (!viewerInstance || !viewerInstance.visual) return;
-    
+
     let selectionData = [];
-    
+
     currentTop3Data.forEach((candidate, index) => {
         for (let i = -2; i <= 2; i++) {
             selectionData.push({
@@ -165,7 +165,7 @@ function renderMolstarStyles() {
 
     viewerInstance.visual.select({
         data: selectionData,
-        nonSelectedColor: {r: 220, g: 220, b: 220}
+        nonSelectedColor: { r: 220, g: 220, b: 220 }
     });
 }
 
@@ -174,10 +174,10 @@ function startAutomatedAnalysis() {
     const overlay = document.getElementById('loading-overlay');
     const fill = document.getElementById('progress-fill');
     const statusText = document.getElementById('status-text');
-    
+
     overlay.style.display = 'flex';
     fill.style.width = '0%';
-    
+
     const steps = [
         "Veri Setleri Yükleniyor...",
         "MSA Hizalaması Yapılıyor...",
@@ -185,10 +185,10 @@ function startAutomatedAnalysis() {
         "SASA ve Yüzey Erişilebilirliği Hesaplanıyor...",
         "Model Hazırlanıyor..."
     ];
-    
+
     let step = 0;
     const totalSteps = steps.length;
-    
+
     const interval = setInterval(() => {
         if (step < totalSteps) {
             statusText.innerText = steps[step];
@@ -203,4 +203,22 @@ function startAutomatedAnalysis() {
             }, 500);
         }
     }, 800);
+}
+
+function downloadCurrentAnalysis() {
+    const config = configurations[currentVirusKey];
+    const filename = `smartepitope_${currentVirusKey}_top3.json`;
+
+    fetch(config.top3Json)
+        .then(res => res.json())
+        .then(data => {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        })
+        .catch(err => alert('İndirme hatası: ' + err.message));
 }

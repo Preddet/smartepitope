@@ -28,7 +28,9 @@
         <div class="container">
             <img src="assets/logo.png" alt="SmartEpitope Logo"
                 style="max-width: 600px; width: 100%; height: auto; margin-bottom: 0.5rem; display: inline-block;">
-            <p class="subtitle">Evrimsel korunmuşluk analizleri ve ESM-2 tabanlı protein dil modelleri kullanılarak viral antijenler üzerindeki potansiyel terapötik hedeflerin saptanması.</p>
+            <p class="subtitle">SmartEpitope, evrimsel korunmuşluk analizleri ve ESM-2 protein dil modelini
+                kullanarak viral antijenler üzerindeki potansiyel terapötik hedeflerin saptanmasını hedefleyen
+                deneysel bir platformdur.</p>
         </div>
     </header>
 
@@ -94,49 +96,85 @@
                     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
 
                         <!-- Bileşen 1: Stats -->
-                        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">① Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Pozisyon <em>i</em>'de gözlemlenen amino asit dağılımının Shannon Entropisi hesaplanır, ardından normalize edilerek korunmuşluk skoruna dönüştürülür:</p>
-                            <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
-                                $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad \text{Stats}(i) = 1 - \frac{H(i)}{H_{\max}}$$
+                        <div
+                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                            <h4
+                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                ① Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Pozisyon <em>i</em>'de gözlemlenen amino
+                                asit dağılımının Shannon Entropisi hesaplanır, ardından normalize edilerek korunmuşluk
+                                skoruna dönüştürülür:</p>
+                            <div class="math-formula"
+                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
+                                $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad \text{Stats}(i) =
+                                1 - \frac{H(i)}{H_{\max}}$$
                             </div>
                             <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını, \(\mathcal{A}\) 20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise maksimum entropiyi ifade eder. Korunmuş pozisyonlarda \(H(i) \approx 0\) ve \(\text{Stats}(i) \approx 1\) olur.
+                                Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını, \(\mathcal{A}\)
+                                20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise maksimum
+                                entropiyi ifade eder. Korunmuş pozisyonlarda \(H(i) \approx 0\) ve \(\text{Stats}(i)
+                                \approx 1\) olur.
                             </p>
                         </div>
 
                         <!-- Bileşen 2: AI -->
-                        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
-                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">② ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Meta ESM-2 modeli, protein dizisindeki her pozisyon için masked token log-olasılığı üretir. Bu değer normalize edilerek bir yaşamsallık skoru elde edilir:</p>
-                            <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
-                                $$\ell(i) = \log P_{\theta}\!\left(x_i \mid \mathbf{x}_{\setminus i}\right), \qquad \text{AI}(i) = \frac{1}{1 + |\ell(i)|}$$
+                        <div
+                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
+                            <h4
+                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                ② ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Meta ESM-2 modeli, protein dizisindeki
+                                her pozisyon için masked token log-olasılığı üretir. Bu değer normalize edilerek bir
+                                yaşamsallık skoru elde edilir:</p>
+                            <div class="math-formula"
+                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
+                                $$\ell(i) = \log P_{\theta}\!\left(x_i \mid \mathbf{x}_{\setminus i}\right), \qquad
+                                \text{AI}(i) = \frac{1}{1 + |\ell(i)|}$$
                             </div>
                             <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(P_\theta\) ESM-2 modelinin parametrelerini, \(x_i\) pozisyon \(i\)'deki gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan diziyi temsil eder. Yüksek \(|\ell(i)|\), oradaki amino asidin model tarafından beklenmedik bulunduğunu — yani o bölgenin yapısal olarak kritik olduğunu — gösterir.
+                                Burada \(P_\theta\) ESM-2 modelinin parametrelerini, \(x_i\) pozisyon \(i\)'deki
+                                gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan diziyi temsil eder.
+                                Yüksek \(|\ell(i)|\), oradaki amino asidin model tarafından beklenmedik bulunduğunu —
+                                yani o bölgenin yapısal olarak kritik olduğunu — gösterir.
                             </p>
                         </div>
 
                         <!-- Bileşen 3: Ağırlıklar -->
-                        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
-                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">③ Dinamik Ağırlık Hesabı</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Her virüsün evrimsel hızı farklı olduğundan ağırlıklar sabit tutulmaz. Her sinyalin standart sapmasının karekökleri kullanılarak orantılı ağırlık atanır:</p>
-                            <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
-                                $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}}, \qquad w_S = 1 - w_{AI}$$
+                        <div
+                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
+                            <h4
+                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
+                                ③ Dinamik Ağırlık Hesabı</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Her virüsün evrimsel hızı farklı
+                                olduğundan ağırlıklar sabit tutulmaz. Her sinyalin standart sapmasının karekökleri
+                                kullanılarak orantılı ağırlık atanır:</p>
+                            <div class="math-formula"
+                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
+                                $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}}, \qquad w_S =
+                                1 - w_{AI}$$
                             </div>
                             <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein genelindeki standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha iyi ayrım yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök dönüşümü, aşırı uç ağırlıklar üretilmesini önler.
+                                Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein genelindeki
+                                standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha iyi ayrım
+                                yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök dönüşümü,
+                                aşırı uç ağırlıklar üretilmesini önler.
                             </p>
                         </div>
 
                         <!-- Nihai Formül -->
-                        <div style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">④ Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
-                            <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
+                        <div
+                            style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                            <h4
+                                style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">
+                                ④ Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
+                            <div class="math-formula"
+                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
                                 $$S_{\text{final}}(i) = w_S \cdot \text{Stats}(i) + w_{AI} \cdot \text{AI}(i)$$
                             </div>
                             <p style="font-size: 0.85rem; margin-top: 0.75rem; color: var(--color-text-muted);">
-                                Bu skor yalnızca SASA filtresi geçen (<em>yüzeye açık</em>, \(\text{SASA} > 25\,\text{Å}^2\)) pozisyonlar arasında değerlendirilir. En yüksek \(S_{\text{final}}\) skoruna sahip yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong> olarak raporlanır.
+                                Bu skor yalnızca SASA filtresi geçen (<em>yüzeye açık</em>, \(\text{SASA} >
+                                25\,\text{Å}^2\)) pozisyonlar arasında değerlendirilir. En yüksek \(S_{\text{final}}\)
+                                skoruna sahip yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong> olarak raporlanır.
                             </p>
                         </div>
 
@@ -191,13 +229,13 @@
                         style="padding: 2rem; background: var(--color-surface); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
                         <h3
                             style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text-main); border-left: 4px solid var(--color-deep-bio-blue); padding-left: 1rem;">
-                            Seçilen 3 Sekans Bölgesi (Top 3 Candidates)</h3>
+                            Seçilen 3 Sekans Bölgesi</h3>
                         <div class="metrics-grid" id="top-candidates-grid">
                             <!-- Cards will be dynamically injected here by JS -->
                         </div>
                         <div style="margin-top: 2rem; text-align: center;">
-                            <a href="data/final_targets.json" download="final_targets.json" class="btn btn-primary"
-                                style="display: inline-block;">Tüm Analiz Verilerini İndir (.JSON)</a>
+                            <button onclick="downloadCurrentAnalysis()" class="btn btn-primary"
+                                style="display: inline-block; cursor: pointer;">Analiz Verilerini İndir (.JSON)</button>
                         </div>
                     </div>
                 </div>
