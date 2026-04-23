@@ -7,6 +7,7 @@ const configurations = {
         top3Json: "data/sars2_final_top3.json",
         weights: "$$S_{final} = 0.62 \\cdot Stats + 0.38 \\cdot AI$$",
         structuralDesc: "<strong>7K8S (Spike Proteini)</strong> 3D analizi. Renkli bölgeler, tespit edilen farklı hedeflerdir.",
+        mlStatus: "* SARS-CoV-2 için ML ile optimize edilmiş ağırlıklar kullanılmaktadır.",
         typeMapping: { 0: "Aday Bölge 1", 1: "Aday Bölge 2", 2: "Aday Bölge 3" }
     },
     sars1: {
@@ -16,6 +17,7 @@ const configurations = {
         top3Json: "data/sars1_final_top3.json",
         weights: "$$S_{final} = 0.50 \\cdot Stats + 0.50 \\cdot AI$$",
         structuralDesc: "<strong>5X58</strong> 3D analizi. SARS-CoV-1 için evrimsel korunmuş bölgeler.",
+        mlStatus: "* SARS-CoV-1 için dengeli (eşit ağırlıklı) hibrit model kullanılmaktadır.",
         typeMapping: { 0: "Aday Bölge 1", 1: "Aday Bölge 2", 2: "Aday Bölge 3" }
     },
     flu: {
@@ -25,6 +27,7 @@ const configurations = {
         top3Json: "data/flu_final_top3.json",
         weights: "$$S_{final} = 0.55 \\cdot Stats + 0.45 \\cdot AI$$",
         structuralDesc: "<strong>1RVX (Hemagglutinin)</strong> 3D analizi. Antijenik sürüklenmeye dirençli adaylar.",
+        mlStatus: "* Influenza A için evrimsel hıza göre uyarlanmış dinamik ağırlıklar kullanılmaktadır.",
         typeMapping: { 0: "Aday Bölge 1", 1: "Aday Bölge 2", 2: "Aday Bölge 3" }
     }
 };
@@ -49,6 +52,7 @@ async function updateInterface(virusKey) {
     const config = configurations[virusKey];
     document.getElementById('formula-display').innerText = config.weights;
     document.getElementById('structural-desc').innerHTML = config.structuralDesc;
+    document.getElementById('ml-status').innerText = config.mlStatus;
     if (window.MathJax) MathJax.typesetPromise();
 
     const grid = document.getElementById('top-candidates-grid');
