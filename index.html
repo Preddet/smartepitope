@@ -45,137 +45,119 @@
                             bölgeleri)</strong> keşfetmek için biyoenformatik araçları ve gelişmiş derin öğrenme
                         modellerini (LLMs) birleştiren hibrit bir platformdur. Amacımız, virüsün mutasyona
                         uğratamayacağı "evrimsel çıkmaz sokakları" bulmak ve bu bölgelerin fiziksel olarak ilaç/antikor
-                        bağlanmasına uygunluğunu doğrulamaktır.
+                        bağlanmasına uygunluğunu doğrulamaktır. Tüm analiz boru hattı aşağıda adım adım matematiksel formülleriyle özetlenmiştir.
                     </p>
 
-                    <h3
-                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
-                        1. Veri Madenciliği ve Evrimsel Hizalama (NCBI & MAFFT)</h3>
-                    <p style="margin-bottom: 1.5rem;">
-                        İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı
-                        viral varyant sekansı (örneğin SARS-CoV-2 için 380+ sekans) otomatik olarak çekilir. Bu
-                        sekanslar, yüksek performanslı <strong>MAFFT (Multiple Alignment using Fast Fourier
-                            Transform)</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino
-                        asit pozisyonu için <em>Shannon Entropisi</em> hesaplanarak, virüsün mutasyona direndiği
-                        (korunmuş) cepler istatistiksel olarak haritalanır.
-                    </p>
-
-                    <h3
-                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
-                        2. Yapay Zeka ile Yapısal Yaşamsallık Doğrulaması (Meta ESM-2)</h3>
-                    <p style="margin-bottom: 1.5rem;">
-                        Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu
-                        aşamada Meta'nın geliştirdiği <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil
-                        modeli devreye girer. ESM-2, milyarlarca parametresiyle proteinin dilini anlar ve ilgili
-                        korunmuş bölgeye in-silico (sanal) mutasyonlar uygulayarak proteinin yapısının bozulup
-                        bozulmayacağını (yaşamsallık) tahmin eder. Yapıyı en çok bozan bölgeler, virüsün zayıf karnı
-                        olarak <strong>AI Skoru</strong> ile ödüllendirilir.
-                    </p>
-
-                    <h3
-                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
-                        3. Yüzey Erişilebilirliği ve 3D Modelleme (SASA & PDBe-Molstar)</h3>
-                    <p style="margin-bottom: 1.5rem;">
-                        Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın
-                        veya antikorun oraya ulaşması imkansızdır. PDB (Protein Data Bank) verileri kullanılarak
-                        hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri ile bölgenin
-                        fiziksel olarak dışarıya açıklığı doğrulanır. Nihai sonuçlar, profesyonel
-                        <strong>PDBe-Molstar</strong> 3D kütüphanesi üzerinden araştırmacıya interaktif olarak sunulur.
-                    </p>
-
-                    <h3
-                        style="color: var(--color-text-main); font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.5rem;">
-                        4. Hibrit Skorlama Modeli — Türetim ve Formüller</h3>
-                    <p style="margin-bottom: 1.5rem;">
-                        Her amino asit pozisyonu için hesaplanan bileşen skorları, virüse özgü dinamik ağırlıklarla
-                        birleştirilerek nihai sıralama skoru elde edilir. Aşağıda her adımın matematiksel temeli
-                        verilmektedir.
-                    </p>
-
-                    <!-- Formül Kartları -->
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-
-                        <!-- Bileşen 1: Stats -->
-                        <div
-                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                            <h4
-                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
-                                ① Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Pozisyon <em>i</em>'de gözlemlenen amino
-                                asit dağılımının Shannon Entropisi hesaplanır, ardından normalize edilerek korunmuşluk
-                                skoruna dönüştürülür:</p>
-                            <div class="math-formula"
-                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
-                                $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad \text{Stats}(i) =
-                                1 - \frac{H(i)}{H_{\max}}$$
-                            </div>
-                            <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını, \(\mathcal{A}\)
-                                20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise maksimum
-                                entropiyi ifade eder. Korunmuş pozisyonlarda \(H(i) \approx 0\) ve \(\text{Stats}(i)
-                                \approx 1\) olur.
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        
+                        <!-- Adım 1 -->
+                        <div class="pipeline-step-detailed">
+                            <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 0.5rem;">
+                                1. Veri Madenciliği ve Evrimsel Hizalama (NCBI & MAFFT)
+                            </h3>
+                            <p style="margin-bottom: 1rem;">
+                                İlk aşamada, <strong>NCBI</strong> ve <strong>UniProt</strong> veritabanlarından yüzlerce farklı
+                                viral varyant sekansı (örneğin SARS-CoV-2 için 380+ sekans) otomatik olarak çekilir. Bu
+                                sekanslar, yüksek performanslı <strong>MAFFT</strong> algoritması kullanılarak hizalanır. Hizalama sonucunda her bir amino
+                                asit pozisyonu için <em>Shannon Entropisi</em> hesaplanarak, virüsün mutasyona direndiği
+                                (korunmuş) cepler istatistiksel olarak haritalanır.
                             </p>
+                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Evrimsel Korunmuşluk Skoru &nbsp;<code>Stats(i)</code></h4>
+                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-deep-bio-blue);">
+                                    $$H(i) = -\sum_{a \in \mathcal{A}} p_a^{(i)} \log_2 p_a^{(i)}, \qquad \text{Stats}(i) =
+                                    1 - \frac{H(i)}{H_{\max}}$$
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
+                                    Burada \(p_a^{(i)}\) amino asit \(a\)'nın \(i\) kolonundaki frekansını, \(\mathcal{A}\)
+                                    20 standart amino asit kümesini, \(H_{\max} = \log_2(20) \approx 4{,}322\) ise maksimum
+                                    entropiyi ifade eder. Korunmuş pozisyonlarda \(H(i) \approx 0\) ve \(\text{Stats}(i)
+                                    \approx 1\) olur.
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- Bileşen 2: AI -->
-                        <div
-                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
-                            <h4
-                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
-                                ② ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Meta ESM-2 modeli, protein dizisindeki
-                                her pozisyon için masked token log-olasılığı üretir. Bu değer normalize edilerek bir
-                                yaşamsallık skoru elde edilir:</p>
-                            <div class="math-formula"
-                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
-                                $$\ell(i) = \log P_{\theta}\!\left(x_i \mid \mathbf{x}_{\setminus i}\right), \qquad
-                                \text{AI}(i) = \frac{1}{1 + |\ell(i)|}$$
-                            </div>
-                            <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(P_\theta\) ESM-2 modelinin parametrelerini, \(x_i\) pozisyon \(i\)'deki
-                                gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan diziyi temsil eder.
-                                Yüksek \(|\ell(i)|\), oradaki amino asidin model tarafından beklenmedik bulunduğunu —
-                                yani o bölgenin yapısal olarak kritik olduğunu — gösterir.
+                        <!-- Adım 2 -->
+                        <div class="pipeline-step-detailed">
+                            <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 0.5rem;">
+                                2. Yapay Zeka ile Yapısal Yaşamsallık Doğrulaması (Meta ESM-2)
+                            </h3>
+                            <p style="margin-bottom: 1rem;">
+                                Sadece geçmişte mutasyona uğramamış olması, o bölgenin hedeflenebilir olduğunu kanıtlamaz. Bu
+                                aşamada Meta'nın geliştirdiği 150 Milyon parametreli <strong>ESM-2 (Evolutionary Scale Modeling)</strong> protein dil
+                                modeli devreye girer. ESM-2, protein dizisindeki her pozisyon için in-silico mutasyonlar uygulayarak proteinin yapısının bozulup
+                                bozulmayacağını tahmin eder.
                             </p>
+                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-action-red); border-radius: 6px; padding: 1.5rem;">
+                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">ESM-2 Yapısal Yaşamsallık Skoru &nbsp;<code>AI(i)</code></h4>
+                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: var(--color-action-red);">
+                                    $$\ell(i) = \log P_{\theta}\!\left(x_i \mid \mathbf{x}_{\setminus i}\right), \qquad
+                                    \text{AI}(i) = \frac{1}{1 + |\ell(i)|}$$
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
+                                    Burada \(P_\theta\) ESM-2 modelinin parametrelerini, \(x_i\) pozisyon \(i\)'deki
+                                    gözlemlenen amino asiti, \(\mathbf{x}_{\setminus i}\) ise geri kalan tüm diziyi temsil eder.
+                                    Yüksek mutlak \(|\ell(i)|\) (çok negatif log-olasılık), o pozisyondaki amino asidin model tarafından oldukça beklenmedik/özgün bulunduğunu ve yapısal açıdan değiştirilemez derecede kritik olduğunu gösterir.
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- Bileşen 3: Ağırlıklar -->
-                        <div
-                            style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
-                            <h4
-                                style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">
-                                ③ Dinamik Ağırlık Hesabı</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Her virüsün evrimsel hızı farklı
-                                olduğundan ağırlıklar sabit tutulmaz. Her sinyalin standart sapmasının karekökleri
-                                kullanılarak orantılı ağırlık atanır:</p>
-                            <div class="math-formula"
-                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
-                                $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}}, \qquad w_S =
-                                1 - w_{AI}$$
-                            </div>
-                            <p style="font-size: 0.85rem; margin-top: 0.75rem;">
-                                Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein genelindeki
-                                standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha iyi ayrım
-                                yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök dönüşümü,
-                                aşırı uç ağırlıklar üretilmesini önler.
+                        <!-- Adım 3 -->
+                        <div class="pipeline-step-detailed">
+                            <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 0.5rem;">
+                                3. Yüzey Erişilebilirliği ve 3D Modelleme (SASA)
+                            </h3>
+                            <p style="margin-bottom: 1rem;">
+                                Keşfedilen bölge ne kadar kritik olursa olsun, proteinin iç kısımlarına gömülmüşse bir ilacın
+                                veya antikorun oraya ulaşması (sterik engel nedeniyle) imkansızdır. PDB verileri kullanılarak
+                                Shrake-Rupley algoritması ile hesaplanan <strong>SASA (Solvent Accessible Surface Area)</strong> metrikleri, bölgenin
+                                fiziksel olarak solvente açıklığını doğrular.
                             </p>
+                            <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #10b981; border-radius: 6px; padding: 1.5rem;">
+                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Solvent Erişilebilir Yüzey Alanı &nbsp;<code>SASA(i)</code></h4>
+                                <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #10b981;">
+                                    $$\text{SASA}(i) \approx \sum_{j \in \text{Atoms}(i)} 4\pi (R_j + r_w)^2 \cdot \frac{P_j}{N} > 25 \, \text{\AA}^2$$
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
+                                    Shrake-Rupley algoritmasında, her atom \(j\) için van der Waals yarıçapı \(R_j\) ve su molekülü prob yarıçapı \(r_w \approx 1.4 \, \text{\AA}\) kullanılır. Atomların yüzeyine \(N\) adet test noktası yerleştirilir ve solventle temas eden (başka atomlar tarafından engellenmeyen) nokta sayısı \(P_j\) hesaplanarak alan bulunur. Toplam alanı \(25 \, \text{\AA}^2\)'nin altında olan pozisyonlar hedeflenebilirlik açısından <strong>elenecektir</strong>.
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- Nihai Formül -->
-                        <div
-                            style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
-                            <h4
-                                style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">
-                                ④ Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
-                            <div class="math-formula"
-                                style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
-                                $$S_{\text{final}}(i) = w_S \cdot \text{Stats}(i) + w_{AI} \cdot \text{AI}(i)$$
-                            </div>
-                            <p style="font-size: 0.85rem; margin-top: 0.75rem; color: var(--color-text-muted);">
-                                Bu skor yalnızca SASA filtresi geçen (<em>yüzeye açık</em>, \(\text{SASA} >
-                                25\,\text{Å}^2\)) pozisyonlar arasında değerlendirilir. En yüksek \(S_{\text{final}}\)
-                                skoruna sahip yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong> olarak raporlanır.
+                        <!-- Adım 4 -->
+                        <div class="pipeline-step-detailed">
+                            <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 0.5rem;">
+                                4. Dinamik Ağırlıklandırma ve Hibrit Skorlama (S_final)
+                            </h3>
+                            <p style="margin-bottom: 1rem;">
+                                Her amino asit pozisyonu için hesaplanan istatistiksel ve yapay zeka skorları, virüse özgü dinamik ağırlıklarla
+                                birleştirilerek nihai sıralama skoru elde edilir. Ağırlıklar her virüsün kendine has evrimsel ve yapısal varyans profiline göre algoritma tarafından otomatik ayarlanır.
                             </p>
+                            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid #a855f7; border-radius: 6px; padding: 1.5rem;">
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.5rem;">Dinamik Ağırlık Hesabı</h4>
+                                    <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid var(--color-border); color: #7c3aed;">
+                                        $$w_{AI} = \frac{\sqrt{\sigma_{AI}}}{\sqrt{\sigma_S} + \sqrt{\sigma_{AI}}}, \qquad w_S =
+                                        1 - w_{AI}$$
+                                    </div>
+                                    <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0;">
+                                        Burada \(\sigma_S\) ve \(\sigma_{AI}\), Stats ve AI skorlarının protein genelindeki
+                                        standart sapmalarıdır. Daha yüksek varyans, sinyalin pozisyonlar arasında daha iyi ayrım
+                                        yaptığını gösterir; dolayısıyla o bileşene daha fazla ağırlık verilir. Karekök dönüşümü,
+                                        aşırı uç ağırlıklar üretilmesini önler.
+                                    </p>
+                                </div>
+
+                                <div style="background: #eff6ff; border: 2px solid var(--color-deep-bio-blue); border-radius: 6px; padding: 1.5rem;">
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: var(--color-deep-bio-blue); margin-bottom: 0.5rem;">Nihai Sıralama Skoru &nbsp;<code>S_final(i)</code></h4>
+                                    <div class="math-formula" style="background: var(--color-surface); border-radius:4px; padding:1rem; border: 1px solid #bfdbfe; color: var(--color-deep-bio-blue); font-size: 1.2rem;">
+                                        $$S_{\text{final}}(i) = w_S \cdot \text{Stats}(i) + w_{AI} \cdot \text{AI}(i)$$
+                                    </div>
+                                    <p style="font-size: 0.85rem; margin-top: 0.75rem; margin-bottom: 0; color: var(--color-text-muted);">
+                                        SASA filtresini geçen pozisyonlar arasında en yüksek \(S_{\text{final}}\) skoruna sahip olan yüzey rezidüleri <strong>Top 3 Terapötik Hedef</strong> olarak belirlenir ve panelde görselleştirilir.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
