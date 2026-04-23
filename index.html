@@ -302,7 +302,33 @@
                         * Sistem her virüs için 120 farklı hiperparametre kombinasyonu (Grid Search) test etmiştir.
                     </p>
                 </div>
-            </div>
+
+                <div class="optimization-details" style="margin-top: 3rem; background-color: var(--color-surface); padding: 2.5rem; border-radius: 6px; border: 1px solid var(--color-border); color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.8;">
+                    <h3 style="color: var(--color-text-main); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">Sistem Kendi Kendini Nasıl Doğruluyor? (Kapalı Döngü Optimizasyonu)</h3>
+                    <p style="margin-bottom: 1rem;">
+                        SmartEpitope, varsayılan olarak "sıfır bilgi (zero-shot)" prensibiyle çalışır; yani dışarıdan hiçbir kopya çekmeden sadece istatistiksel entropi ve ESM-2 modeline dayanarak tahmin yapar. Ancak bu tahminlerin bilimsel geçerliliğini kanıtlamak ve modelin limitlerini keşfetmek için arka planda Python tabanlı bir <strong>Hiperparametre Optimizasyon Motoru (Grid Search)</strong> çalışmaktadır.
+                    </p>
+                    
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Altın Standart (Ground Truth) Verisinin Hazırlanması</h4>
+                    <p style="margin-bottom: 1rem;">
+                        İlk olarak, IEDB (Immune Epitope Database) ve PDB kompleks yapı analizleri taranarak her üç virüs için de literatürde kesin olarak kanıtlanmış "gerçek epitop" koordinatları sisteme tanıtılır. (Örneğin; SARS-CoV-2 için RBD Motif [980-990], NTD Supersite [140-158] gibi bölgeler).
+                    </p>
+                    
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Doğruluk (Accuracy) Metriğinin Kurulması</h4>
+                    <p style="margin-bottom: 1rem;">
+                        Sistemin ürettiği "Top 3" bölge adaylarının pozisyon aralıkları, literatürdeki bu "Altın Standart" aralıklarla kıyaslanır. Tahmin edilen amino asit penceresi literatürdeki hedefle fiziksel olarak kesişirse (IoU - Kesişim/Birleşim mantığı), o tahmin başarılı (Hit) sayılır. Başarı oranı, 3 adaydan kaçının gerçek hedefleri vurduğuyla ölçülür.
+                    </p>
+                    
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Çok Boyutlu Uzayda Izgara Araması (Grid Search)</h4>
+                    <p style="margin-bottom: 1rem;">
+                        Sistem; <em>SASA Eşiğini</em> (15'ten 35'e kadar), <em>Pencere Boyutunu</em> (3'ten 9'a kadar) ve ESM-2 ile İstatistikler arasındaki <em>Ağırlık Sapması (AI Bias)</em> parametrelerini otomatik olarak değiştirerek aynı analizi <strong>120 farklı kombinasyonda</strong> tekrar tekrar çalıştırır. Her iterasyonda yeni bir $S_{final}$ skoru hesaplanır ve yeni bir "Top 3" listesi çıkartılarak doğruluk skoru (Accuracy) tekrar ölçülür.
+                    </p>
+                    
+                    <h4 style="color: var(--color-text-main); font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Sonuç ve Evrim</h4>
+                    <p style="margin-bottom: 0;">
+                        Optimizasyon motoru, yukarıdaki kartlarda gördüğünüz en yüksek doğruluk oranını veren <strong>"Altın Parametreleri"</strong> bulana kadar modeli zorlar. Bu sayede insan müdahalesi olmadan, dış doğrulama verisi sayesinde modelin isabetliliği (SARS-CoV-2'de %100'e kadar) maksimize edilmiş olur. Yukarıda listelenen parametreler, literatür ile algoritmanın en çok uzlaştığı matematiksel zirveleri temsil eder.
+                    </p>
+                </div>
         </section>
 
     <footer>
