@@ -1,0 +1,440 @@
+:root {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+  --color-border: #e2e8f0;
+  
+  --color-action-red: #ef4444;
+  --color-action-red-hover: #dc2626;
+  --color-deep-bio-blue: #1d4ed8;
+  --color-deep-bio-blue-hover: #1e40af;
+  
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-action-red);
+  color: var(--color-surface);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-action-red-hover);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 5rem 0 3rem;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-deep-bio-blue);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero p.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+/* Methodology Pipeline */
+.pipeline-section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text-main);
+  border-left: 4px solid var(--color-deep-bio-blue);
+  padding-left: 1rem;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pipeline-step {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  border-radius: 6px;
+  position: relative;
+}
+
+.step-number {
+  display: inline-block;
+  background-color: var(--color-deep-bio-blue);
+  color: var(--color-surface);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pipeline-step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-step p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Interactive Lab */
+.interactive-lab-section {
+  padding: 2rem 0 4rem;
+}
+
+/* Analysis Dashboard */
+.analysis-dashboard {
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.control-group select {
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-container {
+    background: var(--color-surface);
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 350px;
+    border: 1px solid var(--color-border);
+}
+
+.loader-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--color-deep-bio-blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#status-text {
+    font-weight: 600;
+    color: var(--color-text-main);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--color-action-red);
+    transition: width 0.3s ease;
+}
+
+.primary-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    background: #34495e;
+}
+
+.ml-info {
+    margin-top: 15px;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.badge-vaccine {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.badge-drug {
+    background-color: #fce7f3;
+    color: #be185d;
+    border: 1px solid #fbcfe8;
+}
+
+.lab-container {
+  display: flex;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.lab-viewer {
+  flex: 1;
+  position: relative;
+  background-color: #111; /* Dark background for 3D viewer */
+}
+
+/* Math formula styling */
+.math-formula {
+  background-color: var(--color-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--color-deep-bio-blue);
+  border: 1px solid var(--color-border);
+}
+
+.lab-sidebar {
+  width: 320px;
+  padding: 2rem;
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+.lab-sidebar p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.lab-sidebar .formula-box {
+  margin-top: auto;
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.formula-box h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.formula-box .formula {
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-action-red);
+}
+
+/* PDBe Molstar Viewer Container */
+.molstar-container {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Discovery Metrics */
+.metrics-section {
+  padding: 2rem 0 5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.metric-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  border-radius: 6px;
+  border-top: 4px solid var(--color-action-red);
+}
+
+.metric-card h4 {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.metric-card p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-score {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-deep-bio-blue);
+  line-height: 1;
+}
+
+.metric-score span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.developer-profile {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.developer-profile h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.25rem;
+}
+
+.developer-profile p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .lab-container {
+    flex-direction: column;
+  }
+  
+  .lab-viewer {
+    min-height: 400px;
+  }
+  
+  .lab-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}

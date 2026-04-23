@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ep-001",
+    "name": "RBD-Region Alpha",
+    "sequence": "YQAGSTPCNGV",
+    "ai_score": 0.94,
+    "stats_score": 0.88,
+    "final_score": 0.91,
+    "conservation": "99.8%"
+  },
+  {
+    "id": "ep-002",
+    "name": "Spike-Stem Beta",
+    "sequence": "VIGIVNNTVYD",
+    "ai_score": 0.89,
+    "stats_score": 0.92,
+    "final_score": 0.905,
+    "conservation": "98.5%"
+  },
+  {
+    "id": "ep-003",
+    "name": "Membrane-Loop Gamma",
+    "sequence": "LALLLLDRLNQ",
+    "ai_score": 0.86,
+    "stats_score": 0.84,
+    "final_score": 0.85,
+    "conservation": "95.2%"
+  }
+]
