@@ -42,4 +42,4 @@ Sistem ağır hesaplamalar gerektirdiği için kodlar doğrudan tarayıcıda ça
 - `optimize_pipeline.py`: Kapalı döngü hiperparametre optimizasyonunu (Grid Search) gerçekleştirir.
 
 ### Demo Arayüzünü İnceleme
-Analiz sonuçlarını görselleştirmek için ek bir web sunucusuna ihtiyaç yoktur. Bilgisayarınızda (veya GitHub Pages üzerinde) `index.html` dosyasını açarak, işlenmiş verilerin 3 boyutlu sunumunu interaktif olarak inceleyebilirsiniz.
+Analiz sonuçlarını görselleştirmek için ek bir web sunucusuna ihtiyaç yoktur. Bilgisayarınızda  `index.html` dosyasını açarak veya smartepitope.gkcelebi.me üzerinden, işlenmiş verilerin 3 boyutlu sunumunu interaktif olarak inceleyebilirsiniz.
