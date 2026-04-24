@@ -1,18 +1,8242 @@
 {
     "sars2": [
-        {"name": "Literature Motif A", "range": [980, 990]},
-        {"name": "Receptor Binding Ridge", "range": [470, 490]},
-        {"name": "NTD Supersite", "range": [140, 158]},
-        {"name": "Fusion Peptide Region", "range": [950, 960]}
+        {
+            "name": "MFVFLVLLPLVS",
+            "range": [
+                1,
+                12
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972984
+        },
+        {
+            "name": "MFVFLVLLPLVSSQCVNLTTRT",
+            "range": [
+                1,
+                22
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116227
+        },
+        {
+            "name": "FVFFVLLPLV",
+            "range": [
+                2,
+                11
+            ],
+            "source": "IEDB",
+            "iedb_id": 1979368
+        },
+        {
+            "name": "FLVLLPLVSSQCVNL",
+            "range": [
+                4,
+                18
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001057
+        },
+        {
+            "name": "LVSSQCVNLTTRTQL",
+            "range": [
+                10,
+                24
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001200
+        },
+        {
+            "name": "NCYFPLQSYGFQPTY",
+            "range": [
+                11,
+                25
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860852
+        },
+        {
+            "name": "FPLQSYGFQPTYGVG",
+            "range": [
+                14,
+                28
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860829
+        },
+        {
+            "name": "CVNLTTRTQLPPAYTNSFTRGV",
+            "range": [
+                15,
+                36
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116171
+        },
+        {
+            "name": "QSYGFQPTYGVGYQP",
+            "range": [
+                17,
+                31
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860866
+        },
+        {
+            "name": "GFQPTYGVGYQPYRV",
+            "range": [
+                20,
+                34
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860833
+        },
+        {
+            "name": "PTYGVGYQPYRVVVL",
+            "range": [
+                23,
+                37
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860863
+        },
+        {
+            "name": "LPPAYTNSFTRGVYY",
+            "range": [
+                24,
+                38
+            ],
+            "source": "IEDB",
+            "iedb_id": 2124372
+        },
+        {
+            "name": "PPAYTNSFTRGVYYPDKVFR",
+            "range": [
+                25,
+                44
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868322
+        },
+        {
+            "name": "YTNSFTRGVYYPDKV",
+            "range": [
+                25,
+                39
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001413
+        },
+        {
+            "name": "AYTNSFTRGVYYPDKVFRSS",
+            "range": [
+                27,
+                46
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861097
+        },
+        {
+            "name": "AYTNSFTR",
+            "range": [
+                27,
+                34
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972958
+        },
+        {
+            "name": "YTNSFTRGVYYPDKV",
+            "range": [
+                28,
+                42
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001413
+        },
+        {
+            "name": "TRGVYYPDKVFRSSVLHSTQ",
+            "range": [
+                33,
+                52
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870014
+        },
+        {
+            "name": "GVYYPDKVF",
+            "range": [
+                35,
+                43
+            ],
+            "source": "IEDB",
+            "iedb_id": 1896317
+        },
+        {
+            "name": "YPDKVFRSSVLHSTQDLFLPFFSNVTW",
+            "range": [
+                38,
+                64
+            ],
+            "source": "IEDB",
+            "iedb_id": 1855234
+        },
+        {
+            "name": "YPDKVFRS",
+            "range": [
+                38,
+                45
+            ],
+            "source": "IEDB",
+            "iedb_id": 1973004
+        },
+        {
+            "name": "DKVFRSSVLHSTQDL",
+            "range": [
+                40,
+                54
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001015
+        },
+        {
+            "name": "FRSSVLHSTQDLFLPFFSNVTW",
+            "range": [
+                43,
+                64
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116183
+        },
+        {
+            "name": "SSVLHSTQDLFLP",
+            "range": [
+                45,
+                57
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873602
+        },
+        {
+            "name": "LHSTQDLFLPFFSNV",
+            "range": [
+                48,
+                62
+            ],
+            "source": "IEDB",
+            "iedb_id": 2124032
+        },
+        {
+            "name": "HSTQDLFLPFFSN",
+            "range": [
+                49,
+                61
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872219
+        },
+        {
+            "name": "QDLFLPFFSNVTWFH",
+            "range": [
+                52,
+                66
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001255
+        },
+        {
+            "name": "PFFSNVTWFHAIHVSGTNGT",
+            "range": [
+                57,
+                76
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868279
+        },
+        {
+            "name": "PFFSNVTWFHAIHVSGTNGTK",
+            "range": [
+                57,
+                77
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061084
+        },
+        {
+            "name": "PFFSNVTWFHAIHVSGTNGTKR",
+            "range": [
+                57,
+                78
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116248
+        },
+        {
+            "name": "FFSNVTWFHAIHVSG",
+            "range": [
+                58,
+                72
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001051
+        },
+        {
+            "name": "WFHAIHVSGTNGTKR",
+            "range": [
+                64,
+                78
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001386
+        },
+        {
+            "name": "FHAIHVSGTNGTKRFDNPVLPF",
+            "range": [
+                65,
+                86
+            ],
+            "source": "IEDB",
+            "iedb_id": 1948275
+        },
+        {
+            "name": "VSGTNGTKRFDNPVL",
+            "range": [
+                70,
+                84
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001382
+        },
+        {
+            "name": "SGTNGTKRFDNPVLPFNDGVYF",
+            "range": [
+                71,
+                92
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116269
+        },
+        {
+            "name": "PVLPFNDGVYFASTE",
+            "range": [
+                82,
+                96
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001252
+        },
+        {
+            "name": "PFNDGVYFASTEKSNIIRGWIF",
+            "range": [
+                85,
+                106
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116250
+        },
+        {
+            "name": "DGVYFASTEKSNIIR",
+            "range": [
+                88,
+                102
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001007
+        },
+        {
+            "name": "YFASTEKSNIIRGWIF",
+            "range": [
+                91,
+                106
+            ],
+            "source": "IEDB",
+            "iedb_id": 1708973
+        },
+        {
+            "name": "FASTEKSNI",
+            "range": [
+                92,
+                100
+            ],
+            "source": "IEDB",
+            "iedb_id": 1888578
+        },
+        {
+            "name": "STEKSNIIRGWIFGT",
+            "range": [
+                94,
+                108
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001324
+        },
+        {
+            "name": "KSNIIRGWIFGTTLDSKTQS",
+            "range": [
+                97,
+                116
+            ],
+            "source": "IEDB",
+            "iedb_id": 1867312
+        },
+        {
+            "name": "NIIRGWIFGTTLDSKTQSLLIV",
+            "range": [
+                99,
+                120
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116232
+        },
+        {
+            "name": "IIRGWIFGTTLDSKT",
+            "range": [
+                100,
+                114
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001115
+        },
+        {
+            "name": "TLDSKTQSLLIV",
+            "range": [
+                109,
+                120
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972998
+        },
+        {
+            "name": "SKTQSLLIVNNATNV",
+            "range": [
+                112,
+                126
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001304
+        },
+        {
+            "name": "KTQSLLIVNNATNVVIKVCEFQ",
+            "range": [
+                113,
+                134
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116217
+        },
+        {
+            "name": "LIVNNATNVVIKVCE",
+            "range": [
+                118,
+                132
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001184
+        },
+        {
+            "name": "NNATNVVIKVCE",
+            "range": [
+                121,
+                132
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972987
+        },
+        {
+            "name": "TNVVIKVCEFQFCND",
+            "range": [
+                124,
+                138
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001339
+        },
+        {
+            "name": "VIKVCEFQFCNDPFLGVYYHKN",
+            "range": [
+                127,
+                148
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116298
+        },
+        {
+            "name": "KVCEFQFCNDPFL",
+            "range": [
+                129,
+                141
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872669
+        },
+        {
+            "name": "VCEFQFCNDPFLGVY",
+            "range": [
+                130,
+                144
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001357
+        },
+        {
+            "name": "EFQFCNDPFLGVYYHKNNKSW",
+            "range": [
+                132,
+                152
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060991
+        },
+        {
+            "name": "FCNDPFLGVY",
+            "range": [
+                133,
+                142
+            ],
+            "source": "IEDB",
+            "iedb_id": 1888600
+        },
+        {
+            "name": "FQFCNYPFL",
+            "range": [
+                133,
+                141
+            ],
+            "source": "IEDB",
+            "iedb_id": 1979091
+        },
+        {
+            "name": "FCNDPFLGV",
+            "range": [
+                135,
+                143
+            ],
+            "source": "IEDB",
+            "iedb_id": 1888599
+        },
+        {
+            "name": "FCNDPFLGVY",
+            "range": [
+                135,
+                144
+            ],
+            "source": "IEDB",
+            "iedb_id": 1888600
+        },
+        {
+            "name": "CNDPFLGVYY",
+            "range": [
+                136,
+                145
+            ],
+            "source": "IEDB",
+            "iedb_id": 1879765
+        },
+        {
+            "name": "DPFLGVYYHKNNKSW",
+            "range": [
+                138,
+                152
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118615
+        },
+        {
+            "name": "VCEFQFCNDPFLGVY",
+            "range": [
+                139,
+                153
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001357
+        },
+        {
+            "name": "LGVYYHKNNKSWMESEFRVYSS",
+            "range": [
+                141,
+                162
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116220
+        },
+        {
+            "name": "GVYYHKNNKSWMESEFRVY",
+            "range": [
+                142,
+                160
+            ],
+            "source": "IEDB",
+            "iedb_id": 1948763
+        },
+        {
+            "name": "GVYYHKNNKSWMESE",
+            "range": [
+                142,
+                156
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001091
+        },
+        {
+            "name": "YYHKNNKSWMESEFRV",
+            "range": [
+                144,
+                159
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711462
+        },
+        {
+            "name": "YHKNNKSWMESEFRVY",
+            "range": [
+                145,
+                160
+            ],
+            "source": "IEDB",
+            "iedb_id": 1709353
+        },
+        {
+            "name": "NNKSWMESEFRVYSS",
+            "range": [
+                148,
+                162
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001224
+        },
+        {
+            "name": "ESEFRVYSSANNCTF",
+            "range": [
+                149,
+                163
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001041
+        },
+        {
+            "name": "ESEFRVYSSANNCTF",
+            "range": [
+                154,
+                168
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001041
+        },
+        {
+            "name": "SEFRVYSSANNCTFEYVSQPFL",
+            "range": [
+                155,
+                176
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116267
+        },
+        {
+            "name": "YSSANNCTFEYVSQP",
+            "range": [
+                160,
+                174
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001412
+        },
+        {
+            "name": "SSANNCTFEYVSQPFLM",
+            "range": [
+                161,
+                177
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116009
+        },
+        {
+            "name": "NCTFEYVSQPFLM",
+            "range": [
+                165,
+                177
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873053
+        },
+        {
+            "name": "CTFEYVSQPFFMDLE",
+            "range": [
+                166,
+                180
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972691
+        },
+        {
+            "name": "CTFEYVSQPFLMDLEGK",
+            "range": [
+                166,
+                182
+            ],
+            "source": "IEDB",
+            "iedb_id": 2115994
+        },
+        {
+            "name": "EYVSQPFLMDLEGKQGNFKNLR",
+            "range": [
+                169,
+                190
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116181
+        },
+        {
+            "name": "YVSQPFLM",
+            "range": [
+                170,
+                177
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972729
+        },
+        {
+            "name": "SQPFLMDLEGKQGNF",
+            "range": [
+                171,
+                185
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001317
+        },
+        {
+            "name": "SQPFLMDLEGKQGNF",
+            "range": [
+                172,
+                186
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001317
+        },
+        {
+            "name": "DLEGKQGNFKNLREF",
+            "range": [
+                173,
+                187
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001016
+        },
+        {
+            "name": "DLEGKQGNFKNLREF",
+            "range": [
+                178,
+                192
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001016
+        },
+        {
+            "name": "QGNFKNLREFVFKNIDGYFKIY",
+            "range": [
+                183,
+                204
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116258
+        },
+        {
+            "name": "GNFKNLREFVFKNID",
+            "range": [
+                184,
+                198
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001077
+        },
+        {
+            "name": "NFKNLREFVFKNIDGYFKIY",
+            "range": [
+                185,
+                204
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868040
+        },
+        {
+            "name": "VFKNIDGYFKIYSKHTPINL",
+            "range": [
+                193,
+                212
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870234
+        },
+        {
+            "name": "IDGYFKIYSKHTP",
+            "range": [
+                197,
+                209
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872258
+        },
+        {
+            "name": "IDGYFKIYSKHTPINLVRDLPQ",
+            "range": [
+                197,
+                218
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116207
+        },
+        {
+            "name": "KIYSKHTPINLVRDL",
+            "range": [
+                201,
+                215
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001148
+        },
+        {
+            "name": "KIYSKHTPINLVRDL",
+            "range": [
+                202,
+                216
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001148
+        },
+        {
+            "name": "KIYSKHTPINLVRDLPQGFS",
+            "range": [
+                202,
+                221
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061045
+        },
+        {
+            "name": "YSKHTPINLVRDLPQG",
+            "range": [
+                204,
+                219
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710719
+        },
+        {
+            "name": "HTPINLVR",
+            "range": [
+                207,
+                214
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972970
+        },
+        {
+            "name": "PINLVRDLPQGFSALEPLVD",
+            "range": [
+                209,
+                228
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868297
+        },
+        {
+            "name": "PINLVRDLPQGFS",
+            "range": [
+                209,
+                221
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873165
+        },
+        {
+            "name": "INLVRDLPQGFSALE",
+            "range": [
+                210,
+                224
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122179
+        },
+        {
+            "name": "NLVRDLPQGFSALEPLVDLPIG",
+            "range": [
+                211,
+                232
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116236
+        },
+        {
+            "name": "RDLPQGFSALEPLVD",
+            "range": [
+                214,
+                228
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001275
+        },
+        {
+            "name": "FSALEPLVDLPIGIN",
+            "range": [
+                217,
+                231
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001062
+        },
+        {
+            "name": "FSALEPLVDLPIGIN",
+            "range": [
+                220,
+                234
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001062
+        },
+        {
+            "name": "PLVDLPIGINITRFQTLLAL",
+            "range": [
+                225,
+                244
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868318
+        },
+        {
+            "name": "DLPIGINITRFQTLL",
+            "range": [
+                225,
+                239
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118497
+        },
+        {
+            "name": "DLPIGINITRFQTLL",
+            "range": [
+                228,
+                242
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118497
+        },
+        {
+            "name": "GINITRFQTLLALHR",
+            "range": [
+                229,
+                243
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001075
+        },
+        {
+            "name": "GINITRFQTLLALHR",
+            "range": [
+                231,
+                245
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001075
+        },
+        {
+            "name": "GINITRFQTLLALHR",
+            "range": [
+                232,
+                246
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001075
+        },
+        {
+            "name": "INITRFQTLLALHRSYLTPG",
+            "range": [
+                233,
+                252
+            ],
+            "source": "IEDB",
+            "iedb_id": 1866712
+        },
+        {
+            "name": "INITRFQTLLALH",
+            "range": [
+                233,
+                245
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872350
+        },
+        {
+            "name": "ITRFQTLLALHISYL",
+            "range": [
+                235,
+                249
+            ],
+            "source": "IEDB",
+            "iedb_id": 1857987
+        },
+        {
+            "name": "TRFQTLLALHRSYLTPGDSSS",
+            "range": [
+                236,
+                256
+            ],
+            "source": "IEDB",
+            "iedb_id": 1835518
+        },
+        {
+            "name": "TRFQTLLAL",
+            "range": [
+                236,
+                244
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860144
+        },
+        {
+            "name": "QTLLALHRSYLTPGDSSSGWTA",
+            "range": [
+                239,
+                260
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116260
+        },
+        {
+            "name": "TLLALHRSY",
+            "range": [
+                240,
+                248
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860045
+        },
+        {
+            "name": "LHRSYLTPGDSSSGW",
+            "range": [
+                241,
+                255
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001179
+        },
+        {
+            "name": "LHRSYLTPGDSSSGW",
+            "range": [
+                244,
+                258
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001179
+        },
+        {
+            "name": "YLTPGDSSSGWTAGAA",
+            "range": [
+                248,
+                263
+            ],
+            "source": "IEDB",
+            "iedb_id": 1709994
+        },
+        {
+            "name": "YLTPGDSS",
+            "range": [
+                248,
+                255
+            ],
+            "source": "IEDB",
+            "iedb_id": 1973003
+        },
+        {
+            "name": "GDSSSGWTAGAAAYYVGYLQ",
+            "range": [
+                252,
+                271
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861385
+        },
+        {
+            "name": "DSSSGWTAGAAAYYVGYLQPRT",
+            "range": [
+                253,
+                274
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116175
+        },
+        {
+            "name": "GWTAGAAA",
+            "range": [
+                257,
+                264
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972969
+        },
+        {
+            "name": "GAAAYYVGYLQPRTFLLKYNENGTITD",
+            "range": [
+                261,
+                287
+            ],
+            "source": "IEDB",
+            "iedb_id": 1852983
+        },
+        {
+            "name": "AAAYYVGYLQPRTFL",
+            "range": [
+                261,
+                275
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000970
+        },
+        {
+            "name": "YYVGYLQPR",
+            "range": [
+                262,
+                270
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711597
+        },
+        {
+            "name": "AAAYYVGYLQPRTFL",
+            "range": [
+                262,
+                276
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000970
+        },
+        {
+            "name": "YYVGYLQPR",
+            "range": [
+                265,
+                273
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711597
+        },
+        {
+            "name": "YYVGYLQPRTFLLKYN",
+            "range": [
+                265,
+                280
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711598
+        },
+        {
+            "name": "GYLQPRTFLLKYNEN",
+            "range": [
+                265,
+                279
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001092
+        },
+        {
+            "name": "VGYLQPRTFLLKYNENGTITDA",
+            "range": [
+                267,
+                288
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116297
+        },
+        {
+            "name": "GYLQPRTFLLKYNEN",
+            "range": [
+                268,
+                282
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001092
+        },
+        {
+            "name": "YLQPRTFLLKYNE",
+            "range": [
+                269,
+                281
+            ],
+            "source": "IEDB",
+            "iedb_id": 1874038
+        },
+        {
+            "name": "TFLLKYNENGTITDA",
+            "range": [
+                274,
+                288
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001330
+        },
+        {
+            "name": "NENGTITDAVDCALD",
+            "range": [
+                277,
+                291
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001216
+        },
+        {
+            "name": "KYNENGTITDAVDCA",
+            "range": [
+                278,
+                292
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123623
+        },
+        {
+            "name": "NENGTITDAVDCALD",
+            "range": [
+                280,
+                294
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001216
+        },
+        {
+            "name": "ENGTITDAVDCAL",
+            "range": [
+                281,
+                293
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871542
+        },
+        {
+            "name": "ENGTITDAVDCALDPLSETKCT",
+            "range": [
+                281,
+                302
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116180
+        },
+        {
+            "name": "ITDAVDCALDPLS",
+            "range": [
+                285,
+                297
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872422
+        },
+        {
+            "name": "ITDAVDCALDPLSETKCTLKS",
+            "range": [
+                285,
+                305
+            ],
+            "source": "IEDB",
+            "iedb_id": 1966615
+        },
+        {
+            "name": "AVDCALDPLSETKCT",
+            "range": [
+                285,
+                299
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117763
+        },
+        {
+            "name": "AVDCALDPLSETKCT",
+            "range": [
+                288,
+                302
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117763
+        },
+        {
+            "name": "ALDPLSETKCTLKSF",
+            "range": [
+                289,
+                303
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000980
+        },
+        {
+            "name": "ALDPLSETKCTLKSF",
+            "range": [
+                291,
+                305
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000980
+        },
+        {
+            "name": "ALDPLSETKCTLKSFTVEKGIYQTSNFRV",
+            "range": [
+                292,
+                320
+            ],
+            "source": "IEDB",
+            "iedb_id": 1945476
+        },
+        {
+            "name": "ALDPLSETKCTLKSF",
+            "range": [
+                292,
+                306
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000980
+        },
+        {
+            "name": "DPLSETKCTLKSFTV",
+            "range": [
+                294,
+                308
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118639
+        },
+        {
+            "name": "PLSETKCTLKSFTVEKGIYQTS",
+            "range": [
+                295,
+                316
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116254
+        },
+        {
+            "name": "SETKCTLKSFTVEKGIYQTS",
+            "range": [
+                297,
+                316
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869221
+        },
+        {
+            "name": "KCTLKSFTVEKGIYQ",
+            "range": [
+                297,
+                311
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122646
+        },
+        {
+            "name": "ETKCTLKSFTVEKGI",
+            "range": [
+                298,
+                312
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001044
+        },
+        {
+            "name": "KCTLKSFTVEKGIYQ",
+            "range": [
+                300,
+                314
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122646
+        },
+        {
+            "name": "KSFTVEKGIYQTSNF",
+            "range": [
+                301,
+                315
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001159
+        },
+        {
+            "name": "TLKSFTVE",
+            "range": [
+                302,
+                309
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972999
+        },
+        {
+            "name": "KSFTVEKGI",
+            "range": [
+                304,
+                312
+            ],
+            "source": "IEDB",
+            "iedb_id": 1908546
+        },
+        {
+            "name": "KSFTVEKGIYQTSNF",
+            "range": [
+                304,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001159
+        },
+        {
+            "name": "SFTVEKGIYQTSNFRVQPTE",
+            "range": [
+                305,
+                324
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869244
+        },
+        {
+            "name": "EKGIYQTSNFRVQPTESIVRFP",
+            "range": [
+                309,
+                330
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116179
+        },
+        {
+            "name": "IYQTSNFRVQPTESI",
+            "range": [
+                309,
+                323
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122526
+        },
+        {
+            "name": "IYQTSNFRVQPTESI",
+            "range": [
+                311,
+                325
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122526
+        },
+        {
+            "name": "IYQTSNFRVQPTESI",
+            "range": [
+                312,
+                326
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122526
+        },
+        {
+            "name": "YQTSNFRVQPTESIVR",
+            "range": [
+                313,
+                328
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710501
+        },
+        {
+            "name": "YQTSNFRVQPTESIVRFPNI",
+            "range": [
+                313,
+                332
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870690
+        },
+        {
+            "name": "FRVQPTESIVRFPNI",
+            "range": [
+                318,
+                332
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120393
+        },
+        {
+            "name": "PTESIVRFPNITNLC",
+            "range": [
+                321,
+                335
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860862
+        },
+        {
+            "name": "PTESIVRFPNITNLC",
+            "range": [
+                322,
+                336
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860862
+        },
+        {
+            "name": "TESIVRFPNITNLCPFGEVFNA",
+            "range": [
+                323,
+                344
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116282
+        },
+        {
+            "name": "ESIVRFPNITNLCPF",
+            "range": [
+                324,
+                338
+            ],
+            "source": "IEDB",
+            "iedb_id": 2119901
+        },
+        {
+            "name": "RFPNITNLCPFGEVF",
+            "range": [
+                328,
+                342
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860869
+        },
+        {
+            "name": "FPNITNLCPFGEVFNATRFA",
+            "range": [
+                329,
+                348
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061003
+        },
+        {
+            "name": "NLCPFGEVFNATRFA",
+            "range": [
+                334,
+                348
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860856
+        },
+        {
+            "name": "EVFNATRFASVYAWN",
+            "range": [
+                337,
+                351
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860821
+        },
+        {
+            "name": "PFGEVFNATRFASVYAWNRK",
+            "range": [
+                337,
+                356
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868280
+        },
+        {
+            "name": "PFGEVFNATRFASVYAWNRKRI",
+            "range": [
+                337,
+                358
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116249
+        },
+        {
+            "name": "GEVFNATRFASVYAWNRKRISNCVA",
+            "range": [
+                339,
+                363
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061009
+        },
+        {
+            "name": "EVFNATRFASVYAWN",
+            "range": [
+                340,
+                354
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860821
+        },
+        {
+            "name": "ATRFASVYAWNRKRISNCVAD",
+            "range": [
+                344,
+                364
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861073
+        },
+        {
+            "name": "ASVYAWNR",
+            "range": [
+                348,
+                355
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972956
+        },
+        {
+            "name": "SVYAWNRKRISNC",
+            "range": [
+                349,
+                361
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873624
+        },
+        {
+            "name": "YAWNRKRISNCVADYSVLYNSA",
+            "range": [
+                351,
+                372
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116311
+        },
+        {
+            "name": "AWNRKRISNCVADYSVLYNSASFST",
+            "range": [
+                352,
+                376
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060961
+        },
+        {
+            "name": "WNRKRISNCVADYSVLYNSA",
+            "range": [
+                353,
+                372
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870579
+        },
+        {
+            "name": "RISNCVADYSVLY",
+            "range": [
+                357,
+                369
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873332
+        },
+        {
+            "name": "ISNCVADYSVLYNSA",
+            "range": [
+                358,
+                372
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860839
+        },
+        {
+            "name": "VADYSVLYNSASFSTFKCYGV",
+            "range": [
+                362,
+                382
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061138
+        },
+        {
+            "name": "YSVLYNSASFSTFKCYGVSPTK",
+            "range": [
+                365,
+                386
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116318
+        },
+        {
+            "name": "SVLYNSASFSTFKCYGVSPTKLNDLCFTNV",
+            "range": [
+                366,
+                395
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060687
+        },
+        {
+            "name": "YNSASFSTFKCYGVSP",
+            "range": [
+                369,
+                384
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710228
+        },
+        {
+            "name": "ASFSTFKCYGVSPTK",
+            "range": [
+                371,
+                385
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117556
+        },
+        {
+            "name": "ASFSTFKCYGVSPTK",
+            "range": [
+                372,
+                386
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117556
+        },
+        {
+            "name": "FSTFKCYGVSPTKLN",
+            "range": [
+                374,
+                388
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120424
+        },
+        {
+            "name": "CYGVSPTKLNDLCFTNVYADSF",
+            "range": [
+                379,
+                400
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116172
+        },
+        {
+            "name": "VSPTKLNDLCFTNVY",
+            "range": [
+                381,
+                395
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860892
+        },
+        {
+            "name": "VSPTKLNDLCFTNVY",
+            "range": [
+                382,
+                396
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860892
+        },
+        {
+            "name": "NDLCFTNVYADSFVI",
+            "range": [
+                385,
+                399
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860853
+        },
+        {
+            "name": "NDLCFTNVYADSFVI",
+            "range": [
+                388,
+                402
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860853
+        },
+        {
+            "name": "FTNVYADSFVIRGDE",
+            "range": [
+                389,
+                403
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120443
+        },
+        {
+            "name": "FTNVYADSFVIRGDE",
+            "range": [
+                391,
+                405
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120443
+        },
+        {
+            "name": "FTNVYADSFVIRGDE",
+            "range": [
+                392,
+                406
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120443
+        },
+        {
+            "name": "TNVYADSFVIRGDEVRQIAP",
+            "range": [
+                393,
+                412
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869962
+        },
+        {
+            "name": "TNVYADSFVIRGDEVRQIAPGQ",
+            "range": [
+                393,
+                414
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116288
+        },
+        {
+            "name": "NVYADSFVIRGDEVR",
+            "range": [
+                394,
+                408
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860857
+        },
+        {
+            "name": "FVIRGDEVRQIAPGQ",
+            "range": [
+                397,
+                411
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860830
+        },
+        {
+            "name": "ADSFVIRG",
+            "range": [
+                397,
+                404
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972950
+        },
+        {
+            "name": "DSFVIRGDEVRQIAP",
+            "range": [
+                398,
+                412
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118798
+        },
+        {
+            "name": "FVIRGDEVRQIAPGQ",
+            "range": [
+                400,
+                414
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860830
+        },
+        {
+            "name": "IRGDEVRQIAPGQTG",
+            "range": [
+                402,
+                416
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122302
+        },
+        {
+            "name": "EVRQIAPGQTGNIAD",
+            "range": [
+                403,
+                417
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860822
+        },
+        {
+            "name": "GDEVRQIAPGQTGKI",
+            "range": [
+                404,
+                418
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120606
+        },
+        {
+            "name": "EVRQIAPGQTGTIAD",
+            "range": [
+                406,
+                420
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860823
+        },
+        {
+            "name": "VRQIAPGQTGKIADYNYKLPDD",
+            "range": [
+                407,
+                428
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116304
+        },
+        {
+            "name": "PGQTGNIADYNYKLP",
+            "range": [
+                409,
+                423
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860859
+        },
+        {
+            "name": "IAPGQTGK",
+            "range": [
+                410,
+                417
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972971
+        },
+        {
+            "name": "PGQTGKIADYNYKLP",
+            "range": [
+                411,
+                425
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860858
+        },
+        {
+            "name": "PGQTGKIADYNYKLP",
+            "range": [
+                412,
+                426
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860858
+        },
+        {
+            "name": "GQTGKIADYNYKL",
+            "range": [
+                413,
+                425
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872111
+        },
+        {
+            "name": "TGTIADYNYKLPDDF",
+            "range": [
+                415,
+                429
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860884
+        },
+        {
+            "name": "IADYNYKLPDDFTGC",
+            "range": [
+                418,
+                432
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860836
+        },
+        {
+            "name": "DYNYKLPD",
+            "range": [
+                420,
+                427
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972962
+        },
+        {
+            "name": "KLPDDFTGCVIAWNS",
+            "range": [
+                421,
+                435
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860846
+        },
+        {
+            "name": "YNYKLPDDFTGCVIAWNSNNLD",
+            "range": [
+                421,
+                442
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116313
+        },
+        {
+            "name": "KLPDDFTGCVIAWNS",
+            "range": [
+                424,
+                438
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860846
+        },
+        {
+            "name": "KLPDDFTGCVIAWNSNNLDSK",
+            "range": [
+                424,
+                444
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861752
+        },
+        {
+            "name": "DFTGCVIAWNSNNLD",
+            "range": [
+                428,
+                442
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118269
+        },
+        {
+            "name": "CVIAWNSNNLDSKVGGNYNY",
+            "range": [
+                432,
+                451
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060972
+        },
+        {
+            "name": "VIAWNSNNLDSKVGGNYNYL",
+            "range": [
+                433,
+                452
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870279
+        },
+        {
+            "name": "VIAWNSNNLDSKVGGNY",
+            "range": [
+                433,
+                449
+            ],
+            "source": "IEDB",
+            "iedb_id": 1956973
+        },
+        {
+            "name": "AWNSNNLDSKVGGNYNYLYRLF",
+            "range": [
+                435,
+                456
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116163
+        },
+        {
+            "name": "DSKVGGNYNYLYRLF",
+            "range": [
+                441,
+                455
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860819
+        },
+        {
+            "name": "DSKVGGNYNYLYRLF",
+            "range": [
+                442,
+                456
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860819
+        },
+        {
+            "name": "SKVGGNYNYLYRLFRKSNLKPFERD",
+            "range": [
+                443,
+                467
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061109
+        },
+        {
+            "name": "KVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGV",
+            "range": [
+                444,
+                483
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060676
+        },
+        {
+            "name": "GGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPC",
+            "range": [
+                446,
+                480
+            ],
+            "source": "IEDB",
+            "iedb_id": 2015980
+        },
+        {
+            "name": "GNYNYLYRLFRKSNLKPFERDISTEIY",
+            "range": [
+                447,
+                473
+            ],
+            "source": "IEDB",
+            "iedb_id": 1853085
+        },
+        {
+            "name": "YNYLYRLFRKSNLKPFERDI",
+            "range": [
+                449,
+                468
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870672
+        },
+        {
+            "name": "YNYLYRLFRKSNLKPFERDISTEIYQA",
+            "range": [
+                449,
+                475
+            ],
+            "source": "IEDB",
+            "iedb_id": 1957714
+        },
+        {
+            "name": "YNYLYRLFRKSNLKPFERDIST",
+            "range": [
+                449,
+                470
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116314
+        },
+        {
+            "name": "YLYRLFRKSNLKPFERDI",
+            "range": [
+                451,
+                468
+            ],
+            "source": "IEDB",
+            "iedb_id": 1850171
+        },
+        {
+            "name": "YRLFRKSNLKPFERDI",
+            "range": [
+                453,
+                468
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710581
+        },
+        {
+            "name": "RLFRKSNLKPFERDI",
+            "range": [
+                454,
+                468
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860873
+        },
+        {
+            "name": "KPFERDISTEIYQAG",
+            "range": [
+                461,
+                475
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123193
+        },
+        {
+            "name": "KPFERDISTEIYQAG",
+            "range": [
+                462,
+                476
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123193
+        },
+        {
+            "name": "PFERDISTEIYQAGSTPCNGVE",
+            "range": [
+                463,
+                484
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116247
+        },
+        {
+            "name": "FERDISTEIYQAGST",
+            "range": [
+                464,
+                478
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120165
+        },
+        {
+            "name": "ERDISTEI",
+            "range": [
+                465,
+                472
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972963
+        },
+        {
+            "name": "DISTEIYQAGSTPCNGVEGFNCYFPLQSY",
+            "range": [
+                467,
+                495
+            ],
+            "source": "IEDB",
+            "iedb_id": 1864859
+        },
+        {
+            "name": "STEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPY",
+            "range": [
+                469,
+                508
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060685
+        },
+        {
+            "name": "IYQAGSTPCNGVEGF",
+            "range": [
+                471,
+                485
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860840
+        },
+        {
+            "name": "IYQAGSTPCNGVEGF",
+            "range": [
+                472,
+                486
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860840
+        },
+        {
+            "name": "YQAGSTPCNGVEGFNC",
+            "range": [
+                473,
+                488
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710415
+        },
+        {
+            "name": "YQAGSTPCNGVEGFNCY",
+            "range": [
+                473,
+                489
+            ],
+            "source": "IEDB",
+            "iedb_id": 1855240
+        },
+        {
+            "name": "IYQAGSTPCNGVKGF",
+            "range": [
+                474,
+                488
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860841
+        },
+        {
+            "name": "AGSTPCNGVKGFNCY",
+            "range": [
+                477,
+                491
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860810
+        },
+        {
+            "name": "STPCNGVEGFNCYFPLQSYGFQ",
+            "range": [
+                477,
+                498
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116277
+        },
+        {
+            "name": "TPCNGVEGFNCYFPL",
+            "range": [
+                478,
+                492
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860885
+        },
+        {
+            "name": "TPCNGVKGFNCYFPL",
+            "range": [
+                480,
+                494
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860886
+        },
+        {
+            "name": "GVEGFNCYFPLQSYG",
+            "range": [
+                481,
+                495
+            ],
+            "source": "IEDB",
+            "iedb_id": 2121417
+        },
+        {
+            "name": "GVEGFNCYFPLQSYG",
+            "range": [
+                482,
+                496
+            ],
+            "source": "IEDB",
+            "iedb_id": 2121417
+        },
+        {
+            "name": "NGVKGFNCYFPLQSY",
+            "range": [
+                483,
+                497
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860855
+        },
+        {
+            "name": "NCYFPLQSYGFQPTY",
+            "range": [
+                484,
+                498
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860852
+        },
+        {
+            "name": "GFNCYFPLQSYGF",
+            "range": [
+                485,
+                497
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871880
+        },
+        {
+            "name": "KGFNCYFPLQSYGFQ",
+            "range": [
+                486,
+                500
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860843
+        },
+        {
+            "name": "STPCNGVEGFNCYFPLQSYG",
+            "range": [
+                486,
+                505
+            ],
+            "source": "IEDB",
+            "iedb_id": 2109160
+        },
+        {
+            "name": "FPLQSYGFQPTYGVG",
+            "range": [
+                487,
+                501
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860829
+        },
+        {
+            "name": "YFPLQSYGFQPTNGVG",
+            "range": [
+                489,
+                504
+            ],
+            "source": "IEDB",
+            "iedb_id": 1709078
+        },
+        {
+            "name": "YFPLQSYGFQPTNGVGYQPY",
+            "range": [
+                489,
+                508
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870623
+        },
+        {
+            "name": "FPLQSYGFQPTNGVG",
+            "range": [
+                490,
+                504
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860828
+        },
+        {
+            "name": "FPLQSYGFQPTNGVGYQPYR",
+            "range": [
+                490,
+                509
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061000
+        },
+        {
+            "name": "PLQSYGFQPTNGVGYQPYRVVV",
+            "range": [
+                491,
+                512
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116253
+        },
+        {
+            "name": "LQSYGFQPTNGVGYQ",
+            "range": [
+                491,
+                505
+            ],
+            "source": "IEDB",
+            "iedb_id": 2124507
+        },
+        {
+            "name": "LQSYGFQPTNGVGYQPYR",
+            "range": [
+                492,
+                509
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001192
+        },
+        {
+            "name": "LQSYGFQPTNGVGYQ",
+            "range": [
+                492,
+                506
+            ],
+            "source": "IEDB",
+            "iedb_id": 2124507
+        },
+        {
+            "name": "GFQPTYGVGYQPYRV",
+            "range": [
+                493,
+                507
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860833
+        },
+        {
+            "name": "PTYGVGYQPYRVVVL",
+            "range": [
+                496,
+                510
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860863
+        },
+        {
+            "name": "PTNGVGYQPYRVVVLSFELL",
+            "range": [
+                499,
+                518
+            ],
+            "source": "IEDB",
+            "iedb_id": 1863584
+        },
+        {
+            "name": "GVGYQPYRVVVLSFE",
+            "range": [
+                501,
+                515
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860835
+        },
+        {
+            "name": "GVGYQPYRVVVLSFE",
+            "range": [
+                502,
+                516
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860835
+        },
+        {
+            "name": "VGYQPYRVVVLSFELLHAPA",
+            "range": [
+                503,
+                522
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870822
+        },
+        {
+            "name": "YQPYRVVVLSFELLHA",
+            "range": [
+                505,
+                520
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710487
+        },
+        {
+            "name": "YRVVVLSFELLHAPA",
+            "range": [
+                505,
+                519
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860900
+        },
+        {
+            "name": "YQPYRVVVLSFELLHAPATV",
+            "range": [
+                505,
+                524
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870688
+        },
+        {
+            "name": "YQPYRVVVLSFELLHAPATVCG",
+            "range": [
+                505,
+                526
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116315
+        },
+        {
+            "name": "RVVVLSFEL",
+            "range": [
+                506,
+                514
+            ],
+            "source": "IEDB",
+            "iedb_id": 1929146
+        },
+        {
+            "name": "YRVVVLSFELLHAPA",
+            "range": [
+                508,
+                522
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860900
+        },
+        {
+            "name": "RVVVLSFEL",
+            "range": [
+                509,
+                517
+            ],
+            "source": "IEDB",
+            "iedb_id": 1929146
+        },
+        {
+            "name": "LSFELLHAPATVCGPKKSTN",
+            "range": [
+                513,
+                532
+            ],
+            "source": "IEDB",
+            "iedb_id": 1867778
+        },
+        {
+            "name": "SFELLHAPATVCGPK",
+            "range": [
+                514,
+                528
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860874
+        },
+        {
+            "name": "APATVCGPKKSTNLV",
+            "range": [
+                517,
+                531
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860812
+        },
+        {
+            "name": "HAPATVCGPKKSTNLVKNKCVN",
+            "range": [
+                519,
+                540
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116206
+        },
+        {
+            "name": "APATVCGPKKSTNLV",
+            "range": [
+                520,
+                534
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860812
+        },
+        {
+            "name": "APATVCGPKKSTNLVKNKCVN",
+            "range": [
+                520,
+                540
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861032
+        },
+        {
+            "name": "PATVCGPKKSTNLVKNKCVNFNFNG",
+            "range": [
+                521,
+                545
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061081
+        },
+        {
+            "name": "ATVCGPKKSTNLVKNKCVNF",
+            "range": [
+                522,
+                541
+            ],
+            "source": "IEDB",
+            "iedb_id": 1863042
+        },
+        {
+            "name": "ATVCGPKKSTNLVKNKCVNFNFNG",
+            "range": [
+                522,
+                545
+            ],
+            "source": "IEDB",
+            "iedb_id": 1945765
+        },
+        {
+            "name": "KKSTNLVKNKCVNFN",
+            "range": [
+                525,
+                539
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122996
+        },
+        {
+            "name": "KKSTNLVKNKCVNFN",
+            "range": [
+                528,
+                542
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122996
+        },
+        {
+            "name": "KSTNLVKNKCVNF",
+            "range": [
+                529,
+                541
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872649
+        },
+        {
+            "name": "KSTNLVKN",
+            "range": [
+                529,
+                536
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972978
+        },
+        {
+            "name": "NLVKNKCVNFNFNGL",
+            "range": [
+                529,
+                543
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001223
+        },
+        {
+            "name": "NLVKNKCVNFNFNGL",
+            "range": [
+                531,
+                545
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001223
+        },
+        {
+            "name": "NLVKNKCVNFNFNGL",
+            "range": [
+                532,
+                546
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001223
+        },
+        {
+            "name": "LVKNKCVNFNFNGLTGTGVLTE",
+            "range": [
+                533,
+                554
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116226
+        },
+        {
+            "name": "KCVNFNFNGLTGTGVLTESN",
+            "range": [
+                537,
+                556
+            ],
+            "source": "IEDB",
+            "iedb_id": 1866873
+        },
+        {
+            "name": "KCVNFNFN",
+            "range": [
+                537,
+                544
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972974
+        },
+        {
+            "name": "CVNFNFNGLTGTGVLTESNK",
+            "range": [
+                538,
+                557
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060974
+        },
+        {
+            "name": "TGTGVLTESNKKFLPFQQFGRD",
+            "range": [
+                547,
+                568
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116283
+        },
+        {
+            "name": "GTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILD",
+            "range": [
+                548,
+                586
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870791
+        },
+        {
+            "name": "TGVLTESNKKFLPFQQFGRD",
+            "range": [
+                549,
+                568
+            ],
+            "source": "IEDB",
+            "iedb_id": 1862508
+        },
+        {
+            "name": "GVLTESNK",
+            "range": [
+                550,
+                557
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972968
+        },
+        {
+            "name": "GVLTESNKKFLPFQQ",
+            "range": [
+                550,
+                564
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001089
+        },
+        {
+            "name": "TESNKKFLPFQQFGRDIADT",
+            "range": [
+                553,
+                572
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869812
+        },
+        {
+            "name": "NKKFLPFQQFGRDIADTTDAV",
+            "range": [
+                556,
+                576
+            ],
+            "source": "IEDB",
+            "iedb_id": 2068690
+        },
+        {
+            "name": "KFLPFQQF",
+            "range": [
+                558,
+                565
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972975
+        },
+        {
+            "name": "FLPFQQFGRDIADT",
+            "range": [
+                559,
+                572
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060674
+        },
+        {
+            "name": "LPFQQFGRDIADTTDAVRDPQTLEIL",
+            "range": [
+                560,
+                585
+            ],
+            "source": "IEDB",
+            "iedb_id": 1951149
+        },
+        {
+            "name": "FQQFGRDIADTTDAV",
+            "range": [
+                561,
+                575
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001060
+        },
+        {
+            "name": "PFQQFGRDIADTTDAVRDPQTL",
+            "range": [
+                561,
+                582
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116251
+        },
+        {
+            "name": "FQQFGRDIADTTDAV",
+            "range": [
+                562,
+                576
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001060
+        },
+        {
+            "name": "DIADTTDAVRDPQTL",
+            "range": [
+                565,
+                579
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001008
+        },
+        {
+            "name": "GRDIADTTDAVRDPQTLEILDITPCSFGGVSV",
+            "range": [
+                566,
+                597
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861472
+        },
+        {
+            "name": "RDIADTTDAV",
+            "range": [
+                567,
+                576
+            ],
+            "source": "IEDB",
+            "iedb_id": 1923087
+        },
+        {
+            "name": "DIADTT",
+            "range": [
+                568,
+                573
+            ],
+            "source": "IEDB",
+            "iedb_id": 1730692
+        },
+        {
+            "name": "DIADTTDAVRDPQTL",
+            "range": [
+                568,
+                582
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001008
+        },
+        {
+            "name": "DTTDAVRDPQTLEILDITPCSF",
+            "range": [
+                571,
+                592
+            ],
+            "source": "IEDB",
+            "iedb_id": 1861181
+        },
+        {
+            "name": "TTDAVRDP",
+            "range": [
+                572,
+                579
+            ],
+            "source": "IEDB",
+            "iedb_id": 1973000
+        },
+        {
+            "name": "DAVRDPQTLEILDIT",
+            "range": [
+                574,
+                588
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001003
+        },
+        {
+            "name": "AVRDPQTLEILDITPCSFGGVS",
+            "range": [
+                575,
+                596
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116162
+        },
+        {
+            "name": "QTLEILDITPCSFGG",
+            "range": [
+                577,
+                591
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001271
+        },
+        {
+            "name": "DPQTLEILDITPCSF",
+            "range": [
+                578,
+                592
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118665
+        },
+        {
+            "name": "QTLEILDITPCSFGG",
+            "range": [
+                580,
+                594
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001271
+        },
+        {
+            "name": "LEILDITPCSFGGVS",
+            "range": [
+                581,
+                595
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123865
+        },
+        {
+            "name": "LEILDITPCSFGGVS",
+            "range": [
+                582,
+                596
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123865
+        },
+        {
+            "name": "FGGVSVITPGTNTSN",
+            "range": [
+                589,
+                603
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001053
+        },
+        {
+            "name": "PCSFGGVSVITPGTNTSNQVAV",
+            "range": [
+                589,
+                610
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116245
+        },
+        {
+            "name": "CSFGGVSVITPGTNT",
+            "range": [
+                590,
+                604
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118000
+        },
+        {
+            "name": "FGGVSVITPGTNTSN",
+            "range": [
+                591,
+                605
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001053
+        },
+        {
+            "name": "FGGVSVITPGTNTSN",
+            "range": [
+                592,
+                606
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001053
+        },
+        {
+            "name": "ITPGTNTSNQVAVLY",
+            "range": [
+                598,
+                612
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001131
+        },
+        {
+            "name": "NTSNQVAVL",
+            "range": [
+                603,
+                611
+            ],
+            "source": "IEDB",
+            "iedb_id": 1918635
+        },
+        {
+            "name": "NTSNQVAVLYQDVNCTEVPVAI",
+            "range": [
+                603,
+                624
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116240
+        },
+        {
+            "name": "TSNQVAVLYQDVNCT",
+            "range": [
+                604,
+                618
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001345
+        },
+        {
+            "name": "SNQVAVLYQDVNCTEVPVAI",
+            "range": [
+                605,
+                624
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061113
+        },
+        {
+            "name": "YQGVNCTEV",
+            "range": [
+                609,
+                617
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000748
+        },
+        {
+            "name": "VLYQDVNCTEVPVAI",
+            "range": [
+                610,
+                624
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001377
+        },
+        {
+            "name": "YQDVNCTEVPVAIHAD",
+            "range": [
+                612,
+                627
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710422
+        },
+        {
+            "name": "YQGVNCTEV",
+            "range": [
+                612,
+                620
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000748
+        },
+        {
+            "name": "DVNCTEVPVAIHADQ",
+            "range": [
+                614,
+                628
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118946
+        },
+        {
+            "name": "NCTEVPVAIHADQLTPTWRVYSTGSNVFQ",
+            "range": [
+                616,
+                644
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001215
+        },
+        {
+            "name": "CTEVPVAIHADQLTPTWRVYST",
+            "range": [
+                617,
+                638
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116168
+        },
+        {
+            "name": "TEVPVAIHADQLTPTWRVYST",
+            "range": [
+                618,
+                638
+            ],
+            "source": "IEDB",
+            "iedb_id": 2072246
+        },
+        {
+            "name": "VAIHADQLTPTWRVY",
+            "range": [
+                621,
+                635
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001355
+        },
+        {
+            "name": "VAIHADQLTPTWRVY",
+            "range": [
+                622,
+                636
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001355
+        },
+        {
+            "name": "AIHADQLTPTWRVYSTG",
+            "range": [
+                623,
+                639
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060671
+        },
+        {
+            "name": "HADQLTPTWRVYSTGSNVFQ",
+            "range": [
+                625,
+                644
+            ],
+            "source": "IEDB",
+            "iedb_id": 1866376
+        },
+        {
+            "name": "QLTPTWRVYSTGSNV",
+            "range": [
+                625,
+                639
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001263
+        },
+        {
+            "name": "QLTPTWRV",
+            "range": [
+                628,
+                635
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972988
+        },
+        {
+            "name": "QLTPTWRVYSTGSNV",
+            "range": [
+                628,
+                642
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001263
+        },
+        {
+            "name": "PTWRVYSTGSNVFQTRAGCLIG",
+            "range": [
+                631,
+                652
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116257
+        },
+        {
+            "name": "WRVYSTGSNVFQTRAGCLIG",
+            "range": [
+                633,
+                652
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870585
+        },
+        {
+            "name": "RVYSTGSNVFQTRAG",
+            "range": [
+                634,
+                648
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001290
+        },
+        {
+            "name": "SNVFQTRAGCLIGAE",
+            "range": [
+                637,
+                651
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001313
+        },
+        {
+            "name": "SNVFQTRAGCLIGAE",
+            "range": [
+                640,
+                654
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001313
+        },
+        {
+            "name": "NVFQTRAGCLIG",
+            "range": [
+                641,
+                652
+            ],
+            "source": "IEDB",
+            "iedb_id": 1862915
+        },
+        {
+            "name": "TRAGCLIGAEHVNNSYECDIPI",
+            "range": [
+                645,
+                666
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116291
+        },
+        {
+            "name": "RAGCLIGAEHVNNSYECDIP",
+            "range": [
+                646,
+                665
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061090
+        },
+        {
+            "name": "GCLIGAEHVNNSYEC",
+            "range": [
+                648,
+                662
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120589
+        },
+        {
+            "name": "GAEHVNNSYECDIPI",
+            "range": [
+                651,
+                665
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001066
+        },
+        {
+            "name": "GAEHVNNSYECDIPI",
+            "range": [
+                652,
+                666
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001066
+        },
+        {
+            "name": "EHVNNSYECDIPIGA",
+            "range": [
+                654,
+                668
+            ],
+            "source": "IEDB",
+            "iedb_id": 2119407
+        },
+        {
+            "name": "NNSYECDIPIGAG",
+            "range": [
+                657,
+                669
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873095
+        },
+        {
+            "name": "NSYECDIPIGAGICA",
+            "range": [
+                658,
+                672
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001226
+        },
+        {
+            "name": "SYECDIPIGAGICASYQTQTNS",
+            "range": [
+                659,
+                680
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116279
+        },
+        {
+            "name": "YECDIPIGAGICASYQ",
+            "range": [
+                660,
+                675
+            ],
+            "source": "IEDB",
+            "iedb_id": 1708836
+        },
+        {
+            "name": "IPIGAGICASYQTQT",
+            "range": [
+                661,
+                675
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001122
+        },
+        {
+            "name": "IPIGAGICASYQTQT",
+            "range": [
+                664,
+                678
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001122
+        },
+        {
+            "name": "PIGAGICASYQTQ",
+            "range": [
+                665,
+                677
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873164
+        },
+        {
+            "name": "ICASYQTQTNSPRRA",
+            "range": [
+                670,
+                684
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001108
+        },
+        {
+            "name": "SYQTQTNSPRRARSVASQSI",
+            "range": [
+                673,
+                692
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869688
+        },
+        {
+            "name": "SYQTQTNSPRRARSVASQSIIA",
+            "range": [
+                673,
+                694
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116280
+        },
+        {
+            "name": "YQTQTNSPRRARSVAS",
+            "range": [
+                674,
+                689
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710498
+        },
+        {
+            "name": "QTNSPRRA",
+            "range": [
+                677,
+                684
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972990
+        },
+        {
+            "name": "PRRARSVASQSI",
+            "range": [
+                681,
+                692
+            ],
+            "source": "IEDB",
+            "iedb_id": 1862918
+        },
+        {
+            "name": "RRARSVASQSIIAYT",
+            "range": [
+                681,
+                695
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001285
+        },
+        {
+            "name": "RRARSVASQSIIAYT",
+            "range": [
+                682,
+                696
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001285
+        },
+        {
+            "name": "ARSVASQSIIAYTMS",
+            "range": [
+                684,
+                698
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117517
+        },
+        {
+            "name": "ASQSIIAYTMSLGAE",
+            "range": [
+                685,
+                699
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000987
+        },
+        {
+            "name": "VASQSIIAYTMSLGAENSVAYS",
+            "range": [
+                687,
+                708
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116296
+        },
+        {
+            "name": "ASQSIIAYTMSLGAE",
+            "range": [
+                688,
+                702
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000987
+        },
+        {
+            "name": "SQSIIAYTMSLGAENSVAYS",
+            "range": [
+                689,
+                708
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869517
+        },
+        {
+            "name": "AYTMSLGAENSVAYS",
+            "range": [
+                694,
+                708
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000990
+        },
+        {
+            "name": "YTMSLGAENSVAYSNN",
+            "range": [
+                695,
+                710
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710970
+        },
+        {
+            "name": "GAENSVAYSNNSIAI",
+            "range": [
+                697,
+                711
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001067
+        },
+        {
+            "name": "GAENSVAYSNNSIAI",
+            "range": [
+                700,
+                714
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001067
+        },
+        {
+            "name": "AENSVAYSNNSIAIPTNFTISV",
+            "range": [
+                701,
+                722
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116158
+        },
+        {
+            "name": "ENSVAYSNNSIAIPT",
+            "range": [
+                701,
+                715
+            ],
+            "source": "IEDB",
+            "iedb_id": 2119718
+        },
+        {
+            "name": "ENSVAYSNNSIAIPT",
+            "range": [
+                702,
+                716
+            ],
+            "source": "IEDB",
+            "iedb_id": 2119718
+        },
+        {
+            "name": "YSNNSIAIPTNFTISV",
+            "range": [
+                707,
+                722
+            ],
+            "source": "IEDB",
+            "iedb_id": 1710762
+        },
+        {
+            "name": "IAIPTNFTISVTTEI",
+            "range": [
+                709,
+                723
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001105
+        },
+        {
+            "name": "IAIPTNFTISVTTEI",
+            "range": [
+                711,
+                725
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001105
+        },
+        {
+            "name": "IAIPTNFTISVTTEI",
+            "range": [
+                712,
+                726
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001105
+        },
+        {
+            "name": "AIPTNFTISVTTEILPVSMT",
+            "range": [
+                713,
+                732
+            ],
+            "source": "IEDB",
+            "iedb_id": 1864369
+        },
+        {
+            "name": "IPTNFTISVTTEILP",
+            "range": [
+                714,
+                728
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122262
+        },
+        {
+            "name": "PTNFTISVTTEILPVSMTKTSV",
+            "range": [
+                715,
+                736
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116256
+        },
+        {
+            "name": "NFTISVTTEILPV",
+            "range": [
+                717,
+                729
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873075
+        },
+        {
+            "name": "ISVTTEILPVSMTKT",
+            "range": [
+                717,
+                731
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122425
+        },
+        {
+            "name": "FTISVTTEILPVSMT",
+            "range": [
+                718,
+                732
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001064
+        },
+        {
+            "name": "ISVTTEILPVSMTKT",
+            "range": [
+                720,
+                734
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122425
+        },
+        {
+            "name": "TEILPVSMTKTSVDC",
+            "range": [
+                721,
+                735
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001329
+        },
+        {
+            "name": "TEILPVSMTKTSVDC",
+            "range": [
+                724,
+                738
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001329
+        },
+        {
+            "name": "VSMTKTSVDCTMYICGDSTECS",
+            "range": [
+                729,
+                750
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116307
+        },
+        {
+            "name": "SMTKTSVDCTMYICG",
+            "range": [
+                730,
+                744
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001307
+        },
+        {
+            "name": "YICGDSTECSNLLLQY",
+            "range": [
+                741,
+                756
+            ],
+            "source": "IEDB",
+            "iedb_id": 1709410
+        },
+        {
+            "name": "ICGDSTECSNLLLQY",
+            "range": [
+                741,
+                755
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001109
+        },
+        {
+            "name": "ICGDSTECSNLLLQY",
+            "range": [
+                742,
+                756
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001109
+        },
+        {
+            "name": "CGDSTECSNLLLQYGSFCTQLN",
+            "range": [
+                743,
+                764
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116167
+        },
+        {
+            "name": "GDSTECSNLLLQYGS",
+            "range": [
+                744,
+                758
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120660
+        },
+        {
+            "name": "DSTECSNLLLQYGSFCTQLN",
+            "range": [
+                745,
+                764
+            ],
+            "source": "IEDB",
+            "iedb_id": 1865053
+        },
+        {
+            "name": "ECSNLLLQYGSFCTQ",
+            "range": [
+                745,
+                759
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001024
+        },
+        {
+            "name": "STECSNLLLQYGSFCTQ",
+            "range": [
+                746,
+                762
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116010
+        },
+        {
+            "name": "TECSNLLLQYGSFCTQL",
+            "range": [
+                747,
+                763
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870815
+        },
+        {
+            "name": "ECSNLLLQYGSFCTQ",
+            "range": [
+                748,
+                762
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001024
+        },
+        {
+            "name": "NLLLQYGSFCTQLNRAL",
+            "range": [
+                751,
+                767
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001221
+        },
+        {
+            "name": "LLQYGSFCTQLNRALTGIAV",
+            "range": [
+                753,
+                772
+            ],
+            "source": "IEDB",
+            "iedb_id": 1867603
+        },
+        {
+            "name": "LQYGSFCTQLNRALT",
+            "range": [
+                754,
+                768
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001193
+        },
+        {
+            "name": "QYGSFCTQLNRALTGIAVEQ",
+            "range": [
+                755,
+                774
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061089
+        },
+        {
+            "name": "GSFCTQLNRALTGIAVEQDKNT",
+            "range": [
+                757,
+                778
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116203
+        },
+        {
+            "name": "CTQLNRALTGIAVEQ",
+            "range": [
+                760,
+                774
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001002
+        },
+        {
+            "name": "VEQDKNTQEVFAQVK",
+            "range": [
+                769,
+                783
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001363
+        },
+        {
+            "name": "AVEQDKNT",
+            "range": [
+                771,
+                778
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972957
+        },
+        {
+            "name": "VEQDKNTQEVFAQVK",
+            "range": [
+                771,
+                785
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001363
+        },
+        {
+            "name": "AVEQDKNTQEVFAQVKQIYKTP",
+            "range": [
+                771,
+                792
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116161
+        },
+        {
+            "name": "VEQDKNTQEVFAQVK",
+            "range": [
+                772,
+                786
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001363
+        },
+        {
+            "name": "NTQEVFAQVKQIYKTPPIKD",
+            "range": [
+                777,
+                796
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868255
+        },
+        {
+            "name": "EVFAQVKQIYKTPPI",
+            "range": [
+                777,
+                791
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120021
+        },
+        {
+            "name": "TQEVFAQVKQIYKTP",
+            "range": [
+                778,
+                792
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001341
+        },
+        {
+            "name": "EVFAQVKQIYKTPPI",
+            "range": [
+                780,
+                794
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120021
+        },
+        {
+            "name": "VFAQVKQIYKTPPIKDFGGFNFSQILPDPS",
+            "range": [
+                781,
+                810
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870821
+        },
+        {
+            "name": "QVKQIYKTPPIKDFG",
+            "range": [
+                784,
+                798
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001272
+        },
+        {
+            "name": "VKQIYKTPPIKDFGGFNFSQIL",
+            "range": [
+                785,
+                806
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116299
+        },
+        {
+            "name": "KQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLL",
+            "range": [
+                786,
+                822
+            ],
+            "source": "IEDB",
+            "iedb_id": 1950249
+        },
+        {
+            "name": "KTPPIKDFGGFNFSQ",
+            "range": [
+                790,
+                804
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001165
+        },
+        {
+            "name": "PPIKD",
+            "range": [
+                792,
+                796
+            ],
+            "source": "IEDB",
+            "iedb_id": 1808223
+        },
+        {
+            "name": "FNFSQILPDPSKPSK",
+            "range": [
+                797,
+                811
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120302
+        },
+        {
+            "name": "GGFNFSQILPDPSKP",
+            "range": [
+                798,
+                812
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120752
+        },
+        {
+            "name": "GFNFSQILPDPSKPSKRSFIED",
+            "range": [
+                799,
+                820
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116193
+        },
+        {
+            "name": "FNFSQILPDPSKPSK",
+            "range": [
+                800,
+                814
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120302
+        },
+        {
+            "name": "NFSQILPDPSKPS",
+            "range": [
+                801,
+                813
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873074
+        },
+        {
+            "name": "ILPDPSKPSKRSF",
+            "range": [
+                805,
+                817
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872338
+        },
+        {
+            "name": "ILPDPSKPSKRSFIEDLLFNKVTLADAGFIK",
+            "range": [
+                805,
+                835
+            ],
+            "source": "IEDB",
+            "iedb_id": 1966318
+        },
+        {
+            "name": "DPSKPSKRSFIEDLL",
+            "range": [
+                805,
+                819
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001020
+        },
+        {
+            "name": "ILPDPSKPSKRSFIEDLLF",
+            "range": [
+                805,
+                823
+            ],
+            "source": "IEDB",
+            "iedb_id": 2066401
+        },
+        {
+            "name": "LPDPSKPSKRSFIEDLLFNKVTLADA",
+            "range": [
+                806,
+                831
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870796
+        },
+        {
+            "name": "PDPSKPSKRSFIEDLLFNKVT",
+            "range": [
+                807,
+                827
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870803
+        },
+        {
+            "name": "DPSKPSKR",
+            "range": [
+                808,
+                815
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870778
+        },
+        {
+            "name": "DPSKPSKRSFIEDLL",
+            "range": [
+                808,
+                822
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001020
+        },
+        {
+            "name": "DPSKPSKRSFIEDLLFNKVTLADA",
+            "range": [
+                808,
+                831
+            ],
+            "source": "IEDB",
+            "iedb_id": 2115996
+        },
+        {
+            "name": "PSKPSKRSFIEDLLFNKVTL",
+            "range": [
+                809,
+                828
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868334
+        },
+        {
+            "name": "PSKPSKRSFIEDLLFNKVTLADAGF",
+            "range": [
+                809,
+                833
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116393
+        },
+        {
+            "name": "KPSKRSFIEDLLFN",
+            "range": [
+                811,
+                824
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116001
+        },
+        {
+            "name": "SKRSFIEDLLFNKVTLADAGFI",
+            "range": [
+                813,
+                834
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116270
+        },
+        {
+            "name": "FIEDLLFNKVTLADAGFIKQ",
+            "range": [
+                817,
+                836
+            ],
+            "source": "IEDB",
+            "iedb_id": 1865759
+        },
+        {
+            "name": "DLLFNKVTLADAGFI",
+            "range": [
+                817,
+                831
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001017
+        },
+        {
+            "name": "IEDLLFNKV",
+            "range": [
+                818,
+                826
+            ],
+            "source": "IEDB",
+            "iedb_id": 1898614
+        },
+        {
+            "name": "DLLFNKVTLADAGFI",
+            "range": [
+                820,
+                834
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001017
+        },
+        {
+            "name": "LADAGFIKQYGDCLG",
+            "range": [
+                825,
+                839
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123640
+        },
+        {
+            "name": "TLADAGFIKQYGDCLGDIAARD",
+            "range": [
+                827,
+                848
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116284
+        },
+        {
+            "name": "LADAGFIKQYGDCLG",
+            "range": [
+                828,
+                842
+            ],
+            "source": "IEDB",
+            "iedb_id": 2123640
+        },
+        {
+            "name": "GFIKQYGDCLGDIAA",
+            "range": [
+                829,
+                843
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001073
+        },
+        {
+            "name": "GFIKQYGDCLGDIAA",
+            "range": [
+                831,
+                845
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001073
+        },
+        {
+            "name": "GFIKQYGDCLGDIAA",
+            "range": [
+                832,
+                846
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001073
+        },
+        {
+            "name": "FIKQYGDCLGDIA",
+            "range": [
+                833,
+                845
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871762
+        },
+        {
+            "name": "IKQYGDCLGDIAARD",
+            "range": [
+                834,
+                848
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122063
+        },
+        {
+            "name": "GDCLGDIAARDLICA",
+            "range": [
+                838,
+                852
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001070
+        },
+        {
+            "name": "LGDIAARDLICAQKFNGLTVLP",
+            "range": [
+                841,
+                862
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116219
+        },
+        {
+            "name": "GDIAARDLICAQKFN",
+            "range": [
+                841,
+                855
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120613
+        },
+        {
+            "name": "GDIAARDLICAQKFN",
+            "range": [
+                842,
+                856
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120613
+        },
+        {
+            "name": "IAARDLICAQKFNGL",
+            "range": [
+                844,
+                858
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001104
+        },
+        {
+            "name": "DLICAQKFNGLTVLP",
+            "range": [
+                848,
+                862
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118476
+        },
+        {
+            "name": "ICAQKFNGLTVLPPL",
+            "range": [
+                850,
+                864
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001107
+        },
+        {
+            "name": "FNGLTVLPPLLTDEMIAQYTSA",
+            "range": [
+                855,
+                876
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116182
+        },
+        {
+            "name": "GLTVLPPLLTDEMIAQYTSALLAGTIT",
+            "range": [
+                857,
+                883
+            ],
+            "source": "IEDB",
+            "iedb_id": 1853072
+        },
+        {
+            "name": "GLTVLPPLLTDEMIAQYTSA",
+            "range": [
+                857,
+                876
+            ],
+            "source": "IEDB",
+            "iedb_id": 1866152
+        },
+        {
+            "name": "PPLLTDEMIAQYTSA",
+            "range": [
+                861,
+                875
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001237
+        },
+        {
+            "name": "PPLLTDEMIAQYTSA",
+            "range": [
+                862,
+                876
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001237
+        },
+        {
+            "name": "LTDEMIAQYTSALLAGTITS",
+            "range": [
+                865,
+                884
+            ],
+            "source": "IEDB",
+            "iedb_id": 1867824
+        },
+        {
+            "name": "EMIAQYTSALLAGTI",
+            "range": [
+                865,
+                879
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001033
+        },
+        {
+            "name": "EMIAQYTSALLAGTI",
+            "range": [
+                868,
+                882
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001033
+        },
+        {
+            "name": "MIAQYTSALLAGTITSGWTFGA",
+            "range": [
+                869,
+                890
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116228
+        },
+        {
+            "name": "YTSALLAGTITSGWTF",
+            "range": [
+                873,
+                888
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711010
+        },
+        {
+            "name": "TSALLAGTITSGWTF",
+            "range": [
+                874,
+                888
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001343
+        },
+        {
+            "name": "GTITSGWTFGAGAAL",
+            "range": [
+                877,
+                891
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001088
+        },
+        {
+            "name": "GTITSGWTFGAGAAL",
+            "range": [
+                880,
+                894
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001088
+        },
+        {
+            "name": "TSGWTFGAGAALQIPFAMQMAY",
+            "range": [
+                883,
+                904
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116293
+        },
+        {
+            "name": "GWTFGAGAALQIP",
+            "range": [
+                885,
+                897
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872160
+        },
+        {
+            "name": "GAGAALQIPFAMQMAYRFNG",
+            "range": [
+                889,
+                908
+            ],
+            "source": "IEDB",
+            "iedb_id": 1865865
+        },
+        {
+            "name": "GAGAALQIPFAMQ",
+            "range": [
+                889,
+                901
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871836
+        },
+        {
+            "name": "AALQIPFAMQMAYRF",
+            "range": [
+                889,
+                903
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000971
+        },
+        {
+            "name": "AGAALQIPFAMQMAY",
+            "range": [
+                890,
+                904
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116818
+        },
+        {
+            "name": "AALQIPFAMQMAYRF",
+            "range": [
+                891,
+                905
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000971
+        },
+        {
+            "name": "AALQIPFAMQMAYRF",
+            "range": [
+                892,
+                906
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000971
+        },
+        {
+            "name": "LQIPFAMQ",
+            "range": [
+                894,
+                901
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972983
+        },
+        {
+            "name": "PFAMQMAYRFNGIGVTQNVL",
+            "range": [
+                897,
+                916
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868278
+        },
+        {
+            "name": "PFAMQMAYRFNGIGVTQNVLYE",
+            "range": [
+                897,
+                918
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116246
+        },
+        {
+            "name": "FAMQMAYRFNGIGVT",
+            "range": [
+                898,
+                912
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001047
+        },
+        {
+            "name": "RFNGIGVTQNVLYENQKLIA",
+            "range": [
+                905,
+                924
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868802
+        },
+        {
+            "name": "GVTQNVLYENQKLIA",
+            "range": [
+                910,
+                924
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001090
+        },
+        {
+            "name": "VTQNVLYENQKLIANQFNSAIG",
+            "range": [
+                911,
+                932
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116308
+        },
+        {
+            "name": "QNVLYENQKLIANQFNSAIG",
+            "range": [
+                913,
+                932
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868568
+        },
+        {
+            "name": "YENQKLIANQFNSAIG",
+            "range": [
+                917,
+                932
+            ],
+            "source": "IEDB",
+            "iedb_id": 1708910
+        },
+        {
+            "name": "KLIANQFNSAIGK",
+            "range": [
+                921,
+                933
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872550
+        },
+        {
+            "name": "LIANQFNSAIGKIQD",
+            "range": [
+                921,
+                935
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001180
+        },
+        {
+            "name": "LIANQFNSAIGKIQD",
+            "range": [
+                922,
+                936
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001180
+        },
+        {
+            "name": "NQFNSAIGKIQDSLSSTASALG",
+            "range": [
+                925,
+                946
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116237
+        },
+        {
+            "name": "SAIGKIQDSLSSTASALGKL",
+            "range": [
+                929,
+                948
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869061
+        },
+        {
+            "name": "GKIQDSLSSTASALG",
+            "range": [
+                929,
+                943
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120874
+        },
+        {
+            "name": "AIGKIQDSLSSTASA",
+            "range": [
+                930,
+                944
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116963
+        },
+        {
+            "name": "GKIQDSLSSTASALG",
+            "range": [
+                931,
+                945
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120874
+        },
+        {
+            "name": "GKIQDSLSSTASALG",
+            "range": [
+                932,
+                946
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120874
+        },
+        {
+            "name": "DSLSSTASALGKLQDVV",
+            "range": [
+                936,
+                952
+            ],
+            "source": "IEDB",
+            "iedb_id": 1735314
+        },
+        {
+            "name": "SLSSTASALGKLQDVVNQNA",
+            "range": [
+                937,
+                956
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869397
+        },
+        {
+            "name": "SSTASALGKLQDVVNQNAQALN",
+            "range": [
+                939,
+                960
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116276
+        },
+        {
+            "name": "STASALGKLQDVVNQ",
+            "range": [
+                940,
+                954
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001323
+        },
+        {
+            "name": "ASALGKLQDVVNQNA",
+            "range": [
+                941,
+                955
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117534
+        },
+        {
+            "name": "ASALGKLQDVVNQNA",
+            "range": [
+                942,
+                956
+            ],
+            "source": "IEDB",
+            "iedb_id": 2117534
+        },
+        {
+            "name": "LGKLQDVVNQNAQALNTLV",
+            "range": [
+                945,
+                963
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061054
+        },
+        {
+            "name": "KLQDVVNQNAQALNTLVKQL",
+            "range": [
+                947,
+                966
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060841
+        },
+        {
+            "name": "VVNQNAQAL",
+            "range": [
+                951,
+                959
+            ],
+            "source": "IEDB",
+            "iedb_id": 1942216
+        },
+        {
+            "name": "VNQNAQALNTLVKQL",
+            "range": [
+                951,
+                965
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001381
+        },
+        {
+            "name": "VNQNAQALNTLVKQL",
+            "range": [
+                952,
+                966
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001381
+        },
+        {
+            "name": "NQNAQALNTLVKQLSSNFGA",
+            "range": [
+                953,
+                972
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868193
+        },
+        {
+            "name": "NQNAQALNTLVKQLSSNFGAIS",
+            "range": [
+                953,
+                974
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116238
+        },
+        {
+            "name": "AQALNTLVKQLSSNFGAISS",
+            "range": [
+                956,
+                975
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060795
+        },
+        {
+            "name": "ALNTLVKQLSSNFGA",
+            "range": [
+                958,
+                972
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000981
+        },
+        {
+            "name": "TLVKQLSSNFGAI",
+            "range": [
+                961,
+                973
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873679
+        },
+        {
+            "name": "LVKQLSSNF",
+            "range": [
+                962,
+                970
+            ],
+            "source": "IEDB",
+            "iedb_id": 1914665
+        },
+        {
+            "name": "KQLSSNFGAISSVLNDILSR",
+            "range": [
+                964,
+                983
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061051
+        },
+        {
+            "name": "SSNFGAISSVLNDILSRLDKVE",
+            "range": [
+                967,
+                988
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116275
+        },
+        {
+            "name": "FGAISSVLNDILSRLDKVEA",
+            "range": [
+                970,
+                989
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060822
+        },
+        {
+            "name": "ISSVLNDILSRLD",
+            "range": [
+                973,
+                985
+            ],
+            "source": "IEDB",
+            "iedb_id": 1872421
+        },
+        {
+            "name": "NDILSRLDKVEAEVQIDRLITGRL",
+            "range": [
+                978,
+                1001
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870800
+        },
+        {
+            "name": "NDILSRLDKVEAEVQIDRLI",
+            "range": [
+                978,
+                997
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060868
+        },
+        {
+            "name": "SRLDKVEAEVQIDRL",
+            "range": [
+                981,
+                995
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001319
+        },
+        {
+            "name": "LSRLDKVEAEVQIDRLITGRLQ",
+            "range": [
+                981,
+                1002
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116223
+        },
+        {
+            "name": "SRLDKVEAEV",
+            "range": [
+                982,
+                991
+            ],
+            "source": "IEDB",
+            "iedb_id": 1933783
+        },
+        {
+            "name": "SRLDKVEAEVQIDRL",
+            "range": [
+                982,
+                996
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001319
+        },
+        {
+            "name": "DKVEAEVQIDRLITGRLQSL",
+            "range": [
+                985,
+                1004
+            ],
+            "source": "IEDB",
+            "iedb_id": 1864879
+        },
+        {
+            "name": "EAEVQIDRLITGRLQ",
+            "range": [
+                985,
+                999
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001023
+        },
+        {
+            "name": "VEAEVQIDRLITGRLQSLQT",
+            "range": [
+                987,
+                1006
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060906
+        },
+        {
+            "name": "EAEVQIDRLITGRLQ",
+            "range": [
+                988,
+                1002
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001023
+        },
+        {
+            "name": "EVQIDRLITGRLQSL",
+            "range": [
+                990,
+                1004
+            ],
+            "source": "IEDB",
+            "iedb_id": 2120058
+        },
+        {
+            "name": "IDRLITGRLQSLQTYVTQQL",
+            "range": [
+                993,
+                1012
+            ],
+            "source": "IEDB",
+            "iedb_id": 1866560
+        },
+        {
+            "name": "DRLITGRLQSLQTYVTQQLI",
+            "range": [
+                994,
+                1013
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060807
+        },
+        {
+            "name": "RLITGRLQSLQTYVTQQLIRAA",
+            "range": [
+                995,
+                1016
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116263
+        },
+        {
+            "name": "RLQSLQTYVTQQLIR",
+            "range": [
+                997,
+                1011
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001283
+        },
+        {
+            "name": "RLQSLQTYVTQQLIRAAEIRASANLAA",
+            "range": [
+                1000,
+                1026
+            ],
+            "source": "IEDB",
+            "iedb_id": 1854558
+        },
+        {
+            "name": "RLQSLQIYV",
+            "range": [
+                1000,
+                1008
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868895
+        },
+        {
+            "name": "RLQSLQTYVTQQLIR",
+            "range": [
+                1000,
+                1014
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001283
+        },
+        {
+            "name": "QSLQTYVTQQLIRAAEIRAS",
+            "range": [
+                1002,
+                1021
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060883
+        },
+        {
+            "name": "SLQTYVTQQLIRAAEIRASANLAA",
+            "range": [
+                1003,
+                1026
+            ],
+            "source": "IEDB",
+            "iedb_id": 2061110
+        },
+        {
+            "name": "TQQLIRAAEIRASANLAATK",
+            "range": [
+                1009,
+                1028
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870005
+        },
+        {
+            "name": "LIRAAEIRASANLAA",
+            "range": [
+                1009,
+                1023
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001183
+        },
+        {
+            "name": "TQQLIRAAEIRASANLAATKMS",
+            "range": [
+                1009,
+                1030
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116290
+        },
+        {
+            "name": "LIRAAEIRASANLAA",
+            "range": [
+                1011,
+                1025
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001183
+        },
+        {
+            "name": "LIRAAEIRASANLAA",
+            "range": [
+                1012,
+                1026
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001183
+        },
+        {
+            "name": "AAEIRASANLAATKMSECVLGQSKR",
+            "range": [
+                1015,
+                1039
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060950
+        },
+        {
+            "name": "EIRASANLAATKMSECVLGQ",
+            "range": [
+                1017,
+                1036
+            ],
+            "source": "IEDB",
+            "iedb_id": 1865417
+        },
+        {
+            "name": "EIRASANLAATKM",
+            "range": [
+                1017,
+                1029
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871461
+        },
+        {
+            "name": "IRASANLAATKMSEC",
+            "range": [
+                1018,
+                1032
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001123
+        },
+        {
+            "name": "RASANLAATKMSECVLGQSK",
+            "range": [
+                1019,
+                1038
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060884
+        },
+        {
+            "name": "NLAATKMSECVLGQSKRVDFCG",
+            "range": [
+                1023,
+                1044
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116235
+        },
+        {
+            "name": "SECVLGQSKRVDFCG",
+            "range": [
+                1030,
+                1044
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001293
+        },
+        {
+            "name": "SKRVDFCGKGYHLMSFPQSAPH",
+            "range": [
+                1037,
+                1058
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116271
+        },
+        {
+            "name": "FCGKGYHLMSFPQSA",
+            "range": [
+                1041,
+                1055
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001049
+        },
+        {
+            "name": "DFCGKGYHLMSFPQSAPHGVVFLHV",
+            "range": [
+                1041,
+                1065
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060979
+        },
+        {
+            "name": "FCGKGYHLMSFPQSA",
+            "range": [
+                1042,
+                1056
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001049
+        },
+        {
+            "name": "HLMSFPQSAPHGVVF",
+            "range": [
+                1045,
+                1059
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001097
+        },
+        {
+            "name": "HLMSFPQSAPHGVVF",
+            "range": [
+                1048,
+                1062
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001097
+        },
+        {
+            "name": "SFPQSAPHGVVFLHVTYVPAQE",
+            "range": [
+                1051,
+                1072
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116268
+        },
+        {
+            "name": "QSAPHGVVFLHVTYV",
+            "range": [
+                1054,
+                1068
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001269
+        },
+        {
+            "name": "PHGVVFLHVTYVPAQEKNFT",
+            "range": [
+                1057,
+                1076
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868295
+        },
+        {
+            "name": "VVFLHVTYVPAQEKN",
+            "range": [
+                1057,
+                1071
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001383
+        },
+        {
+            "name": "VVFLHVTYVPAQEKN",
+            "range": [
+                1060,
+                1074
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001383
+        },
+        {
+            "name": "VTYVPAQEKNFTTAPAICHDGK",
+            "range": [
+                1065,
+                1086
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116309
+        },
+        {
+            "name": "YVPAQEKNFTTAPAIC",
+            "range": [
+                1067,
+                1082
+            ],
+            "source": "IEDB",
+            "iedb_id": 1711274
+        },
+        {
+            "name": "VPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWF",
+            "range": [
+                1068,
+                1103
+            ],
+            "source": "IEDB",
+            "iedb_id": 1957105
+        },
+        {
+            "name": "EKNFTTAPAICHDGK",
+            "range": [
+                1069,
+                1083
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001031
+        },
+        {
+            "name": "EKNFTTAPAICHDGK",
+            "range": [
+                1071,
+                1085
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001031
+        },
+        {
+            "name": "EKNFTTAPAICHDGK",
+            "range": [
+                1072,
+                1086
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001031
+        },
+        {
+            "name": "KNFTTAPAICHDGKAHFPRE",
+            "range": [
+                1073,
+                1092
+            ],
+            "source": "IEDB",
+            "iedb_id": 1867213
+        },
+        {
+            "name": "PAICHDGKAHFPREGVFVSNGT",
+            "range": [
+                1079,
+                1100
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116244
+        },
+        {
+            "name": "DGKAHFPREGVFVSN",
+            "range": [
+                1081,
+                1095
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001006
+        },
+        {
+            "name": "DGKAHFPREGVFVSN",
+            "range": [
+                1084,
+                1098
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001006
+        },
+        {
+            "name": "AHFPREGVF",
+            "range": [
+                1087,
+                1095
+            ],
+            "source": "IEDB",
+            "iedb_id": 1876454
+        },
+        {
+            "name": "PREGVFVSNGTHWFV",
+            "range": [
+                1090,
+                1104
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001242
+        },
+        {
+            "name": "GVFVSNGTHWFVTQRNFYEPQI",
+            "range": [
+                1093,
+                1114
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116205
+        },
+        {
+            "name": "SNGTHWFVTQRNFYEPQIIT",
+            "range": [
+                1097,
+                1116
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869413
+        },
+        {
+            "name": "WFVTQRNFYEPQIIT",
+            "range": [
+                1101,
+                1115
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001387
+        },
+        {
+            "name": "WFVTQRNFYEPQIIT",
+            "range": [
+                1102,
+                1116
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001387
+        },
+        {
+            "name": "TQRNFYEPQIITTDNTFVSG",
+            "range": [
+                1105,
+                1124
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870007
+        },
+        {
+            "name": "NFYEPQIITTDNTFV",
+            "range": [
+                1105,
+                1119
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001217
+        },
+        {
+            "name": "RNFYEPQII",
+            "range": [
+                1107,
+                1115
+            ],
+            "source": "IEDB",
+            "iedb_id": 1927257
+        },
+        {
+            "name": "RNFYEPQIITTDNTFVSGNCDV",
+            "range": [
+                1107,
+                1128
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116265
+        },
+        {
+            "name": "NFYEPQIITTDNTFV",
+            "range": [
+                1108,
+                1122
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001217
+        },
+        {
+            "name": "YEPQIITTDNTFVSGN",
+            "range": [
+                1110,
+                1125
+            ],
+            "source": "IEDB",
+            "iedb_id": 1708916
+        },
+        {
+            "name": "QIITTDNTFVSGNCDVVIGI",
+            "range": [
+                1113,
+                1132
+            ],
+            "source": "IEDB",
+            "iedb_id": 1868524
+        },
+        {
+            "name": "QIITTDNTFVSGN",
+            "range": [
+                1113,
+                1125
+            ],
+            "source": "IEDB",
+            "iedb_id": 1873239
+        },
+        {
+            "name": "TFVSGNCDVVIGIVN",
+            "range": [
+                1117,
+                1131
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001331
+        },
+        {
+            "name": "DNTFVSGNCDVVIGI",
+            "range": [
+                1118,
+                1132
+            ],
+            "source": "IEDB",
+            "iedb_id": 2118580
+        },
+        {
+            "name": "TFVSGNCDVVIGIVN",
+            "range": [
+                1120,
+                1134
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001331
+        },
+        {
+            "name": "FVSGNCDVVIGIV",
+            "range": [
+                1121,
+                1133
+            ],
+            "source": "IEDB",
+            "iedb_id": 1871830
+        },
+        {
+            "name": "FVSGNCDVVIGIVNNTVYDPLQ",
+            "range": [
+                1121,
+                1142
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116184
+        },
+        {
+            "name": "GNCDVVIGIVNNTVY",
+            "range": [
+                1121,
+                1135
+            ],
+            "source": "IEDB",
+            "iedb_id": 2121009
+        },
+        {
+            "name": "GNCDVVIGIVNNTVY",
+            "range": [
+                1124,
+                1138
+            ],
+            "source": "IEDB",
+            "iedb_id": 2121009
+        },
+        {
+            "name": "IVNNTVYDPLQPELD",
+            "range": [
+                1129,
+                1143
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001132
+        },
+        {
+            "name": "IVNNTVYDPLQPELD",
+            "range": [
+                1131,
+                1145
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001132
+        },
+        {
+            "name": "IVNNTVYDPLQPELD",
+            "range": [
+                1132,
+                1146
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001132
+        },
+        {
+            "name": "NTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDIS",
+            "range": [
+                1135,
+                1170
+            ],
+            "source": "IEDB",
+            "iedb_id": 1969166
+        },
+        {
+            "name": "YDPLQPELDSFKEEL",
+            "range": [
+                1138,
+                1152
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001390
+        },
+        {
+            "name": "YDPLQPELDSFKEELDKYFKNHTSPDVDLGDI",
+            "range": [
+                1138,
+                1169
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001391
+        },
+        {
+            "name": "PLQPELDSFKEELDKYFKNHTSPDVDLGDIS",
+            "range": [
+                1140,
+                1170
+            ],
+            "source": "IEDB",
+            "iedb_id": 1952004
+        },
+        {
+            "name": "PELDSFKEELDKYFKNHTSPD",
+            "range": [
+                1143,
+                1163
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870804
+        },
+        {
+            "name": "PELDSFKEELDKYFKNHTSPDVDLG",
+            "range": [
+                1143,
+                1167
+            ],
+            "source": "IEDB",
+            "iedb_id": 2069086
+        },
+        {
+            "name": "ELDSFKEEL",
+            "range": [
+                1144,
+                1152
+            ],
+            "source": "IEDB",
+            "iedb_id": 1886278
+        },
+        {
+            "name": "ELDSFKEELDKYFKNHTSPDV",
+            "range": [
+                1144,
+                1164
+            ],
+            "source": "IEDB",
+            "iedb_id": 2115997
+        },
+        {
+            "name": "ELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDR",
+            "range": [
+                1144,
+                1185
+            ],
+            "source": "IEDB",
+            "iedb_id": 2115998
+        },
+        {
+            "name": "LDSFKEELDKYFKNHTSPDVDLG",
+            "range": [
+                1145,
+                1167
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972979
+        },
+        {
+            "name": "SFKEELDKYFK",
+            "range": [
+                1147,
+                1157
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972993
+        },
+        {
+            "name": "FKEELDKYFK",
+            "range": [
+                1148,
+                1157
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116377
+        },
+        {
+            "name": "KEELDKYFKNHTSPDVDLGDIS",
+            "range": [
+                1149,
+                1170
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116211
+        },
+        {
+            "name": "EELDKYFKNHTSPDV",
+            "range": [
+                1150,
+                1164
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001027
+        },
+        {
+            "name": "DKYFKNHTSPDVDL",
+            "range": [
+                1153,
+                1166
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972961
+        },
+        {
+            "name": "PDVDLGDISGINASV",
+            "range": [
+                1161,
+                1175
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001232
+        },
+        {
+            "name": "PDVDLGDISGINASV",
+            "range": [
+                1162,
+                1176
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001232
+        },
+        {
+            "name": "DVDLGDISGINASVVNIQKEID",
+            "range": [
+                1163,
+                1184
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116176
+        },
+        {
+            "name": "DLGDISGIN",
+            "range": [
+                1165,
+                1173
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972694
+        },
+        {
+            "name": "DISGINASVVNIQKE",
+            "range": [
+                1165,
+                1179
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001010
+        },
+        {
+            "name": "DISGINASVVNIQKE",
+            "range": [
+                1168,
+                1182
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001010
+        },
+        {
+            "name": "INASVVNIQKEIDRL",
+            "range": [
+                1169,
+                1183
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122140
+        },
+        {
+            "name": "SGINASVVNIQKEIDRLNEVAKNLNESLIDLQ",
+            "range": [
+                1170,
+                1201
+            ],
+            "source": "IEDB",
+            "iedb_id": 1870810
+        },
+        {
+            "name": "INASVVNIQKEIDRL",
+            "range": [
+                1171,
+                1185
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122140
+        },
+        {
+            "name": "INASVVNIQKEIDRL",
+            "range": [
+                1172,
+                1186
+            ],
+            "source": "IEDB",
+            "iedb_id": 2122140
+        },
+        {
+            "name": "QKEIDRLNEVAKNLN",
+            "range": [
+                1177,
+                1191
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001261
+        },
+        {
+            "name": "VNIQKEIDRLNEVAKNLNESLI",
+            "range": [
+                1177,
+                1198
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116302
+        },
+        {
+            "name": "IQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWP",
+            "range": [
+                1179,
+                1213
+            ],
+            "source": "IEDB",
+            "iedb_id": 2066455
+        },
+        {
+            "name": "QKEIDRLNEVAKNLN",
+            "range": [
+                1180,
+                1194
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001261
+        },
+        {
+            "name": "EIDRLNEVAKNLNESLIDLQEL",
+            "range": [
+                1182,
+                1203
+            ],
+            "source": "IEDB",
+            "iedb_id": 1852209
+        },
+        {
+            "name": "RLNEVAKNLNESLIDLQELG",
+            "range": [
+                1185,
+                1204
+            ],
+            "source": "IEDB",
+            "iedb_id": 2060886
+        },
+        {
+            "name": "NLNESLIDLQELGKY",
+            "range": [
+                1189,
+                1203
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001222
+        },
+        {
+            "name": "NLNESLIDLQELGKY",
+            "range": [
+                1191,
+                1205
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001222
+        },
+        {
+            "name": "KNLNESLIDLQELGKYEQYIKW",
+            "range": [
+                1191,
+                1212
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116215
+        },
+        {
+            "name": "NLNESLIDLQELGKY",
+            "range": [
+                1192,
+                1206
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001222
+        },
+        {
+            "name": "LQELGKYEQYIKWPW",
+            "range": [
+                1197,
+                1211
+            ],
+            "source": "IEDB",
+            "iedb_id": 1858678
+        },
+        {
+            "name": "IDLQELGKYEQYIKW",
+            "range": [
+                1198,
+                1212
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001112
+        },
+        {
+            "name": "LQELGKYEQYIKWPW",
+            "range": [
+                1200,
+                1214
+            ],
+            "source": "IEDB",
+            "iedb_id": 1858678
+        },
+        {
+            "name": "GKYEQYIKWPWYIWL",
+            "range": [
+                1201,
+                1215
+            ],
+            "source": "IEDB",
+            "iedb_id": 1857361
+        },
+        {
+            "name": "GKYEQYIKWPWYIWL",
+            "range": [
+                1204,
+                1218
+            ],
+            "source": "IEDB",
+            "iedb_id": 1857361
+        },
+        {
+            "name": "QYIKWPWYIWLGFIA",
+            "range": [
+                1205,
+                1219
+            ],
+            "source": "IEDB",
+            "iedb_id": 1859278
+        },
+        {
+            "name": "KYEQYIKWPWYIWLGFIAGLIA",
+            "range": [
+                1205,
+                1226
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116218
+        },
+        {
+            "name": "YEQYIKWPWYIWLGFI",
+            "range": [
+                1206,
+                1221
+            ],
+            "source": "IEDB",
+            "iedb_id": 1708928
+        },
+        {
+            "name": "QYIKWPWYIWLGFIA",
+            "range": [
+                1208,
+                1222
+            ],
+            "source": "IEDB",
+            "iedb_id": 1859278
+        },
+        {
+            "name": "YIKWPWYIWLGFIAGL",
+            "range": [
+                1209,
+                1224
+            ],
+            "source": "IEDB",
+            "iedb_id": 1709470
+        },
+        {
+            "name": "WPWYIWLGFIAGLIA",
+            "range": [
+                1209,
+                1223
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860592
+        },
+        {
+            "name": "YIKWPWYIW",
+            "range": [
+                1209,
+                1217
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860671
+        },
+        {
+            "name": "IKWPWYIWL",
+            "range": [
+                1210,
+                1218
+            ],
+            "source": "IEDB",
+            "iedb_id": 1857835
+        },
+        {
+            "name": "IKWPWYIWLGFIAGL",
+            "range": [
+                1210,
+                1224
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001116
+        },
+        {
+            "name": "KWPWYIWLG",
+            "range": [
+                1211,
+                1219
+            ],
+            "source": "IEDB",
+            "iedb_id": 1858355
+        },
+        {
+            "name": "WPWYIWLGFIAGLIA",
+            "range": [
+                1211,
+                1225
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860592
+        },
+        {
+            "name": "WPWYIWLGF",
+            "range": [
+                1212,
+                1220
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860591
+        },
+        {
+            "name": "WPWYIWLGFIAGLIA",
+            "range": [
+                1212,
+                1226
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860592
+        },
+        {
+            "name": "PWYIWLGFI",
+            "range": [
+                1213,
+                1221
+            ],
+            "source": "IEDB",
+            "iedb_id": 1859072
+        },
+        {
+            "name": "WYIWLGFIA",
+            "range": [
+                1214,
+                1222
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860610
+        },
+        {
+            "name": "YIWLGFIAG",
+            "range": [
+                1215,
+                1223
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860674
+        },
+        {
+            "name": "YIWLGFIAGL",
+            "range": [
+                1215,
+                1224
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000272
+        },
+        {
+            "name": "IWLGFIAG",
+            "range": [
+                1216,
+                1223
+            ],
+            "source": "IEDB",
+            "iedb_id": 1972973
+        },
+        {
+            "name": "WLGFIAGLI",
+            "range": [
+                1217,
+                1225
+            ],
+            "source": "IEDB",
+            "iedb_id": 1860587
+        },
+        {
+            "name": "LGFIAGLIA",
+            "range": [
+                1218,
+                1226
+            ],
+            "source": "IEDB",
+            "iedb_id": 1858482
+        },
+        {
+            "name": "AGLIAIVMVTIMLCC",
+            "range": [
+                1221,
+                1235
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000973
+        },
+        {
+            "name": "AGLIAIVMVTIMLCC",
+            "range": [
+                1222,
+                1236
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000973
+        },
+        {
+            "name": "GLIAIVMVTIMLCCMTS",
+            "range": [
+                1223,
+                1239
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116197
+        },
+        {
+            "name": "VMVTIMLCCMTSCCS",
+            "range": [
+                1225,
+                1239
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001378
+        },
+        {
+            "name": "VMVTIMLCCMTSCCS",
+            "range": [
+                1228,
+                1242
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001378
+        },
+        {
+            "name": "LCCMTSCCSCLKGCC",
+            "range": [
+                1234,
+                1248
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001173
+        },
+        {
+            "name": "MTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGV",
+            "range": [
+                1237,
+                1268
+            ],
+            "source": "IEDB",
+            "iedb_id": 1951687
+        },
+        {
+            "name": "CCSCLKGCCSCGSCC",
+            "range": [
+                1237,
+                1251
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000993
+        },
+        {
+            "name": "TSCCSCLKGCCSCGS",
+            "range": [
+                1238,
+                1252
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116292
+        },
+        {
+            "name": "CCSCLKGCCSCGSCC",
+            "range": [
+                1240,
+                1254
+            ],
+            "source": "IEDB",
+            "iedb_id": 2000993
+        },
+        {
+            "name": "CCSCGSCCKFDEDDSEPVLKGV",
+            "range": [
+                1247,
+                1268
+            ],
+            "source": "IEDB",
+            "iedb_id": 2116165
+        },
+        {
+            "name": "SCGSCCKFDEDDSEPVLKGV",
+            "range": [
+                1249,
+                1268
+            ],
+            "source": "IEDB",
+            "iedb_id": 1869082
+        },
+        {
+            "name": "SCCKFDEDDSEPVLK",
+            "range": [
+                1249,
+                1263
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001292
+        },
+        {
+            "name": "SCCKFDEDDSEPVLK",
+            "range": [
+                1251,
+                1265
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001292
+        },
+        {
+            "name": "SCCKFDEDDSEPVLK",
+            "range": [
+                1252,
+                1266
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001292
+        },
+        {
+            "name": "EDDSEPVLKGVKLHY",
+            "range": [
+                1258,
+                1272
+            ],
+            "source": "IEDB",
+            "iedb_id": 2001025
+        }
     ],
-    "sars1": [
-        {"name": "RBD Interface", "range": [320, 340]},
-        {"name": "Neutralization Loop", "range": [460, 480]},
-        {"name": "Conserved Core B", "range": [960, 970]}
-    ],
+    "sars1": [],
     "flu": [
-        {"name": "Antigenic Site Sa", "range": [128, 133]},
-        {"name": "Antigenic Site Sb", "range": [170, 180]},
-        {"name": "Antigenic Site Ca", "range": [235, 245]}
+        {
+            "name": "GLFGAIAGFIE",
+            "range": [
+                1,
+                11
+            ],
+            "source": "IEDB",
+            "iedb_id": 20838
+        },
+        {
+            "name": "GLFGAIAGFIEGGW",
+            "range": [
+                1,
+                14
+            ],
+            "source": "IEDB",
+            "iedb_id": 97348
+        },
+        {
+            "name": "WILWISFAIS",
+            "range": [
+                4,
+                13
+            ],
+            "source": "IEDB",
+            "iedb_id": 179686
+        },
+        {
+            "name": "WISFAISCFL",
+            "range": [
+                7,
+                16
+            ],
+            "source": "IEDB",
+            "iedb_id": 179687
+        },
+        {
+            "name": "ISFAISCFLL",
+            "range": [
+                8,
+                17
+            ],
+            "source": "IEDB",
+            "iedb_id": 179037
+        },
+        {
+            "name": "NADTLCIGY",
+            "range": [
+                16,
+                24
+            ],
+            "source": "IEDB",
+            "iedb_id": 164133
+        },
+        {
+            "name": "GTLVKTITDDQIEV",
+            "range": [
+                23,
+                36
+            ],
+            "source": "IEDB",
+            "iedb_id": 22755
+        },
+        {
+            "name": "GTLVKTITDDQIE",
+            "range": [
+                23,
+                35
+            ],
+            "source": "IEDB",
+            "iedb_id": 105852
+        },
+        {
+            "name": "HANNSTDTV",
+            "range": [
+                25,
+                33
+            ],
+            "source": "IEDB",
+            "iedb_id": 178960
+        },
+        {
+            "name": "LEKNVTVTHSVNLLEDS",
+            "range": [
+                26,
+                42
+            ],
+            "source": "IEDB",
+            "iedb_id": 129221
+        },
+        {
+            "name": "IEVTNATEL",
+            "range": [
+                34,
+                42
+            ],
+            "source": "IEDB",
+            "iedb_id": 124304
+        },
+        {
+            "name": "LEKNVTVTHSVNLLEDS",
+            "range": [
+                37,
+                53
+            ],
+            "source": "IEDB",
+            "iedb_id": 129221
+        },
+        {
+            "name": "GTLVKTITDDQIEV",
+            "range": [
+                39,
+                52
+            ],
+            "source": "IEDB",
+            "iedb_id": 22755
+        },
+        {
+            "name": "YVFVGTSRY",
+            "range": [
+                39,
+                47
+            ],
+            "source": "IEDB",
+            "iedb_id": 231705
+        },
+        {
+            "name": "NVTVTHSV",
+            "range": [
+                40,
+                47
+            ],
+            "source": "IEDB",
+            "iedb_id": 179330
+        },
+        {
+            "name": "RSKAFSNCY",
+            "range": [
+                44,
+                52
+            ],
+            "source": "IEDB",
+            "iedb_id": 55866
+        },
+        {
+            "name": "GMIDGWYGY",
+            "range": [
+                53,
+                61
+            ],
+            "source": "IEDB",
+            "iedb_id": 21284
+        },
+        {
+            "name": "IEKTNEKFHQIEK",
+            "range": [
+                56,
+                68
+            ],
+            "source": "IEDB",
+            "iedb_id": 25863
+        },
+        {
+            "name": "GIAPLQLGK",
+            "range": [
+                63,
+                71
+            ],
+            "source": "IEDB",
+            "iedb_id": 20218
+        },
+        {
+            "name": "KEFSEVEGRIQDLEKYV",
+            "range": [
+                68,
+                84
+            ],
+            "source": "IEDB",
+            "iedb_id": 30386
+        },
+        {
+            "name": "LSTASSWSY",
+            "range": [
+                87,
+                95
+            ],
+            "source": "IEDB",
+            "iedb_id": 124485
+        },
+        {
+            "name": "RSKAFSNCY",
+            "range": [
+                90,
+                98
+            ],
+            "source": "IEDB",
+            "iedb_id": 55866
+        },
+        {
+            "name": "SKAFSNCYPYDVPDYASL",
+            "range": [
+                91,
+                108
+            ],
+            "source": "IEDB",
+            "iedb_id": 58783
+        },
+        {
+            "name": "SYNAELLVAL",
+            "range": [
+                93,
+                102
+            ],
+            "source": "IEDB",
+            "iedb_id": 62653
+        },
+        {
+            "name": "AELLVALEN",
+            "range": [
+                96,
+                104
+            ],
+            "source": "IEDB",
+            "iedb_id": 1055
+        },
+        {
+            "name": "CYPYDVPDY",
+            "range": [
+                97,
+                105
+            ],
+            "source": "IEDB",
+            "iedb_id": 7428
+        },
+        {
+            "name": "YPGYFADYEELREQLSS",
+            "range": [
+                97,
+                113
+            ],
+            "source": "IEDB",
+            "iedb_id": 130388
+        },
+        {
+            "name": "CYPYDVPDYASLRSLVASSG",
+            "range": [
+                97,
+                116
+            ],
+            "source": "IEDB",
+            "iedb_id": 138761
+        },
+        {
+            "name": "YPYDVPDYA",
+            "range": [
+                98,
+                106
+            ],
+            "source": "IEDB",
+            "iedb_id": 75441
+        },
+        {
+            "name": "YPYDVPDYASL",
+            "range": [
+                98,
+                108
+            ],
+            "source": "IEDB",
+            "iedb_id": 75443
+        },
+        {
+            "name": "YDVPDYASLRSLVASS",
+            "range": [
+                100,
+                115
+            ],
+            "source": "IEDB",
+            "iedb_id": 73603
+        },
+        {
+            "name": "NSDNGTCYPGDFINYEEL",
+            "range": [
+                101,
+                118
+            ],
+            "source": "IEDB",
+            "iedb_id": 174212
+        },
+        {
+            "name": "SVSSFERFEIFPK",
+            "range": [
+                107,
+                119
+            ],
+            "source": "IEDB",
+            "iedb_id": 62335
+        },
+        {
+            "name": "YPGYFADYEELREQLSS",
+            "range": [
+                108,
+                124
+            ],
+            "source": "IEDB",
+            "iedb_id": 130388
+        },
+        {
+            "name": "LRSLVASSG",
+            "range": [
+                108,
+                116
+            ],
+            "source": "IEDB",
+            "iedb_id": 226494
+        },
+        {
+            "name": "SFERFEIFPKE",
+            "range": [
+                110,
+                120
+            ],
+            "source": "IEDB",
+            "iedb_id": 57751
+        },
+        {
+            "name": "FERFEIFPK",
+            "range": [
+                111,
+                119
+            ],
+            "source": "IEDB",
+            "iedb_id": 15630
+        },
+        {
+            "name": "SVSSFERFEIFPK",
+            "range": [
+                112,
+                124
+            ],
+            "source": "IEDB",
+            "iedb_id": 62335
+        },
+        {
+            "name": "ADYEELREQLSSVSSFERFE",
+            "range": [
+                113,
+                132
+            ],
+            "source": "IEDB",
+            "iedb_id": 798
+        },
+        {
+            "name": "CYPYDVPDY",
+            "range": [
+                114,
+                122
+            ],
+            "source": "IEDB",
+            "iedb_id": 7428
+        },
+        {
+            "name": "SFERFEIFPKE",
+            "range": [
+                115,
+                125
+            ],
+            "source": "IEDB",
+            "iedb_id": 57751
+        },
+        {
+            "name": "YPYDVPDYA",
+            "range": [
+                115,
+                123
+            ],
+            "source": "IEDB",
+            "iedb_id": 75441
+        },
+        {
+            "name": "FERFEIFPKE",
+            "range": [
+                116,
+                125
+            ],
+            "source": "IEDB",
+            "iedb_id": 15631
+        },
+        {
+            "name": "YDVPDYASLRSLVASS",
+            "range": [
+                116,
+                131
+            ],
+            "source": "IEDB",
+            "iedb_id": 73603
+        },
+        {
+            "name": "QLSSVSSFERFEIFPKESSW",
+            "range": [
+                117,
+                136
+            ],
+            "source": "IEDB",
+            "iedb_id": 51554
+        },
+        {
+            "name": "QLSSVSSFERFEIFPKESSW",
+            "range": [
+                121,
+                140
+            ],
+            "source": "IEDB",
+            "iedb_id": 51554
+        },
+        {
+            "name": "GFTWTGVTQNG",
+            "range": [
+                124,
+                134
+            ],
+            "source": "IEDB",
+            "iedb_id": 19639
+        },
+        {
+            "name": "SVSSFERFEIFPK",
+            "range": [
+                124,
+                136
+            ],
+            "source": "IEDB",
+            "iedb_id": 62335
+        },
+        {
+            "name": "LRSLVASSG",
+            "range": [
+                124,
+                132
+            ],
+            "source": "IEDB",
+            "iedb_id": 226494
+        },
+        {
+            "name": "SFERFEIFPKE",
+            "range": [
+                127,
+                137
+            ],
+            "source": "IEDB",
+            "iedb_id": 57751
+        },
+        {
+            "name": "WTGVTQN",
+            "range": [
+                127,
+                133
+            ],
+            "source": "IEDB",
+            "iedb_id": 73132
+        },
+        {
+            "name": "FERFEIFPK",
+            "range": [
+                128,
+                136
+            ],
+            "source": "IEDB",
+            "iedb_id": 15630
+        },
+        {
+            "name": "FERFEIFPKE",
+            "range": [
+                128,
+                137
+            ],
+            "source": "IEDB",
+            "iedb_id": 15631
+        },
+        {
+            "name": "KVKILPKDRWTQHTTTGG",
+            "range": [
+                128,
+                145
+            ],
+            "source": "IEDB",
+            "iedb_id": 34068
+        },
+        {
+            "name": "LVASSGTLEFI",
+            "range": [
+                128,
+                138
+            ],
+            "source": "IEDB",
+            "iedb_id": 179223
+        },
+        {
+            "name": "ACKRGPGSGFFSRLN",
+            "range": [
+                138,
+                152
+            ],
+            "source": "IEDB",
+            "iedb_id": 570
+        },
+        {
+            "name": "HNTNGVTAACSHE",
+            "range": [
+                139,
+                151
+            ],
+            "source": "IEDB",
+            "iedb_id": 24408
+        },
+        {
+            "name": "GFTWTGVTQNG",
+            "range": [
+                140,
+                150
+            ],
+            "source": "IEDB",
+            "iedb_id": 19639
+        },
+        {
+            "name": "PNHNTNGVTAA",
+            "range": [
+                141,
+                151
+            ],
+            "source": "IEDB",
+            "iedb_id": 48652
+        },
+        {
+            "name": "NHNTNGVTAAC",
+            "range": [
+                142,
+                152
+            ],
+            "source": "IEDB",
+            "iedb_id": 44161
+        },
+        {
+            "name": "HNTNGVTAACS",
+            "range": [
+                143,
+                153
+            ],
+            "source": "IEDB",
+            "iedb_id": 24407
+        },
+        {
+            "name": "HNTNGVTAACSHE",
+            "range": [
+                143,
+                155
+            ],
+            "source": "IEDB",
+            "iedb_id": 24408
+        },
+        {
+            "name": "WTGVTQN",
+            "range": [
+                143,
+                149
+            ],
+            "source": "IEDB",
+            "iedb_id": 73132
+        },
+        {
+            "name": "NTNGVTAACSH",
+            "range": [
+                144,
+                154
+            ],
+            "source": "IEDB",
+            "iedb_id": 46185
+        },
+        {
+            "name": "TNGVTAACSHE",
+            "range": [
+                145,
+                155
+            ],
+            "source": "IEDB",
+            "iedb_id": 65332
+        },
+        {
+            "name": "NGVTAACSHEG",
+            "range": [
+                146,
+                156
+            ],
+            "source": "IEDB",
+            "iedb_id": 44110
+        },
+        {
+            "name": "FYRNLLWLT",
+            "range": [
+                149,
+                157
+            ],
+            "source": "IEDB",
+            "iedb_id": 18460
+        },
+        {
+            "name": "VTAACSHAGK",
+            "range": [
+                149,
+                158
+            ],
+            "source": "IEDB",
+            "iedb_id": 71239
+        },
+        {
+            "name": "ACKRGPGSGFFSRLN",
+            "range": [
+                154,
+                168
+            ],
+            "source": "IEDB",
+            "iedb_id": 570
+        },
+        {
+            "name": "LTKSGSTYPVLNVT",
+            "range": [
+                154,
+                167
+            ],
+            "source": "IEDB",
+            "iedb_id": 39998
+        },
+        {
+            "name": "FYRNLLWLT",
+            "range": [
+                160,
+                168
+            ],
+            "source": "IEDB",
+            "iedb_id": 18460
+        },
+        {
+            "name": "YRNLVWFIKKNTRYP",
+            "range": [
+                161,
+                175
+            ],
+            "source": "IEDB",
+            "iedb_id": 116041
+        },
+        {
+            "name": "LTKSGSTYPVLNVT",
+            "range": [
+                170,
+                183
+            ],
+            "source": "IEDB",
+            "iedb_id": 39998
+        },
+        {
+            "name": "RFQIKGVEL",
+            "range": [
+                170,
+                178
+            ],
+            "source": "IEDB",
+            "iedb_id": 177942
+        },
+        {
+            "name": "KFDKLYIWGVHHPGT",
+            "range": [
+                173,
+                187
+            ],
+            "source": "IEDB",
+            "iedb_id": 190809
+        },
+        {
+            "name": "DKLYIWGVHHPSTN",
+            "range": [
+                175,
+                188
+            ],
+            "source": "IEDB",
+            "iedb_id": 8939
+        },
+        {
+            "name": "GIHHPSNSK",
+            "range": [
+                177,
+                185
+            ],
+            "source": "IEDB",
+            "iedb_id": 20289
+        },
+        {
+            "name": "HHPSTNQEQTSLYVQAS",
+            "range": [
+                183,
+                199
+            ],
+            "source": "IEDB",
+            "iedb_id": 24012
+        },
+        {
+            "name": "STNQEQTSLYVQASGRVTVS",
+            "range": [
+                186,
+                205
+            ],
+            "source": "IEDB",
+            "iedb_id": 61797
+        },
+        {
+            "name": "GIHHPSNSK",
+            "range": [
+                195,
+                203
+            ],
+            "source": "IEDB",
+            "iedb_id": 20289
+        },
+        {
+            "name": "HHPSTNQEQTSLYVQAS",
+            "range": [
+                199,
+                215
+            ],
+            "source": "IEDB",
+            "iedb_id": 24012
+        },
+        {
+            "name": "GRVTVSTKR",
+            "range": [
+                200,
+                208
+            ],
+            "source": "IEDB",
+            "iedb_id": 124229
+        },
+        {
+            "name": "IGNQRALYHTENAYVSVVSS",
+            "range": [
+                201,
+                220
+            ],
+            "source": "IEDB",
+            "iedb_id": 26287
+        },
+        {
+            "name": "RVTVSTRRSQQTIIPNIG",
+            "range": [
+                201,
+                218
+            ],
+            "source": "IEDB",
+            "iedb_id": 56434
+        },
+        {
+            "name": "TSADQQSLY",
+            "range": [
+                201,
+                209
+            ],
+            "source": "IEDB",
+            "iedb_id": 124788
+        },
+        {
+            "name": "STNQEQTSLYVQASGRVTVS",
+            "range": [
+                202,
+                221
+            ],
+            "source": "IEDB",
+            "iedb_id": 61797
+        },
+        {
+            "name": "LYQNVGTYV",
+            "range": [
+                204,
+                212
+            ],
+            "source": "IEDB",
+            "iedb_id": 40910
+        },
+        {
+            "name": "RLYQNPTTYI",
+            "range": [
+                204,
+                213
+            ],
+            "source": "IEDB",
+            "iedb_id": 135263
+        },
+        {
+            "name": "KLYQNPTTYI",
+            "range": [
+                205,
+                214
+            ],
+            "source": "IEDB",
+            "iedb_id": 32268
+        },
+        {
+            "name": "AIYHTENAYVSVVSSHYNR",
+            "range": [
+                207,
+                225
+            ],
+            "source": "IEDB",
+            "iedb_id": 2136
+        },
+        {
+            "name": "TYVSVGTSTL",
+            "range": [
+                210,
+                219
+            ],
+            "source": "IEDB",
+            "iedb_id": 67501
+        },
+        {
+            "name": "YVFVGSSRY",
+            "range": [
+                215,
+                223
+            ],
+            "source": "IEDB",
+            "iedb_id": 164145
+        },
+        {
+            "name": "RVTVSTRRSQQTIIPNIG",
+            "range": [
+                217,
+                234
+            ],
+            "source": "IEDB",
+            "iedb_id": 56434
+        },
+        {
+            "name": "VVSSHYSRRFTPEIAKRPKV",
+            "range": [
+                217,
+                236
+            ],
+            "source": "IEDB",
+            "iedb_id": 71836
+        },
+        {
+            "name": "NIPSRISIYWTIVKPGD",
+            "range": [
+                225,
+                241
+            ],
+            "source": "IEDB",
+            "iedb_id": 190870
+        },
+        {
+            "name": "IYWTIVKPGDILL",
+            "range": [
+                232,
+                244
+            ],
+            "source": "IEDB",
+            "iedb_id": 29726
+        },
+        {
+            "name": "MNYYWTLL",
+            "range": [
+                243,
+                250
+            ],
+            "source": "IEDB",
+            "iedb_id": 42256
+        },
+        {
+            "name": "MNYYWTLL",
+            "range": [
+                244,
+                251
+            ],
+            "source": "IEDB",
+            "iedb_id": 42256
+        },
+        {
+            "name": "TLVEPGDKITFEATGNLVVP",
+            "range": [
+                249,
+                268
+            ],
+            "source": "IEDB",
+            "iedb_id": 188764
+        },
+        {
+            "name": "LIAPRGYFK",
+            "range": [
+                251,
+                259
+            ],
+            "source": "IEDB",
+            "iedb_id": 124429
+        },
+        {
+            "name": "FESTGNLI",
+            "range": [
+                255,
+                262
+            ],
+            "source": "IEDB",
+            "iedb_id": 15687
+        },
+        {
+            "name": "RGYFKMRTGKSSIMRS",
+            "range": [
+                255,
+                270
+            ],
+            "source": "IEDB",
+            "iedb_id": 54022
+        },
+        {
+            "name": "IFEANGNLIAPWYAFALSRG",
+            "range": [
+                257,
+                276
+            ],
+            "source": "IEDB",
+            "iedb_id": 26049
+        },
+        {
+            "name": "IFEANGNLIAPWYAFALSRG",
+            "range": [
+                258,
+                277
+            ],
+            "source": "IEDB",
+            "iedb_id": 26049
+        },
+        {
+            "name": "FEANGNLI",
+            "range": [
+                259,
+                266
+            ],
+            "source": "IEDB",
+            "iedb_id": 15483
+        },
+        {
+            "name": "GNLIAPWYAFALSRG",
+            "range": [
+                262,
+                276
+            ],
+            "source": "IEDB",
+            "iedb_id": 97356
+        },
+        {
+            "name": "LVVPRYAFAMERNAGSGIII",
+            "range": [
+                265,
+                284
+            ],
+            "source": "IEDB",
+            "iedb_id": 188723
+        },
+        {
+            "name": "LIAPRGYFK",
+            "range": [
+                267,
+                275
+            ],
+            "source": "IEDB",
+            "iedb_id": 124429
+        },
+        {
+            "name": "VPRYAFAM",
+            "range": [
+                267,
+                274
+            ],
+            "source": "IEDB",
+            "iedb_id": 124831
+        },
+        {
+            "name": "RGYFKMRTGKSSIMRS",
+            "range": [
+                271,
+                286
+            ],
+            "source": "IEDB",
+            "iedb_id": 54022
+        },
+        {
+            "name": "GSIPNDKPFQNVNKITYGACPKYVKQNTLKLAT",
+            "range": [
+                286,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 105231
+        },
+        {
+            "name": "ECNTKCQT",
+            "range": [
+                290,
+                297
+            ],
+            "source": "IEDB",
+            "iedb_id": 187312
+        },
+        {
+            "name": "FQNVNKITY",
+            "range": [
+                294,
+                302
+            ],
+            "source": "IEDB",
+            "iedb_id": 124126
+        },
+        {
+            "name": "CPKYVRSAKLRM",
+            "range": [
+                303,
+                314
+            ],
+            "source": "IEDB",
+            "iedb_id": 6802
+        },
+        {
+            "name": "GACPKYVKQNTLKLAT",
+            "range": [
+                303,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 18543
+        },
+        {
+            "name": "GACPKYVKQNTLKLATGMR",
+            "range": [
+                303,
+                321
+            ],
+            "source": "IEDB",
+            "iedb_id": 18544
+        },
+        {
+            "name": "GACPKYVKQNTLKL",
+            "range": [
+                303,
+                316
+            ],
+            "source": "IEDB",
+            "iedb_id": 18541
+        },
+        {
+            "name": "GACPKYVKQNTLKLA",
+            "range": [
+                303,
+                317
+            ],
+            "source": "IEDB",
+            "iedb_id": 18542
+        },
+        {
+            "name": "SSLPYQNI",
+            "range": [
+                304,
+                311
+            ],
+            "source": "IEDB",
+            "iedb_id": 187526
+        },
+        {
+            "name": "ACPKYVKQNTLKLATG",
+            "range": [
+                304,
+                319
+            ],
+            "source": "IEDB",
+            "iedb_id": 234022
+        },
+        {
+            "name": "CPKYVKQNTLKLATG",
+            "range": [
+                305,
+                319
+            ],
+            "source": "IEDB",
+            "iedb_id": 6795
+        },
+        {
+            "name": "CPKYVKQNTLKLATGMRNV",
+            "range": [
+                305,
+                323
+            ],
+            "source": "IEDB",
+            "iedb_id": 6797
+        },
+        {
+            "name": "PKYVKQNTLKLA",
+            "range": [
+                306,
+                317
+            ],
+            "source": "IEDB",
+            "iedb_id": 48231
+        },
+        {
+            "name": "PKYVKQNTLKLAT",
+            "range": [
+                306,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 48236
+        },
+        {
+            "name": "PKYVKQNTLKLATG",
+            "range": [
+                306,
+                319
+            ],
+            "source": "IEDB",
+            "iedb_id": 48238
+        },
+        {
+            "name": "PKYVKQNTLKLATGMR",
+            "range": [
+                306,
+                321
+            ],
+            "source": "IEDB",
+            "iedb_id": 48239
+        },
+        {
+            "name": "PKYVKQNTLKLATGMRNVPEKQT",
+            "range": [
+                306,
+                328
+            ],
+            "source": "IEDB",
+            "iedb_id": 48240
+        },
+        {
+            "name": "SLPFQNVHPVTIGECPKYVR",
+            "range": [
+                306,
+                325
+            ],
+            "source": "IEDB",
+            "iedb_id": 59385
+        },
+        {
+            "name": "PRYVKQNTLKLATGM",
+            "range": [
+                306,
+                320
+            ],
+            "source": "IEDB",
+            "iedb_id": 97560
+        },
+        {
+            "name": "PKYVKQNTLKLATGMRNVPEKQTRGLFGAIAGF",
+            "range": [
+                306,
+                338
+            ],
+            "source": "IEDB",
+            "iedb_id": 105473
+        },
+        {
+            "name": "KYVKQNTLKLA",
+            "range": [
+                307,
+                317
+            ],
+            "source": "IEDB",
+            "iedb_id": 34630
+        },
+        {
+            "name": "KYVKQNTLKLATGMR",
+            "range": [
+                307,
+                321
+            ],
+            "source": "IEDB",
+            "iedb_id": 34631
+        },
+        {
+            "name": "KYVKQNTLKLAT",
+            "range": [
+                307,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 95535
+        },
+        {
+            "name": "YVKQNTLKL",
+            "range": [
+                308,
+                316
+            ],
+            "source": "IEDB",
+            "iedb_id": 76317
+        },
+        {
+            "name": "YVKQNTLKLA",
+            "range": [
+                308,
+                317
+            ],
+            "source": "IEDB",
+            "iedb_id": 76318
+        },
+        {
+            "name": "YVKQNTLKLATGMR",
+            "range": [
+                308,
+                321
+            ],
+            "source": "IEDB",
+            "iedb_id": 76319
+        },
+        {
+            "name": "YVKQNTLKLAT",
+            "range": [
+                308,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 96032
+        },
+        {
+            "name": "FQNVNKITY",
+            "range": [
+                310,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 124126
+        },
+        {
+            "name": "LKLAT",
+            "range": [
+                314,
+                318
+            ],
+            "source": "IEDB",
+            "iedb_id": 36931
+        },
+        {
+            "name": "ATGMRNVPEKQTR",
+            "range": [
+                317,
+                329
+            ],
+            "source": "IEDB",
+            "iedb_id": 4973
+        },
+        {
+            "name": "CPKYVRSAKLRM",
+            "range": [
+                319,
+                330
+            ],
+            "source": "IEDB",
+            "iedb_id": 6802
+        },
+        {
+            "name": "GACPKYVKQNTLKLAT",
+            "range": [
+                319,
+                334
+            ],
+            "source": "IEDB",
+            "iedb_id": 18543
+        },
+        {
+            "name": "GACPKYVKQNTLKLATGMR",
+            "range": [
+                319,
+                337
+            ],
+            "source": "IEDB",
+            "iedb_id": 18544
+        },
+        {
+            "name": "GACPKYVKQNTLKL",
+            "range": [
+                319,
+                332
+            ],
+            "source": "IEDB",
+            "iedb_id": 18541
+        },
+        {
+            "name": "GACPKYVKQNTLKLA",
+            "range": [
+                319,
+                333
+            ],
+            "source": "IEDB",
+            "iedb_id": 18542
+        },
+        {
+            "name": "GMRNVPEKQT",
+            "range": [
+                319,
+                328
+            ],
+            "source": "IEDB",
+            "iedb_id": 21337
+        },
+        {
+            "name": "CPKYVRSAKLRM",
+            "range": [
+                320,
+                331
+            ],
+            "source": "IEDB",
+            "iedb_id": 6802
+        },
+        {
+            "name": "MRNVPEKQT",
+            "range": [
+                320,
+                328
+            ],
+            "source": "IEDB",
+            "iedb_id": 42487
+        },
+        {
+            "name": "MRNVPEKQTR",
+            "range": [
+                320,
+                329
+            ],
+            "source": "IEDB",
+            "iedb_id": 42488
+        },
+        {
+            "name": "PKYVRSAKLRMVT",
+            "range": [
+                320,
+                332
+            ],
+            "source": "IEDB",
+            "iedb_id": 48268
+        },
+        {
+            "name": "CPKYVKQNTLKLATG",
+            "range": [
+                321,
+                335
+            ],
+            "source": "IEDB",
+            "iedb_id": 6795
+        },
+        {
+            "name": "CPKYVKQNTLKLATGMRNV",
+            "range": [
+                321,
+                339
+            ],
+            "source": "IEDB",
+            "iedb_id": 6797
+        },
+        {
+            "name": "PKYVKQNTLKLA",
+            "range": [
+                322,
+                333
+            ],
+            "source": "IEDB",
+            "iedb_id": 48231
+        },
+        {
+            "name": "PKYVKQNTLKLAT",
+            "range": [
+                322,
+                334
+            ],
+            "source": "IEDB",
+            "iedb_id": 48237
+        },
+        {
+            "name": "PKYVKQNTLKLATG",
+            "range": [
+                322,
+                335
+            ],
+            "source": "IEDB",
+            "iedb_id": 48238
+        },
+        {
+            "name": "PKYVKQNTLKLATGMR",
+            "range": [
+                322,
+                337
+            ],
+            "source": "IEDB",
+            "iedb_id": 48239
+        },
+        {
+            "name": "KYVKQNTLKLATGMR",
+            "range": [
+                323,
+                337
+            ],
+            "source": "IEDB",
+            "iedb_id": 34631
+        },
+        {
+            "name": "PKYVKQNTLKLAT",
+            "range": [
+                323,
+                335
+            ],
+            "source": "IEDB",
+            "iedb_id": 48236
+        },
+        {
+            "name": "YVKQNTLKLATGMR",
+            "range": [
+                324,
+                337
+            ],
+            "source": "IEDB",
+            "iedb_id": 76319
+        },
+        {
+            "name": "ATGLRNVPQIESR",
+            "range": [
+                328,
+                340
+            ],
+            "source": "IEDB",
+            "iedb_id": 4971
+        },
+        {
+            "name": "ATGLRNVPQIESRGLFGAIAGFIEG",
+            "range": [
+                328,
+                352
+            ],
+            "source": "IEDB",
+            "iedb_id": 4972
+        },
+        {
+            "name": "GLRNVPQIES",
+            "range": [
+                330,
+                339
+            ],
+            "source": "IEDB",
+            "iedb_id": 21110
+        },
+        {
+            "name": "LKLAT",
+            "range": [
+                330,
+                334
+            ],
+            "source": "IEDB",
+            "iedb_id": 36931
+        },
+        {
+            "name": "LRNVPQIES",
+            "range": [
+                331,
+                339
+            ],
+            "source": "IEDB",
+            "iedb_id": 39154
+        },
+        {
+            "name": "LRNVPQIESR",
+            "range": [
+                331,
+                340
+            ],
+            "source": "IEDB",
+            "iedb_id": 39155
+        },
+        {
+            "name": "VTGLRNIPSIQSRGLFGAIAGFIEG",
+            "range": [
+                331,
+                355
+            ],
+            "source": "IEDB",
+            "iedb_id": 71336
+        },
+        {
+            "name": "VTGLRNIPSIQSR",
+            "range": [
+                332,
+                344
+            ],
+            "source": "IEDB",
+            "iedb_id": 71335
+        },
+        {
+            "name": "VTGLRNIPSIQSRGLFGAIAGFIEG",
+            "range": [
+                332,
+                356
+            ],
+            "source": "IEDB",
+            "iedb_id": 71336
+        },
+        {
+            "name": "TGLRNTPSI",
+            "range": [
+                332,
+                340
+            ],
+            "source": "IEDB",
+            "iedb_id": 187544
+        },
+        {
+            "name": "ATGMRNVPEKQTR",
+            "range": [
+                334,
+                346
+            ],
+            "source": "IEDB",
+            "iedb_id": 4973
+        },
+        {
+            "name": "GLRNIPSIQS",
+            "range": [
+                334,
+                343
+            ],
+            "source": "IEDB",
+            "iedb_id": 21107
+        },
+        {
+            "name": "LRNIPSIQS",
+            "range": [
+                335,
+                343
+            ],
+            "source": "IEDB",
+            "iedb_id": 39147
+        },
+        {
+            "name": "LRNIPSIQSR",
+            "range": [
+                335,
+                344
+            ],
+            "source": "IEDB",
+            "iedb_id": 39148
+        },
+        {
+            "name": "GMRNVPEKQT",
+            "range": [
+                336,
+                345
+            ],
+            "source": "IEDB",
+            "iedb_id": 21337
+        },
+        {
+            "name": "MRNVPEKQT",
+            "range": [
+                336,
+                344
+            ],
+            "source": "IEDB",
+            "iedb_id": 42487
+        },
+        {
+            "name": "MRNVPEKQT",
+            "range": [
+                337,
+                345
+            ],
+            "source": "IEDB",
+            "iedb_id": 42487
+        },
+        {
+            "name": "MRNVPEKQTR",
+            "range": [
+                337,
+                346
+            ],
+            "source": "IEDB",
+            "iedb_id": 42488
+        },
+        {
+            "name": "GLFGAIAGF",
+            "range": [
+                340,
+                348
+            ],
+            "source": "IEDB",
+            "iedb_id": 20836
+        },
+        {
+            "name": "GLFGAIAGF",
+            "range": [
+                344,
+                352
+            ],
+            "source": "IEDB",
+            "iedb_id": 20836
+        },
+        {
+            "name": "GLFGAIAGFI",
+            "range": [
+                344,
+                353
+            ],
+            "source": "IEDB",
+            "iedb_id": 20837
+        },
+        {
+            "name": "GLFGAIAGFIEGGW",
+            "range": [
+                344,
+                357
+            ],
+            "source": "IEDB",
+            "iedb_id": 97348
+        },
+        {
+            "name": "GLFGAIAGFIEGG",
+            "range": [
+                344,
+                356
+            ],
+            "source": "IEDB",
+            "iedb_id": 193235
+        },
+        {
+            "name": "GLFGAIAGFI",
+            "range": [
+                345,
+                354
+            ],
+            "source": "IEDB",
+            "iedb_id": 20837
+        },
+        {
+            "name": "GLFGAIAGFIE",
+            "range": [
+                345,
+                355
+            ],
+            "source": "IEDB",
+            "iedb_id": 20838
+        },
+        {
+            "name": "PAKLLKERGFFGAIAGFLE",
+            "range": [
+                345,
+                363
+            ],
+            "source": "IEDB",
+            "iedb_id": 46841
+        },
+        {
+            "name": "GLFGAIAGFIEGG",
+            "range": [
+                346,
+                358
+            ],
+            "source": "IEDB",
+            "iedb_id": 193235
+        },
+        {
+            "name": "GLFGAIAGF",
+            "range": [
+                347,
+                355
+            ],
+            "source": "IEDB",
+            "iedb_id": 20836
+        },
+        {
+            "name": "GLFGAIAGFI",
+            "range": [
+                347,
+                356
+            ],
+            "source": "IEDB",
+            "iedb_id": 20837
+        },
+        {
+            "name": "GMIDGWYGY",
+            "range": [
+                359,
+                367
+            ],
+            "source": "IEDB",
+            "iedb_id": 21284
+        },
+        {
+            "name": "GMIDGWYGY",
+            "range": [
+                360,
+                368
+            ],
+            "source": "IEDB",
+            "iedb_id": 21284
+        },
+        {
+            "name": "GMVDGWYG",
+            "range": [
+                361,
+                368
+            ],
+            "source": "IEDB",
+            "iedb_id": 133590
+        },
+        {
+            "name": "ADQKSTQNAINGITNKVN",
+            "range": [
+                379,
+                396
+            ],
+            "source": "IEDB",
+            "iedb_id": 95213
+        },
+        {
+            "name": "LKSTQNAIDEITNKVN",
+            "range": [
+                382,
+                397
+            ],
+            "source": "IEDB",
+            "iedb_id": 193290
+        },
+        {
+            "name": "TNKVNSVIEKMNTQFTAVGK",
+            "range": [
+                393,
+                412
+            ],
+            "source": "IEDB",
+            "iedb_id": 188765
+        },
+        {
+            "name": "MNIQFTAV",
+            "range": [
+                402,
+                409
+            ],
+            "source": "IEDB",
+            "iedb_id": 42208
+        },
+        {
+            "name": "MNIQFTAV",
+            "range": [
+                403,
+                410
+            ],
+            "source": "IEDB",
+            "iedb_id": 42208
+        },
+        {
+            "name": "TYNAELLVL",
+            "range": [
+                437,
+                445
+            ],
+            "source": "IEDB",
+            "iedb_id": 67391
+        },
+        {
+            "name": "SYNAELLVAL",
+            "range": [
+                438,
+                447
+            ],
+            "source": "IEDB",
+            "iedb_id": 62653
+        },
+        {
+            "name": "YNAELLVLL",
+            "range": [
+                438,
+                446
+            ],
+            "source": "IEDB",
+            "iedb_id": 179720
+        },
+        {
+            "name": "YNAELLV",
+            "range": [
+                439,
+                445
+            ],
+            "source": "IEDB",
+            "iedb_id": 133748
+        },
+        {
+            "name": "AELLVALEN",
+            "range": [
+                441,
+                449
+            ],
+            "source": "IEDB",
+            "iedb_id": 1055
+        },
+        {
+            "name": "WSYNAELLVA",
+            "range": [
+                444,
+                453
+            ],
+            "source": "IEDB",
+            "iedb_id": 179692
+        },
+        {
+            "name": "LENERTLDF",
+            "range": [
+                445,
+                453
+            ],
+            "source": "IEDB",
+            "iedb_id": 35615
+        },
+        {
+            "name": "RTLDFHDSNVK",
+            "range": [
+                449,
+                459
+            ],
+            "source": "IEDB",
+            "iedb_id": 56100
+        },
+        {
+            "name": "RTLDFHDSNVK",
+            "range": [
+                450,
+                460
+            ],
+            "source": "IEDB",
+            "iedb_id": 56100
+        },
+        {
+            "name": "LYEKVKSQL",
+            "range": [
+                461,
+                469
+            ],
+            "source": "IEDB",
+            "iedb_id": 40746
+        },
+        {
+            "name": "LYEKVKSQL",
+            "range": [
+                462,
+                470
+            ],
+            "source": "IEDB",
+            "iedb_id": 40746
+        },
+        {
+            "name": "SQLKNNAKEI",
+            "range": [
+                467,
+                476
+            ],
+            "source": "IEDB",
+            "iedb_id": 60493
+        },
+        {
+            "name": "SQLKNNAKEI",
+            "range": [
+                468,
+                477
+            ],
+            "source": "IEDB",
+            "iedb_id": 60493
+        },
+        {
+            "name": "KEIGNGCFEF",
+            "range": [
+                474,
+                483
+            ],
+            "source": "IEDB",
+            "iedb_id": 30437
+        },
+        {
+            "name": "KEIGNGCFEF",
+            "range": [
+                475,
+                484
+            ],
+            "source": "IEDB",
+            "iedb_id": 30437
+        },
+        {
+            "name": "ALNNRFQIKGVELKS",
+            "range": [
+                495,
+                509
+            ],
+            "source": "IEDB",
+            "iedb_id": 2790
+        },
+        {
+            "name": "KYSEESKLNREKIDGVK",
+            "range": [
+                504,
+                520
+            ],
+            "source": "IEDB",
+            "iedb_id": 129190
+        },
+        {
+            "name": "KYSEESKLNREKIDGVK",
+            "range": [
+                506,
+                522
+            ],
+            "source": "IEDB",
+            "iedb_id": 129190
+        },
+        {
+            "name": "KLNREKIDGVKLESMGV",
+            "range": [
+                510,
+                526
+            ],
+            "source": "IEDB",
+            "iedb_id": 129108
+        },
+        {
+            "name": "ALNNRFQIKGVELKS",
+            "range": [
+                511,
+                525
+            ],
+            "source": "IEDB",
+            "iedb_id": 2790
+        },
+        {
+            "name": "SMGVYQILA",
+            "range": [
+                523,
+                531
+            ],
+            "source": "IEDB",
+            "iedb_id": 179511
+        },
+        {
+            "name": "IYATVAGSL",
+            "range": [
+                529,
+                537
+            ],
+            "source": "IEDB",
+            "iedb_id": 29560
+        },
+        {
+            "name": "IYSTVASSL",
+            "range": [
+                531,
+                539
+            ],
+            "source": "IEDB",
+            "iedb_id": 29690
+        },
+        {
+            "name": "IYSTVASSL",
+            "range": [
+                532,
+                540
+            ],
+            "source": "IEDB",
+            "iedb_id": 29690
+        },
+        {
+            "name": "IYSTVASSLVL",
+            "range": [
+                532,
+                542
+            ],
+            "source": "IEDB",
+            "iedb_id": 29691
+        },
+        {
+            "name": "IYSTVASSL",
+            "range": [
+                533,
+                541
+            ],
+            "source": "IEDB",
+            "iedb_id": 29690
+        },
+        {
+            "name": "IYSTVASSLVL",
+            "range": [
+                533,
+                543
+            ],
+            "source": "IEDB",
+            "iedb_id": 29691
+        },
+        {
+            "name": "IYSTVASSL",
+            "range": [
+                535,
+                543
+            ],
+            "source": "IEDB",
+            "iedb_id": 29690
+        },
+        {
+            "name": "VLLVSLGAI",
+            "range": [
+                541,
+                549
+            ],
+            "source": "IEDB",
+            "iedb_id": 69631
+        },
+        {
+            "name": "VLLVSLGAI",
+            "range": [
+                542,
+                550
+            ],
+            "source": "IEDB",
+            "iedb_id": 69631
+        }
     ]
 }
