@@ -23,7 +23,7 @@ VIRUS_CONFIGS = {
         "limit": 2000,
     },
     "sars1": {
-        "org_encoded": "SARS-CoV",
+        "org_encoded": "SARS-CoV1",
         "spike_keywords": ["P59594", "spike", "surface glycoprotein"],
         "limit": 1000,
     },
@@ -43,15 +43,23 @@ def is_spike_antigen(source_antigens, keywords):
                 return True
     return False
 
-def fetch_all(org_encoded, limit, timeout=60):
+def fetch_all(org_encoded, limit, timeout=120):
     url = (
         f"{IEDB_API}"
         f"?source_organism_names=cs.%7B{org_encoded}%7D"
         f"&structure_type=eq.Linear%20peptide"
         f"&limit={limit}"
     )
-    with urllib.request.urlopen(url, timeout=timeout) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(url, timeout=timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as e:
+            if attempt == 0:
+                print(f"  Hata, tekrar deneniyor... ({e})")
+                time.sleep(2)
+                continue
+            raise e
 
 def process_epitopes(all_data, keywords):
     results = []

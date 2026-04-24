@@ -15,7 +15,7 @@
         ]
     },
     "sars1": {
-        "accuracy": 66.66666666666666,
+        "accuracy": 100.0,
         "best_parameters": {
             "sasa_threshold": 15.0,
             "ai_bias": 0.5,
