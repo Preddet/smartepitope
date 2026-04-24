@@ -1,4 +1,4 @@
-# SmartEpitope: Viral Epitope Discovery Pipeline (Prototip)
+# SmartEpitope: Epitop Önceliklendirmesi için Yapay Zeka Destekli Evrimsel ve Yapısal Analiz
 
 SmartEpitope, viral proteinler üzerinde potansiyel terapötik hedefleri (epitopları) tespit etmek amacıyla biyoinformatik araçları ve makine öğrenmesi modellerini birleştiren hibrit bir analiz sistemidir.
 
