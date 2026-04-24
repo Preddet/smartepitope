@@ -1,0 +1,47 @@
+{
+    "sars2": {
+        "accuracy": 100.0,
+        "best_parameters": {
+            "sasa_threshold": 15.0,
+            "ai_bias": 0.5,
+            "window_size": 3,
+            "w_ai_final": 0.5037593984962406,
+            "w_stats_final": 0.49624060150375937
+        },
+        "top3_predicted_positions": [
+            977,
+            984,
+            983
+        ]
+    },
+    "sars1": {
+        "accuracy": 66.66666666666666,
+        "best_parameters": {
+            "sasa_threshold": 15.0,
+            "ai_bias": 0.5,
+            "window_size": 3,
+            "w_ai_final": 0.35135135135135137,
+            "w_stats_final": 0.6486486486486487
+        },
+        "top3_predicted_positions": [
+            965,
+            959,
+            934
+        ]
+    },
+    "flu": {
+        "accuracy": 100.0,
+        "best_parameters": {
+            "sasa_threshold": 15.0,
+            "ai_bias": 0.5,
+            "window_size": 3,
+            "w_ai_final": 0.2903225806451613,
+            "w_stats_final": 0.7096774193548387
+        },
+        "top3_predicted_positions": [
+            174,
+            240,
+            44
+        ]
+    }
+}
