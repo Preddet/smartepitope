@@ -24,6 +24,15 @@
 
 <body>
 
+    <div id="top-disclaimer" class="disclaimer-banner">
+        <div class="container">
+            <p><strong>ÖNEMLİ BİLGİLENDİRME:</strong> Bu platform bir <strong>prototip</strong> çalışmasıdır. Burada
+                izlenen metodolojiler ve hesaplanan skorlar deneysel aşamada olup, tam olarak standart bilimsel
+                metodlara uygunluk garantisi taahhüdü altında değildir. Geliştirilen yöntemler test sürecindedir ve
+                tıbbi/bilimsel bir kesinlik arz etmez.</p>
+        </div>
+    </div>
+
     <header class="hero">
         <div class="container">
             <img src="assets/logo.png" alt="SmartEpitope Logo"
@@ -351,16 +360,34 @@
                     </div>
 
                     <div
-                        style="padding: 2rem; background: var(--color-surface); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                        style="padding: 2rem; background: var(--color-surface); border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: 1px solid var(--color-border);">
                         <h3
                             style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-text-main); border-left: 4px solid var(--color-deep-bio-blue); padding-left: 1rem;">
-                            Seçilen 3 Sekans Bölgesi</h3>
+                            Seçilen 3 Sekans Bölgesi
+                        </h3>
                         <div class="metrics-grid" id="top-candidates-grid">
                             <!-- Cards will be dynamically injected here by JS -->
                         </div>
                         <div style="margin-top: 2rem; text-align: center;">
                             <button onclick="downloadCurrentAnalysis()" class="btn btn-primary"
                                 style="display: inline-block; cursor: pointer;">Analiz Verilerini İndir (.JSON)</button>
+                        </div>
+                    </div>
+
+                    <!-- ── Gerçek Epitop Karşılaştırma Paneli ── -->
+                    <div id="comparison-panel"
+                        style="padding: 2rem; background: #f8fafc; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
+                        <h3
+                            style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text-main); border-left: 4px solid #a855f7; padding-left: 1rem;">
+                            Gerçek Epitop Karşılaştırması
+                        </h3>
+                        <p
+                            style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.5rem; padding-left: 1.25rem;">
+                            Model tahminleri, IEDB (Immune Epitope Database) kayıtlarıyla IoU metriği kullanılarak
+                            karşılaştırılmıştır.
+                        </p>
+                        <div class="comparison-grid" id="comparison-grid">
+                            <!-- Comparison rows injected here by JS -->
                         </div>
                     </div>
                 </div>
