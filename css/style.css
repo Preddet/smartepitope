@@ -452,8 +452,37 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .hero h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
+  }
+
+  .hero p.subtitle {
+    font-size: 1.05rem;
+    margin: -1.5rem auto 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .disclaimer-banner {
+    padding: 0.75rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .pipeline-section {
+    padding: 2rem 0;
+  }
+
+  .methodology-content {
+    padding: 1.25rem !important;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .lab-container {
@@ -461,13 +490,44 @@ footer {
   }
 
   .lab-viewer {
-    min-height: 400px;
+    min-height: 350px;
   }
 
-    .lab-sidebar {
+  .lab-sidebar {
     width: 100%;
     border-left: none;
     border-top: 1px solid var(--color-border);
+    padding: 1.25rem !important;
+  }
+
+  /* Karşılaştırma Paneli Mobil Düzen */
+  .comparison-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .comparison-iou-badge {
+    text-align: left;
+    border-top: 1px dashed var(--color-border);
+    padding-top: 0.75rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .comparison-iou-badge small {
+    display: inline;
+  }
+
+  .comparison-bar-wrap .bar-label {
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+
+  .comparison-bar-wrap .bar-label .epitope-name {
+    text-align: left;
   }
 }
 

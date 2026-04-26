@@ -291,14 +291,15 @@ function renderComparisonPanel(top3Data, fullGtData, currentVirusKey) {
 
 
 function loadProteinStructure(pdbPath) {
+    const isMobile = window.innerWidth <= 768;
     const options = {
         customData: { url: pdbPath, format: 'pdb' },
         assemblyId: '1',
         bgColor: { r: 255, g: 255, b: 255 },
-        hideControls: false,
-        hideSequencePanel: false,
-        sequencePanel: true,
-        landscape: true,
+        hideControls: isMobile,
+        hideSequencePanel: isMobile,
+        sequencePanel: !isMobile,
+        landscape: !isMobile,
         visualStyle: 'cartoon'
     };
 
@@ -307,9 +308,15 @@ function loadProteinStructure(pdbPath) {
 
     setTimeout(function () {
         if (viewerInstance && viewerInstance.plugin && viewerInstance.plugin.layout) {
+            const isMobile = window.innerWidth <= 768;
             viewerInstance.plugin.layout.setProps({
-                showSequence: true,
-                regionState: { top: 'show', right: 'show' }
+                showSequence: !isMobile,
+                regionState: { 
+                    top: isMobile ? 'hidden' : 'show', 
+                    right: isMobile ? 'hidden' : 'show',
+                    left: 'hidden',
+                    bottom: 'hidden'
+                }
             });
         }
         renderMolstarStyles();
