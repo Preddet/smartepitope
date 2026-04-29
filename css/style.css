@@ -429,7 +429,7 @@ code {
 footer {
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  padding: 3rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -625,6 +625,7 @@ footer {
   .comparison-row {
     grid-template-columns: 1fr;
   }
+
   .comparison-iou-badge {
     text-align: left;
   }
